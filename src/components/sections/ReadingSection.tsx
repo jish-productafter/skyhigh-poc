@@ -1,27 +1,27 @@
-"use client"
+"use client";
 
-import React, { useState } from "react"
-import { BookOpen } from "lucide-react"
-import { SectionProps, ReadingQuestion } from "@/types"
-import { GermanQuestion } from "@/components/ui/GermanQuestion"
-import { QuestionContainer } from "@/components/ui/QuestionContainer"
-import { AnswerFeedback } from "@/components/ui/AnswerFeedback"
+import React, { useState } from "react";
+import { BookOpen } from "lucide-react";
+import { SectionProps, ReadingQuestion } from "@/types";
+import { GermanQuestion } from "@/components/ui/GermanQuestion";
+import { QuestionContainer } from "@/components/ui/QuestionContainer";
+import { AnswerFeedback } from "@/components/ui/AnswerFeedback";
 
 export const ReadingSection: React.FC<SectionProps> = ({
   questions,
   level,
 }) => {
-  const [answers, setAnswers] = useState<Record<number, string>>({})
-  const [showFeedback, setShowFeedback] = useState<Record<number, boolean>>({})
+  const [answers, setAnswers] = useState<Record<number, string>>({});
+  const [showFeedback, setShowFeedback] = useState<Record<number, boolean>>({});
 
   const handleAnswer = (qId: number, selectedOption: string) => {
-    setAnswers({ ...answers, [qId]: selectedOption })
-    setShowFeedback({ ...showFeedback, [qId]: false })
-  }
+    setAnswers({ ...answers, [qId]: selectedOption });
+    setShowFeedback({ ...showFeedback, [qId]: false });
+  };
 
   const checkAnswer = (qId: number, correctAnswer: string) => {
-    setShowFeedback({ ...showFeedback, [qId]: true })
-  }
+    setShowFeedback({ ...showFeedback, [qId]: true });
+  };
 
   return (
     <div className="space-y-6">
@@ -101,5 +101,5 @@ export const ReadingSection: React.FC<SectionProps> = ({
         </QuestionContainer>
       ))}
     </div>
-  )
-}
+  );
+};

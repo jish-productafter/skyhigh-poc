@@ -1,27 +1,136 @@
-"use client"
+"use client";
 
-import React, { useState } from "react"
-import { Speaker } from "lucide-react"
-import { SectionProps, ListeningQuestion } from "@/types"
-import { GermanQuestion } from "@/components/ui/GermanQuestion"
-import { QuestionContainer } from "@/components/ui/QuestionContainer"
-import { AnswerFeedback } from "@/components/ui/AnswerFeedback"
+import React, { useState, useRef, useEffect } from "react";
+import { Speaker, Pause, Volume2 } from "lucide-react";
+import { SectionProps, ListeningQuestion } from "@/types";
+import { GermanQuestion } from "@/components/ui/GermanQuestion";
+import { QuestionContainer } from "@/components/ui/QuestionContainer";
+import { AnswerFeedback } from "@/components/ui/AnswerFeedback";
 
 export const ListeningSection: React.FC<SectionProps> = ({
   questions,
   level,
 }) => {
-  const [answers, setAnswers] = useState<Record<number, string>>({})
-  const [showFeedback, setShowFeedback] = useState<Record<number, boolean>>({})
+  const [answers, setAnswers] = useState<Record<number, string>>({});
+  const [showFeedback, setShowFeedback] = useState<Record<number, boolean>>({});
+  const [playing, setPlaying] = useState<Record<number, boolean>>({});
+  const synthesisRef = useRef<SpeechSynthesis | null>(null);
+  const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
+
+  // Initialize speech synthesis
+  useEffect(() => {
+    if (typeof window !== "undefined" && "speechSynthesis" in window) {
+      synthesisRef.current = window.speechSynthesis;
+
+      // Load voices (some browsers need this)
+      const loadVoices = () => {
+        if (synthesisRef.current) {
+          synthesisRef.current.getVoices();
+        }
+      };
+
+      // Chrome loads voices asynchronously
+      if (synthesisRef.current.onvoiceschanged !== undefined) {
+        synthesisRef.current.onvoiceschanged = loadVoices;
+      }
+      loadVoices();
+    }
+    return () => {
+      // Cleanup: stop any ongoing speech when component unmounts
+      if (synthesisRef.current) {
+        synthesisRef.current.cancel();
+      }
+    };
+  }, []);
 
   const handleAnswer = (qId: number, selectedOption: string) => {
-    setAnswers({ ...answers, [qId]: selectedOption })
-    setShowFeedback({ ...showFeedback, [qId]: false })
-  }
+    setAnswers({ ...answers, [qId]: selectedOption });
+    setShowFeedback({ ...showFeedback, [qId]: false });
+  };
 
   const checkAnswer = (qId: number, correctAnswer: string) => {
-    setShowFeedback({ ...showFeedback, [qId]: true })
-  }
+    setShowFeedback({ ...showFeedback, [qId]: true });
+  };
+
+  const speakText = (text: string, lang: string = "de-DE") => {
+    if (!synthesisRef.current) {
+      console.warn("Speech synthesis not supported in this browser");
+      return;
+    }
+
+    // Cancel any ongoing speech
+    synthesisRef.current.cancel();
+
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = lang;
+    utterance.rate = 0.9; // Slightly slower for better comprehension
+    utterance.pitch = 1;
+    utterance.volume = 1;
+
+    // Try to use a German voice if available
+    const voices = synthesisRef.current.getVoices();
+    const germanVoice = voices.find(
+      (voice) => voice.lang.startsWith("de") || voice.lang.startsWith("de-DE")
+    );
+    if (germanVoice) {
+      utterance.voice = germanVoice;
+    }
+
+    utteranceRef.current = utterance;
+
+    utterance.onend = () => {
+      setPlaying((prev) => {
+        const newState = { ...prev };
+        // Reset all playing states when speech ends
+        Object.keys(newState).forEach((key) => {
+          newState[Number(key)] = false;
+        });
+        return newState;
+      });
+    };
+
+    utterance.onerror = (error) => {
+      console.error("Speech synthesis error:", error);
+      setPlaying((prev) => {
+        const newState = { ...prev };
+        Object.keys(newState).forEach((key) => {
+          newState[Number(key)] = false;
+        });
+        return newState;
+      });
+    };
+
+    synthesisRef.current.speak(utterance);
+  };
+
+  const handlePlayAudio = (question: ListeningQuestion) => {
+    // Read the question text, not the audioText
+    const textToSpeak = question.question;
+
+    if (!textToSpeak) {
+      console.warn("No question text available for this question");
+      return;
+    }
+
+    // Toggle play/pause
+    if (playing[question.id]) {
+      // Stop current speech
+      if (synthesisRef.current) {
+        synthesisRef.current.cancel();
+      }
+      setPlaying({ ...playing, [question.id]: false });
+    } else {
+      // Stop any other playing audio first
+      if (synthesisRef.current) {
+        synthesisRef.current.cancel();
+      }
+      // Reset all playing states
+      setPlaying({});
+      // Start speaking
+      setPlaying({ [question.id]: true });
+      speakText(textToSpeak, "de-DE");
+    }
+  };
 
   return (
     <div className="space-y-6">
@@ -55,14 +164,45 @@ export const ListeningSection: React.FC<SectionProps> = ({
               />
             </div>
             <div className="grow">
-              <GermanQuestion
-                germanText={q.question}
-                englishTranslation={q.translation}
-                className="mb-3"
-              />
+              <div className="flex items-start justify-between mb-3">
+                <div className="flex-1">
+                  <GermanQuestion
+                    germanText={q.question}
+                    englishTranslation={q.translation}
+                    className="mb-0"
+                  />
+                </div>
+                {/* TTS Play Button */}
+                {q.question && (
+                  <button
+                    onClick={() => handlePlayAudio(q)}
+                    className="ml-4 p-2 bg-indigo-100 hover:bg-indigo-200 text-indigo-700 rounded-full transition-all duration-200 flex items-center justify-center min-w-[44px] min-h-[44px]"
+                    title="Play question (Frage abspielen)"
+                    aria-label="Play question"
+                  >
+                    {playing[q.id] ? (
+                      <Pause className="w-5 h-5" />
+                    ) : (
+                      <Volume2 className="w-5 h-5" />
+                    )}
+                  </button>
+                )}
+              </div>
               <p className="text-sm text-blue-600 mb-4 font-medium">
                 <em>{q.audioDescription}</em>
               </p>
+              {(q.ttsPrompt || q.audioText) && (
+                <div className="mb-4 p-2 bg-indigo-50 rounded-lg border border-indigo-200">
+                  <p className="text-xs text-indigo-700">
+                    <strong>Audio Text:</strong> {q.ttsPrompt || q.audioText}
+                  </p>
+                  {q.audioText_translation && (
+                    <p className="text-xs text-indigo-600 mt-1 italic">
+                      ({q.audioText_translation})
+                    </p>
+                  )}
+                </div>
+              )}
 
               <div className="grid grid-cols-1 gap-3">
                 {q.options.map((option) => (
@@ -104,5 +244,5 @@ export const ListeningSection: React.FC<SectionProps> = ({
         </QuestionContainer>
       ))}
     </div>
-  )
-}
+  );
+};
