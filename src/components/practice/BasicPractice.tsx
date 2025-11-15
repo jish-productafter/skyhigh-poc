@@ -1,66 +1,184 @@
-"use client"
+"use client";
 
-import React, { useState, useEffect, useRef } from "react"
-import { Grid, Mic, Speaker, RefreshCw } from "lucide-react"
-import { BASIC_GERMAN_WORDS } from "@/data"
+import React, { useState, useEffect, useRef } from "react";
+import {
+  Grid,
+  Mic,
+  Speaker,
+  RefreshCw,
+  Square,
+  Play,
+  CheckCircle,
+  XCircle,
+  Loader2,
+} from "lucide-react";
+import { BASIC_GERMAN_WORDS } from "@/data";
 import {
   SpeechRecognition,
   SpeechRecognitionEvent,
   SpeechRecognitionErrorEvent,
-} from "@/types"
+} from "@/types";
+import { validateSpeaking } from "@/services/api";
 
 export const BasicPractice: React.FC = () => {
-  const [currentWord, setCurrentWord] = useState<string>("")
-  const [isListening, setIsListening] = useState<boolean>(false)
-  const [isSpeaking, setIsSpeaking] = useState<boolean>(false)
-  const recognitionRef = useRef<any>(null)
+  const [currentWord, setCurrentWord] = useState<string>("");
+  const [isListening, setIsListening] = useState<boolean>(false);
+  const [isSpeaking, setIsSpeaking] = useState<boolean>(false);
+  const [isRecording, setIsRecording] = useState<boolean>(false);
+  const [recording, setRecording] = useState<Blob | null>(null);
+  const [validating, setValidating] = useState<boolean>(false);
+  const [validationResult, setValidationResult] = useState<{
+    score?: number;
+    feedback?: string;
+    transcription?: string;
+    errors?: string[];
+    suggestions?: string[];
+  } | null>(null);
+  const [validationError, setValidationError] = useState<string | null>(null);
+  const recognitionRef = useRef<any>(null);
+  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
+  const audioChunksRef = useRef<Blob[]>([]);
 
   // Initialize with a random word
   useEffect(() => {
-    getRandomWord()
-  }, [])
+    getRandomWord();
+  }, []);
 
   const getRandomWord = () => {
-    const randomIndex = Math.floor(Math.random() * BASIC_GERMAN_WORDS.length)
-    setCurrentWord(BASIC_GERMAN_WORDS[randomIndex])
-  }
+    const randomIndex = Math.floor(Math.random() * BASIC_GERMAN_WORDS.length);
+    setCurrentWord(BASIC_GERMAN_WORDS[randomIndex]);
+    // Reset validation when word changes
+    setValidationResult(null);
+    setValidationError(null);
+    setRecording(null);
+  };
 
   const speakWord = () => {
-    if (!currentWord) return
+    if (!currentWord) return;
 
-    setIsSpeaking(true)
-    const utterance = new SpeechSynthesisUtterance(currentWord)
-    utterance.lang = "de-DE"
-    utterance.onend = () => setIsSpeaking(false)
-    utterance.onerror = () => setIsSpeaking(false)
-    speechSynthesis.speak(utterance)
-  }
+    setIsSpeaking(true);
+    const utterance = new SpeechSynthesisUtterance(currentWord);
+    utterance.lang = "de-DE";
+    utterance.onend = () => setIsSpeaking(false);
+    utterance.onerror = () => setIsSpeaking(false);
+    speechSynthesis.speak(utterance);
+  };
+
+  const startRecording = async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const mediaRecorder = new MediaRecorder(stream, {
+        mimeType: "audio/webm;codecs=opus",
+      });
+
+      audioChunksRef.current = [];
+
+      mediaRecorder.ondataavailable = (event) => {
+        if (event.data.size > 0) {
+          audioChunksRef.current.push(event.data);
+        }
+      };
+
+      mediaRecorder.onstop = () => {
+        const audioBlob = new Blob(audioChunksRef.current, {
+          type: "audio/webm",
+        });
+        setRecording(audioBlob);
+        // Stop all tracks to release microphone
+        stream.getTracks().forEach((track) => track.stop());
+      };
+
+      mediaRecorderRef.current = mediaRecorder;
+      mediaRecorder.start();
+      setIsRecording(true);
+      setValidationResult(null);
+      setValidationError(null);
+    } catch (error) {
+      console.error("Error accessing microphone:", error);
+      setValidationError(
+        "Microphone access denied. Please allow microphone access."
+      );
+    }
+  };
+
+  const stopRecording = () => {
+    const recorder = mediaRecorderRef.current;
+    if (recorder && recorder.state !== "inactive") {
+      recorder.stop();
+      setIsRecording(false);
+    }
+  };
+
+  const playRecording = () => {
+    if (recording) {
+      const audioUrl = URL.createObjectURL(recording);
+      const audio = new Audio(audioUrl);
+      audio.play();
+      audio.onended = () => URL.revokeObjectURL(audioUrl);
+    }
+  };
+
+  const handleValidate = async () => {
+    if (!recording || !currentWord) {
+      setValidationError("Please record your pronunciation first.");
+      return;
+    }
+
+    setValidating(true);
+    setValidationError(null);
+    setValidationResult(null);
+
+    try {
+      // Create a simple speaking task for basic word practice
+      const speakingTask: import("@/types").SpeakingQuestion = {
+        id: 0,
+        type: "Vorstellen",
+        prompt: `Sprechen Sie das Wort "${currentWord}" aus. (Pronounce the word "${currentWord}".)`,
+        translation: `Pronounce the word "${currentWord}".`,
+      };
+
+      const result = await validateSpeaking({
+        speaking_task: speakingTask,
+        audioFile: recording,
+      });
+      setValidationResult(result);
+    } catch (error) {
+      setValidationError(
+        error instanceof Error
+          ? error.message
+          : "Failed to validate pronunciation"
+      );
+      console.error("Validation error:", error);
+    } finally {
+      setValidating(false);
+    }
+  };
 
   const startListening = () => {
     if (
       !("webkitSpeechRecognition" in window) &&
       !("SpeechRecognition" in window)
     ) {
-      alert("Speech recognition is not supported in your browser.")
-      return
+      alert("Speech recognition is not supported in your browser.");
+      return;
     }
 
     const SpeechRecognitionClass =
       (window as any).SpeechRecognition ||
-      (window as any).webkitSpeechRecognition
-    const recognition = new SpeechRecognitionClass() as SpeechRecognition
-    recognition.lang = "de-DE"
-    recognition.continuous = false
-    recognition.interimResults = false
+      (window as any).webkitSpeechRecognition;
+    const recognition = new SpeechRecognitionClass() as SpeechRecognition;
+    recognition.lang = "de-DE";
+    recognition.continuous = false;
+    recognition.interimResults = false;
 
     recognition.onstart = () => {
-      setIsListening(true)
-    }
+      setIsListening(true);
+    };
 
     recognition.onresult = async (event: SpeechRecognitionEvent) => {
-      const transcript = event.results[0][0].transcript.trim()
-      const confidence = event.results[0][0].confidence || 0
-      const isCorrect = transcript.toLowerCase() === currentWord.toLowerCase()
+      const transcript = event.results[0][0].transcript.trim();
+      const confidence = event.results[0][0].confidence || 0;
+      const isCorrect = transcript.toLowerCase() === currentWord.toLowerCase();
 
       // Send data to mock backend
       try {
@@ -77,64 +195,70 @@ export const BasicPractice: React.FC = () => {
             language: "de-DE",
             timestamp: new Date().toISOString(),
           }),
-        })
+        });
 
         if (!response.ok) {
           console.error(
             "Failed to save practice record:",
             await response.text()
-          )
+          );
         } else {
-          const data = await response.json()
-          console.log("Practice record saved:", data)
+          const data = await response.json();
+          console.log("Practice record saved:", data);
         }
       } catch (error) {
-        console.error("Error sending practice record to backend:", error)
+        console.error("Error sending practice record to backend:", error);
       }
 
       if (isCorrect) {
-        alert("Richtig! Gut gemacht! (Correct! Well done!)")
+        alert("Richtig! Gut gemacht! (Correct! Well done!)");
       } else {
         alert(
           `Sie sagten: "${transcript}". Das richtige Wort ist: "${currentWord}". (You said: "${transcript}". The correct word is: "${currentWord}".)`
-        )
+        );
       }
-      setIsListening(false)
-    }
+      setIsListening(false);
+    };
 
     recognition.onerror = (event: SpeechRecognitionErrorEvent) => {
-      console.error("Speech recognition error:", event.error)
-      setIsListening(false)
+      console.error("Speech recognition error:", event.error);
+      setIsListening(false);
       if (event.error === "no-speech") {
         alert(
           "Keine Sprache erkannt. Versuchen Sie es erneut. (No speech detected. Please try again.)"
-        )
+        );
       }
-    }
+    };
 
     recognition.onend = () => {
-      setIsListening(false)
-    }
+      setIsListening(false);
+    };
 
-    recognitionRef.current = recognition
-    recognition.start()
-  }
+    recognitionRef.current = recognition;
+    recognition.start();
+  };
 
   const stopListening = () => {
     if (recognitionRef.current) {
-      recognitionRef.current.stop()
-      setIsListening(false)
+      recognitionRef.current.stop();
+      setIsListening(false);
     }
-  }
+  };
 
   useEffect(() => {
     return () => {
       if (recognitionRef.current) {
-        recognitionRef.current.stop()
+        recognitionRef.current.stop();
       }
-      speechSynthesis.cancel()
-    }
-  }, [])
+      if (
+        mediaRecorderRef.current &&
+        mediaRecorderRef.current.state !== "inactive"
+      ) {
+        mediaRecorderRef.current.stop();
+      }
+      speechSynthesis.cancel();
+    };
+  }, []);
 
   return (
     <div className="space-y-6">
@@ -190,23 +314,60 @@ export const BasicPractice: React.FC = () => {
               </span>
             </button>
 
-            {/* Mic Button */}
-            <button
-              onClick={isListening ? stopListening : startListening}
-              className={`flex items-center justify-center px-6 py-3 rounded-lg shadow-md transition-all transform hover:scale-105 ${
-                isListening
-                  ? "bg-red-500 text-white hover:bg-red-600 animate-pulse"
-                  : "bg-blue-500 text-white hover:bg-blue-600"
-              }`}
-            >
-              <Mic className="w-6 h-6 mr-2" />
-              <span className="font-semibold">
-                {isListening ? "Stoppen" : "Sprechen"}
-              </span>
-              <span className="text-xs ml-2 opacity-80">
-                ({isListening ? "Stop" : "Speak"})
-              </span>
-            </button>
+            {/* Record Button */}
+            {!isRecording ? (
+              <button
+                onClick={startRecording}
+                className="flex items-center justify-center px-6 py-3 rounded-lg shadow-md transition-all transform hover:scale-105 bg-red-500 text-white hover:bg-red-600"
+              >
+                <Mic className="w-6 h-6 mr-2" />
+                <span className="font-semibold">Aufnehmen</span>
+                <span className="text-xs ml-2 opacity-80">(Record)</span>
+              </button>
+            ) : (
+              <button
+                onClick={stopRecording}
+                className="flex items-center justify-center px-6 py-3 rounded-lg shadow-md transition-all transform hover:scale-105 bg-red-800 text-white hover:bg-red-900 animate-pulse"
+              >
+                <Square className="w-6 h-6 mr-2" />
+                <span className="font-semibold">Stoppen</span>
+                <span className="text-xs ml-2 opacity-80">(Stop)</span>
+              </button>
+            )}
+
+            {/* Play Recording Button */}
+            {recording && !isRecording && (
+              <button
+                onClick={playRecording}
+                className="flex items-center justify-center px-6 py-3 rounded-lg shadow-md transition-all transform hover:scale-105 bg-gray-600 text-white hover:bg-gray-700"
+              >
+                <Play className="w-6 h-6 mr-2" />
+                <span className="font-semibold">Abspielen</span>
+                <span className="text-xs ml-2 opacity-80">(Play)</span>
+              </button>
+            )}
+
+            {/* Validate Button */}
+            {recording && !isRecording && (
+              <button
+                onClick={handleValidate}
+                disabled={validating}
+                className="flex items-center justify-center px-6 py-3 rounded-lg shadow-md transition-all transform hover:scale-105 bg-green-600 text-white hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {validating ? (
+                  <>
+                    <Loader2 className="w-6 h-6 mr-2 animate-spin" />
+                    <span className="font-semibold">Validating...</span>
+                  </>
+                ) : (
+                  <>
+                    <CheckCircle className="w-6 h-6 mr-2" />
+                    <span className="font-semibold">Prüfen</span>
+                    <span className="text-xs ml-2 opacity-80">(Validate)</span>
+                  </>
+                )}
+              </button>
+            )}
 
             {/* Refresh Button */}
             <button
@@ -219,6 +380,83 @@ export const BasicPractice: React.FC = () => {
             </button>
           </div>
 
+          {/* Recording Indicator */}
+          {isRecording && (
+            <div className="flex items-center justify-center gap-2 text-red-600">
+              <div className="w-3 h-3 bg-red-600 rounded-full animate-pulse"></div>
+              <span className="text-sm font-medium">Recording...</span>
+            </div>
+          )}
+
+          {/* Validation Result */}
+          {validationResult && (
+            <div className="mt-4 p-4 bg-green-50 border-l-4 border-green-400 rounded-md max-w-2xl">
+              <div className="flex items-start gap-2">
+                <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
+                <div className="flex-1">
+                  <h4 className="font-semibold text-green-800 mb-2">
+                    Validation Result
+                  </h4>
+                  {validationResult.score !== undefined && (
+                    <p className="text-green-700 mb-2">
+                      <strong>Score:</strong> {validationResult.score}/100
+                    </p>
+                  )}
+                  {validationResult.transcription && (
+                    <p className="text-green-700 mb-2">
+                      <strong>Transcription:</strong>{" "}
+                      {validationResult.transcription}
+                    </p>
+                  )}
+                  {validationResult.feedback && (
+                    <p className="text-green-700 mb-2">
+                      <strong>Feedback:</strong> {validationResult.feedback}
+                    </p>
+                  )}
+                  {validationResult.errors &&
+                    validationResult.errors.length > 0 && (
+                      <div className="mt-2">
+                        <strong className="text-green-800">Errors:</strong>
+                        <ul className="list-disc list-inside text-green-700 mt-1">
+                          {validationResult.errors.map((error, idx) => (
+                            <li key={idx}>{error}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  {validationResult.suggestions &&
+                    validationResult.suggestions.length > 0 && (
+                      <div className="mt-2">
+                        <strong className="text-green-800">Suggestions:</strong>
+                        <ul className="list-disc list-inside text-green-700 mt-1">
+                          {validationResult.suggestions.map(
+                            (suggestion, idx) => (
+                              <li key={idx}>{suggestion}</li>
+                            )
+                          )}
+                        </ul>
+                      </div>
+                    )}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Validation Error */}
+          {validationError && (
+            <div className="mt-4 p-4 bg-red-50 border-l-4 border-red-400 rounded-md max-w-2xl">
+              <div className="flex items-start gap-2">
+                <XCircle className="w-5 h-5 text-red-600 mt-0.5" />
+                <div>
+                  <h4 className="font-semibold text-red-800 mb-1">
+                    Validation Error
+                  </h4>
+                  <p className="text-red-700">{validationError}</p>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Instructions */}
           <div className="mt-6 p-4 bg-purple-50 border-l-4 border-purple-400 rounded-md max-w-2xl">
             <p className="text-sm font-medium text-purple-700 mb-2">
@@ -230,8 +468,16 @@ export const BasicPractice: React.FC = () => {
                 to hear the word.)
               </li>
               <li>
-                Klicken Sie auf "Sprechen" und sprechen Sie das Wort nach.
-                (Click "Speak" and repeat the word.)
+                Klicken Sie auf "Aufnehmen" und sprechen Sie das Wort nach.
+                (Click "Record" and repeat the word.)
+              </li>
+              <li>
+                Klicken Sie auf "Stoppen", wenn Sie fertig sind. (Click "Stop"
+                when you're done.)
+              </li>
+              <li>
+                Klicken Sie auf "Prüfen", um Ihre Aussprache validieren zu
+                lassen. (Click "Validate" to have your pronunciation validated.)
               </li>
               <li>
                 Klicken Sie auf "Neues Wort", um ein anderes Wort zu üben.
@@ -242,5 +488,5 @@ export const BasicPractice: React.FC = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
