@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { fetchWithRetry } from "../../utils";
 
 const API_BASE_URL = process.env.API_BASE_URL!;
 
@@ -19,12 +20,16 @@ export async function POST(request: NextRequest) {
     url.searchParams.append("topic", topic);
     url.searchParams.append("level", level);
 
-    const response = await fetch(url.toString(), {
-      method: "POST",
-      headers: {
-        accept: "application/json",
-      },
-    });
+    const response = await fetchWithRetry(
+      () =>
+        fetch(url.toString(), {
+          method: "POST",
+          headers: {
+            accept: "application/json",
+          },
+        }),
+      2
+    );
 
     if (!response.ok) {
       const errorText = await response.text();

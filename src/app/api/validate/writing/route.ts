@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { fetchWithRetry } from "../../utils";
 
 const API_BASE_URL = process.env.API_BASE_URL!;
 
@@ -25,27 +26,31 @@ export async function POST(request: NextRequest) {
       user_response.toString().length
     );
 
-    const formData = new URLSearchParams();
-    formData.append("writing_task", writing_task.toString());
-    formData.append("user_response", user_response.toString());
+    // Create FormData factory function for retries
+    const createFormData = () => {
+      const formData = new URLSearchParams();
+      formData.append("writing_task", writing_task.toString());
+      formData.append("user_response", user_response.toString());
+      return formData.toString();
+    };
 
     console.log(
       "[API Route] Sending to external API:",
       `${API_BASE_URL}/validate/writing`
     );
-    console.log("[API Route] FormData preview:", {
-      writing_task: formData.get("writing_task"),
-      user_response: formData.get("user_response"),
-    });
 
-    const response = await fetch(`${API_BASE_URL}/validate/writing`, {
-      method: "POST",
-      headers: {
-        accept: "application/json",
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: formData.toString(),
-    });
+    const response = await fetchWithRetry(
+      () =>
+        fetch(`${API_BASE_URL}/validate/writing`, {
+          method: "POST",
+          headers: {
+            accept: "application/json",
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: createFormData(),
+        }),
+      2
+    );
 
     console.log("[API Route] External API Response Status:", response.status);
     console.log("[API Route] External API Response OK:", response.ok);

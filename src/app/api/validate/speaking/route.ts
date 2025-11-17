@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { fetchWithRetry } from "../../utils";
 
 const API_BASE_URL = process.env.API_BASE_URL!;
 
@@ -15,26 +16,27 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Create new FormData for the external API
-    const apiFormData = new FormData();
-    apiFormData.append("file", file as Blob);
-    apiFormData.append("speaking_task", speaking_task.toString());
+    // Create FormData factory function for retries
+    const createFormData = () => {
+      const apiFormData = new FormData();
+      apiFormData.append("file", file as Blob);
+      apiFormData.append("speaking_task", speaking_task.toString());
+      return apiFormData;
+    };
 
-    const response = await fetch(`${API_BASE_URL}/validate/speaking`, {
-      method: "POST",
-      body: apiFormData,
-    });
+    const response = await fetchWithRetry(
+      () =>
+        fetch(`${API_BASE_URL}/validate/speaking`, {
+          method: "POST",
+          body: createFormData(),
+        }),
+      2
+    );
 
     if (!response.ok) {
       const errorText = await response.text();
-      let errorData;
-      try {
-        errorData = JSON.parse(errorText);
-      } catch {
-        errorData = { detail: errorText };
-      }
       return NextResponse.json(
-        { error: `API error: ${response.statusText}`, details: errorData },
+        { error: `API error: ${response.statusText}`, details: errorText },
         { status: response.status }
       );
     }
