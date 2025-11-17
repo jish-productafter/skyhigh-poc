@@ -2,12 +2,12 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import { Mic, Square, Play, CheckCircle, XCircle, Loader2 } from "lucide-react";
-import { SectionProps, SpeakingQuestion } from "@/types";
+import { SpeakingSectionProps } from "@/types";
 import { GermanQuestion } from "@/components/ui/GermanQuestion";
 import { QuestionContainer } from "@/components/ui/QuestionContainer";
-import { validateSpeaking } from "@/services/api";
+import { validateSpeaking, ApiSpeakingQuestion } from "@/services/api";
 
-export const SpeakingSection: React.FC<SectionProps> = ({
+export const SpeakingSection: React.FC<SpeakingSectionProps> = ({
   questions,
   level,
 }) => {
@@ -90,7 +90,7 @@ export const SpeakingSection: React.FC<SectionProps> = ({
     }
   };
 
-  const handleValidate = async (question: SpeakingQuestion) => {
+  const handleValidate = async (question: ApiSpeakingQuestion) => {
     const audioBlob = recordings[question.id];
     if (!audioBlob) {
       setValidationErrors({
@@ -100,29 +100,57 @@ export const SpeakingSection: React.FC<SectionProps> = ({
       return;
     }
 
+    console.log("=== Speaking Validation Started ===");
+    console.log("Question ID:", question.id);
+    console.log("Question Type:", question.type);
+    console.log("Question Prompt:", question.prompt);
+    console.log("Audio Blob Size:", audioBlob.size, "bytes");
+    console.log("Audio Blob Type:", audioBlob.type);
+
     setValidating({ ...validating, [question.id]: true });
     setValidationErrors({ ...validationErrors, [question.id]: null });
     setValidationResults({ ...validationResults, [question.id]: null });
 
     try {
-      // Convert webm to mp3 format (or use webm if API accepts it)
-      // For now, we'll send webm and let the API handle it
+      const startTime = Date.now();
+      console.log("Sending validation request to API...");
+
       const result = await validateSpeaking({
         speaking_task: question,
         audioFile: audioBlob,
       });
+
+      const duration = Date.now() - startTime;
+      console.log("=== Speaking Validation Success ===");
+      console.log("Validation Duration:", duration, "ms");
+      console.log("Validation Result:", result);
+      console.log("Score:", result.score);
+      console.log("Transcription:", result.transcription);
+      console.log("Feedback:", result.feedback);
+      console.log("Errors:", result.errors);
+      console.log("Suggestions:", result.suggestions);
+
       setValidationResults({ ...validationResults, [question.id]: result });
     } catch (error) {
+      const errorMessage =
+        error instanceof Error ? error.message : "Failed to validate speaking";
+
+      console.error("=== Speaking Validation Error ===");
+      console.error("Question ID:", question.id);
+      console.error("Error:", error);
+      console.error("Error Message:", errorMessage);
+      console.error(
+        "Error Stack:",
+        error instanceof Error ? error.stack : "N/A"
+      );
+
       setValidationErrors({
         ...validationErrors,
-        [question.id]:
-          error instanceof Error
-            ? error.message
-            : "Failed to validate speaking",
+        [question.id]: errorMessage,
       });
-      console.error("Validation error:", error);
     } finally {
       setValidating({ ...validating, [question.id]: false });
+      console.log("Validation process completed for question:", question.id);
     }
   };
 
@@ -154,7 +182,7 @@ export const SpeakingSection: React.FC<SectionProps> = ({
           (Practice the oral exam. Record your answer and have it validated.)
         </span>
       </p>
-      {questions.map((q: SpeakingQuestion) => (
+      {questions.map((q: ApiSpeakingQuestion) => (
         <QuestionContainer key={q.id} id={q.id} level={level}>
           <GermanQuestion
             germanText={q.prompt}
@@ -247,33 +275,46 @@ export const SpeakingSection: React.FC<SectionProps> = ({
           {validationResults[q.id] &&
             (() => {
               const result = validationResults[q.id]!;
+              const isFailed =
+                (result.score !== undefined && result.score < 70) ||
+                (result.errors && result.errors.length > 0);
+              const bgColor = isFailed
+                ? "bg-red-50 border-red-400"
+                : "bg-green-50 border-green-400";
+              const textColor = isFailed ? "text-red" : "text-green";
+              const Icon = isFailed ? XCircle : CheckCircle;
+
               return (
-                <div className="mt-4 p-4 bg-green-50 border-l-4 border-green-400 rounded-md">
+                <div className={`mt-4 p-4 ${bgColor} border-l-4 rounded-md`}>
                   <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
+                    <Icon className={`w-5 h-5 ${textColor}-600 mt-0.5`} />
                     <div className="flex-1">
-                      <h4 className="font-semibold text-green-800 mb-2">
+                      <h4 className={`font-semibold ${textColor}-800 mb-2`}>
                         Validation Result
                       </h4>
                       {result.score !== undefined && (
-                        <p className="text-green-700 mb-2">
+                        <p className={`${textColor}-700 mb-2`}>
                           <strong>Score:</strong> {result.score}/100
                         </p>
                       )}
                       {result.transcription && (
-                        <p className="text-green-700 mb-2">
+                        <p className={`${textColor}-700 mb-2`}>
                           <strong>Transcription:</strong> {result.transcription}
                         </p>
                       )}
                       {result.feedback && (
-                        <p className="text-green-700 mb-2">
+                        <p className={`${textColor}-700 mb-2`}>
                           <strong>Feedback:</strong> {result.feedback}
                         </p>
                       )}
                       {result.errors && result.errors.length > 0 && (
                         <div className="mt-2">
-                          <strong className="text-green-800">Errors:</strong>
-                          <ul className="list-disc list-inside text-green-700 mt-1">
+                          <strong className={`${textColor}-800`}>
+                            Errors:
+                          </strong>
+                          <ul
+                            className={`list-disc list-inside ${textColor}-700 mt-1`}
+                          >
                             {result.errors.map((error, idx) => (
                               <li key={idx}>{error}</li>
                             ))}
@@ -282,10 +323,12 @@ export const SpeakingSection: React.FC<SectionProps> = ({
                       )}
                       {result.suggestions && result.suggestions.length > 0 && (
                         <div className="mt-2">
-                          <strong className="text-green-800">
+                          <strong className={`${textColor}-800`}>
                             Suggestions:
                           </strong>
-                          <ul className="list-disc list-inside text-green-700 mt-1">
+                          <ul
+                            className={`list-disc list-inside ${textColor}-700 mt-1`}
+                          >
                             {result.suggestions.map((suggestion, idx) => (
                               <li key={idx}>{suggestion}</li>
                             ))}

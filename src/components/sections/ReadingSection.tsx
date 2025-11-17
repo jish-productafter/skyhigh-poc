@@ -1,16 +1,21 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { BookOpen } from "lucide-react";
-import { SectionProps, ReadingQuestion } from "@/types";
+import { ReadingSectionProps, ReadingQuestion } from "@/types";
 import { GermanQuestion } from "@/components/ui/GermanQuestion";
 import { QuestionContainer } from "@/components/ui/QuestionContainer";
 import { AnswerFeedback } from "@/components/ui/AnswerFeedback";
+import { adaptReadingQuestion } from "@/services/api";
 
-export const ReadingSection: React.FC<SectionProps> = ({
+export const ReadingSection: React.FC<ReadingSectionProps> = ({
   questions,
   level,
 }) => {
+  // Adapt API questions to app format
+  const adaptedQuestions = useMemo(() => {
+    return questions.map(adaptReadingQuestion);
+  }, [questions]);
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [showFeedback, setShowFeedback] = useState<Record<number, boolean>>({});
 
@@ -41,7 +46,7 @@ export const ReadingSection: React.FC<SectionProps> = ({
         </span>
       </p>
 
-      {questions.map((q: ReadingQuestion) => (
+      {adaptedQuestions.map((q: ReadingQuestion) => (
         <QuestionContainer key={q.id} id={q.id} level={level}>
           <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-6">
             <div className="shrink-0 p-4 border rounded-lg bg-gray-50 w-full md:w-1/3">

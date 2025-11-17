@@ -173,3 +173,23 @@ export interface SectionProps {
   questions: any[];
   level: Level;
 }
+
+export interface ListeningSectionProps {
+  questions: import("@/services/api").ApiListeningQuestion[];
+  level: Level;
+}
+
+export interface ReadingSectionProps {
+  questions: import("@/services/api").ApiReadingQuestion[];
+  level: Level;
+}
+
+export interface WritingSectionProps {
+  questions: import("@/services/api").ApiWritingQuestion[];
+  level: Level;
+}
+
+export interface SpeakingSectionProps {
+  questions: import("@/services/api").ApiSpeakingQuestion[];
+  level: Level;
+}

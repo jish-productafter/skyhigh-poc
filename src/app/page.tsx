@@ -1,14 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import {
-  Level,
-  Section,
-  ListeningQuestion,
-  ReadingQuestion,
-  WritingQuestion,
-  SpeakingQuestion,
-} from "@/types";
+import { Level, Section } from "@/types";
 import { EXAM_CONTENT } from "@/data";
 import { Header } from "@/components/layout/Header";
 import { LevelSelection } from "@/components/pages/LevelSelection";
@@ -23,20 +16,20 @@ import {
   generateReading,
   generateWriting,
   generateSpeaking,
-  adaptListeningQuestion,
-  adaptReadingQuestion,
-  adaptWritingQuestion,
-  adaptSpeakingQuestion,
+  ApiListeningQuestion,
+  ApiReadingQuestion,
+  ApiWritingQuestion,
+  ApiSpeakingQuestion,
 } from "@/services/api";
 
 const App = () => {
   const [activeLevel, setActiveLevel] = useState<Level | "Basic" | null>(null);
   const [activeSection, setActiveSection] = useState<Section | null>(null);
   const [questions, setQuestions] = useState<
-    | ListeningQuestion[]
-    | ReadingQuestion[]
-    | WritingQuestion[]
-    | SpeakingQuestion[]
+    | ApiListeningQuestion[]
+    | ApiReadingQuestion[]
+    | ApiWritingQuestion[]
+    | ApiSpeakingQuestion[]
   >([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -73,7 +66,7 @@ const App = () => {
                 topic: defaultTopic,
                 level: activeLevel,
               });
-              setQuestions(listeningData.map(adaptListeningQuestion));
+              setQuestions(listeningData);
               break;
             }
             case "READING": {
@@ -82,7 +75,7 @@ const App = () => {
                 level: activeLevel,
                 prefer_type: "MultipleChoice",
               });
-              setQuestions(readingData.map(adaptReadingQuestion));
+              setQuestions(readingData);
               break;
             }
             case "WRITING": {
@@ -92,9 +85,7 @@ const App = () => {
                 task_type: "email",
               });
               console.log("Raw writing data from API:", writingData);
-              const adapted = writingData.map(adaptWritingQuestion);
-              console.log("Adapted writing questions:", adapted);
-              setQuestions(adapted);
+              setQuestions(writingData);
               break;
             }
             case "SPEAKING": {
@@ -103,7 +94,7 @@ const App = () => {
                 level: activeLevel,
                 interaction_type: "interview",
               });
-              setQuestions(speakingData.map(adaptSpeakingQuestion));
+              setQuestions(speakingData);
               break;
             }
           }
@@ -208,28 +199,28 @@ const App = () => {
       case "LISTENING":
         return (
           <ListeningSection
-            questions={questions as ListeningQuestion[]}
+            questions={questions as ApiListeningQuestion[]}
             level={activeLevel}
           />
         );
       case "READING":
         return (
           <ReadingSection
-            questions={questions as ReadingQuestion[]}
+            questions={questions as ApiReadingQuestion[]}
             level={activeLevel}
           />
         );
       case "WRITING":
         return (
           <WritingSection
-            questions={questions as WritingQuestion[]}
+            questions={questions as ApiWritingQuestion[]}
             level={activeLevel}
           />
         );
       case "SPEAKING":
         return (
           <SpeakingSection
-            questions={questions as SpeakingQuestion[]}
+            questions={questions as ApiSpeakingQuestion[]}
             level={activeLevel}
           />
         );

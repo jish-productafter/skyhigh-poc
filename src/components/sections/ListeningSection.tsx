@@ -1,16 +1,21 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useMemo } from "react";
 import { Speaker, Pause, Volume2 } from "lucide-react";
-import { SectionProps, ListeningQuestion } from "@/types";
+import { ListeningSectionProps, ListeningQuestion } from "@/types";
 import { GermanQuestion } from "@/components/ui/GermanQuestion";
 import { QuestionContainer } from "@/components/ui/QuestionContainer";
 import { AnswerFeedback } from "@/components/ui/AnswerFeedback";
+import { adaptListeningQuestion } from "@/services/api";
 
-export const ListeningSection: React.FC<SectionProps> = ({
+export const ListeningSection: React.FC<ListeningSectionProps> = ({
   questions,
   level,
 }) => {
+  // Adapt API questions to app format
+  const adaptedQuestions = useMemo(() => {
+    return questions.map(adaptListeningQuestion);
+  }, [questions]);
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [showFeedback, setShowFeedback] = useState<Record<number, boolean>>({});
   const [playing, setPlaying] = useState<Record<number, boolean>>({});
@@ -153,7 +158,7 @@ export const ListeningSection: React.FC<SectionProps> = ({
         </span>
       </p>
 
-      {questions.map((q: ListeningQuestion) => (
+      {adaptedQuestions.map((q: ListeningQuestion) => (
         <QuestionContainer key={q.id} id={q.id} level={level}>
           <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
             <div className="shrink-0">

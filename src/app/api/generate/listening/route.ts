@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const API_BASE_URL = "https://german.productafter.com";
+const API_BASE_URL = process.env.API_BASE_URL!;
 
 export async function POST(request: NextRequest) {
   try {
@@ -34,7 +34,32 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const data = await response.json();
+    // Get response as text first to handle potential JSON parsing errors
+    const responseText = await response.text();
+    let data;
+    try {
+      data = JSON.parse(responseText);
+    } catch (parseError) {
+      console.error("Failed to parse JSON response:", parseError);
+      console.error(
+        "Response text (first 1000 chars):",
+        responseText.substring(0, 1000)
+      );
+      console.error("Response text length:", responseText.length);
+      return NextResponse.json(
+        {
+          error: "Invalid JSON response from API",
+          details:
+            parseError instanceof Error
+              ? parseError.message
+              : "Unknown parsing error",
+          responsePreview: responseText.substring(0, 500),
+        },
+        { status: 500 }
+      );
+    }
+
+    console.log("listening questions", data);
     return NextResponse.json(data);
   } catch (error) {
     console.error("Error proxying listening request:", error);
