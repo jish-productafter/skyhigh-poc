@@ -1,0 +1,3469 @@
+{
+  "syllabus": {
+    "A1": {
+      "listening": [
+        {
+          "id": 1,
+          "type": "MultipleChoice",
+          "question": "Wann fand der letzte Besuch statt?",
+          "translation": "When was the doctor's last visit?",
+          "audioText": "Er kam vorgestern an, aber vor dem Vortrag erholte ich mich nicht.",
+          "audioText_translation": "He returned the day before yesterday, but didn't recover before the previous lecture.",
+          "audioDescription": "A person explaining when they were last at place.",
+          "ttsPrompt": "Arrivals and recovery times",
+          "options": ["gestern", "vor dem Vortag", "am Vortag", "vorgestern"],
+          "options_translations": [
+            "yesterday",
+            "before that",
+            "the day before",
+            "day before yesterday"
+          ],
+          "correctAnswer": "vorgestern",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A1",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T05:52:50.441757"
+          }
+        },
+        {
+          "id": 2,
+          "type": "MultipleChoice",
+          "question": "Wann ist der Zug angekommen?",
+          "translation": "When did the train arrive?",
+          "audioText": "Der Zug ist heute Vormittag angekommen. Wann wartest du?",
+          "audioText_translation": "The train arrived this morning. When are you waiting?",
+          "audioDescription": "Someone checks the train schedule.",
+          "ttsPrompt": "Train schedules and arrival times",
+          "options": [
+            "gestern",
+            "heute Vormittag",
+            "letzte Woche",
+            "am Sonntag"
+          ],
+          "options_translations": [
+            "yesterday",
+            "this morning",
+            "last week",
+            "Sunday"
+          ],
+          "correctAnswer": "gestern",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A1",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T05:52:50.441757"
+          }
+        },
+        {
+          "id": 3,
+          "type": "MultipleChoice",
+          "question": "Wo ist der verlassene Baby gefunden?",
+          "translation": "Where was the abandoned baby found?",
+          "audioText": "Das Baby ist in der Ecke levendig geblieben, warte meine Punkte.",
+          "audioText_translation": "The baby is alive in the corner, I mark the point.",
+          "audioDescription": "Someone reports about baby's location.",
+          "ttsPrompt": "Lost baby found in a park",
+          "options": [
+            "in der Küche",
+            "im Sandkasten",
+            "im Korb",
+            "bei der Mutter"
+          ],
+          "options_translations": [
+            "in the kitchen",
+            "in the sandbox",
+            "in the basket",
+            "with the mother"
+          ],
+          "correctAnswer": "im Korb",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A1",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T05:52:50.441757"
+          }
+        },
+        {
+          "id": 4,
+          "type": "MultipleChoice",
+          "question": "Kann ich dir mit Bequem von Luggage bekannt?",
+          "translation": "Can I help you with luggage comfortably?",
+          "audioText": "Ist diese Tasche nach dem Aufreisen bequem oder zu schwer?",
+          "audioText_translation": "Is this bag comfortable or too heavy after packing?",
+          "audioDescription": "Luggage handler interacts with traveler.",
+          "ttsPrompt": "Luggage comfort discussion",
+          "options": ["Toilette", "Wand", "Sack", "Koffer"],
+          "options_translations": ["toilet", "wall", "bag", "suitcase"],
+          "correctAnswer": "Sack",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A1",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T05:52:50.441757"
+          }
+        },
+        {
+          "id": 5,
+          "type": "MultipleChoice",
+          "question": "Find entlang der Linie beruhigen, was schaffst du?",
+          "translation": "Can you stay calm along the line?",
+          "audioText": "Don't let the rain nervieren you during the trip.",
+          "audioText_translation": "Don't let the rain bother you during the trip.",
+          "audioDescription": "A conductor calms passengers during a delay.",
+          "ttsPrompt": "Staying calm during travel disruptions",
+          "options": ["zurückkehren", "beruhigen", "hängen bleiben", "schrei"],
+          "options_translations": ["return", "calm down", "stay put", "shout"],
+          "correctAnswer": "beruhigen",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A1",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T05:52:50.441757"
+          }
+        },
+        {
+          "id": 6,
+          "type": "MultipleChoice",
+          "question": "Was benutzt du, um nach dem Bade zu reinigen?",
+          "translation": "What do you use to clean after bathing?",
+          "audioText": "Nimm nächstes Mal mehr Duschgel. Das ist besser für die Haut.",
+          "audioText_translation": "Use more shower gel next time. It's better for your skin.",
+          "audioDescription": "Bathroom attendant gives tips.",
+          "ttsPrompt": "Shower gel recommendation",
+          "options": ["Shampoo", "Duschgel", "Seife", "Sahnemittel"],
+          "options_translations": ["Shampoo", "shower gel", "soap", "loofah"],
+          "correctAnswer": "Duschgel",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A1",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T05:52:50.441757"
+          }
+        },
+        {
+          "id": 7,
+          "type": "MultipleChoice",
+          "question": "Wo soll man das Souvenir zeigen?",
+          "translation": "Where should you display the souvenir?",
+          "audioText": "Das Souvenir sollte auf dem Tisch bleiben, nicht im Hausfahrzeug.",
+          "audioText_translation": "The souvenir should stay on the table, not in the car.",
+          "audioDescription": "Museum guide advises tourists.",
+          "ttsPrompt": "Souvenir display location",
+          "options": [
+            "auf dem Tisch",
+            "im Koffer",
+            "ins Regal",
+            "bei den Nachbarn"
+          ],
+          "options_translations": [
+            "on the table",
+            "in the suitcase",
+            "on the shelf",
+            "with the neighbors"
+          ],
+          "correctAnswer": "auf dem Tisch",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A1",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T05:52:50.441757"
+          }
+        },
+        {
+          "id": 8,
+          "type": "MultipleChoice",
+          "question": "Was hat der Kassierer zurückgewiesen?",
+          "translation": "What did the cashier refuse?",
+          "audioText": "Hier gibt er den Metall vom Souvenir zurück, sag Häuschen.",
+          "audioText_translation": "Here he gives back the metal from the souvenir, say Kuchenhaus.",
+          "audioDescription": "Customer returns a metal souvenir.",
+          "ttsPrompt": "Returning metal souvenir at cash desk",
+          "options": ["Kunstwerk", "Duschgel", "Portemonnaie", "Pausenbrett"],
+          "options_translations": [
+            "artwork",
+            "shower gel",
+            "wallet",
+            "pause table"
+          ],
+          "correctAnswer": "Kunstwerk",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A1",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T05:52:50.441757"
+          }
+        },
+        {
+          "id": 9,
+          "type": "MultipleChoice",
+          "question": "Wovon spricht der Mann über seinen Haushalt?",
+          "translation": "What did the man speak about his household?",
+          "audioText": "Mein Hausrecht bleibt null, aber der Freund wird stinkensaugen.",
+          "audioText_translation": "My household's rule stays null, but the friend eats stink.",
+          "audioDescription": "People discussing food consumption.",
+          "ttsPrompt": "Household food habits",
+          "options": ["Duschgel", "Team", "Nerven", "Souvenir"],
+          "options_translations": ["shower gel", "team", "nerves", "souvenir"],
+          "correctAnswer": "Souvenir",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A1",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T05:52:50.441757"
+          }
+        },
+        {
+          "id": 10,
+          "type": "MultipleChoice",
+          "question": "Was verarbeitet das bestimmte Label?",
+          "translation": "What does the specific label process?",
+          "audioText": "Das cheese-hat ein Talley Label, also for meinen Migranten.",
+          "audioText_translation": "The cheese has the Turkey label, so Dutch migrants.",
+          "audioDescription": "Discussion about a cheese label's meaning.",
+          "ttsPrompt": "Food label discussion",
+          "options": ["Brand", "Ding", "Material", "Ingredient"],
+          "options_translations": ["brand", "thing", "material", "ingredient"],
+          "correctAnswer": "Brand",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A1",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T05:52:50.441757"
+          }
+        }
+      ],
+      "reading": [
+        {
+          "id": 1,
+          "type": "MultipleChoice",
+          "question": "Welche Art von Kleidung wird in der Modeschule hergestellt? \n\nPassage: In der Modeschule in Hamburg entwerfe ich neue Trends für Damen. Gestern habe ich ein komplettes Set für den Sommer gemacht. \n\nPassage Translation: At the fashion school in Hamburg, I design new trends for women. Yesterday, I created a complete outfit for summer.",
+          "question_translation": "What type of clothing is being made at the fashion school?",
+          "options": ["mens fashion", "women's fashion", "shoe collection"],
+          "options_translations": [
+            "mens fashion",
+            "women's fashion",
+            "shoe collection"
+          ],
+          "correctAnswer": "women's fashion",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A1",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T05:59:13.179969",
+            "passage_word_count": 42
+          }
+        },
+        {
+          "id": 2,
+          "type": "MultipleChoice",
+          "question": "Welches Gesamtthema verbindet die in dem Postcard erwähnten Tätigkeiten? \n\nPassage: Am Wochenende trat ich einem Photography Workshop bei. Wir lernen, wie man die perfekte Aufnahme macht, und tauschen Souvenirs aus. \n\nPassage Translation: At the weekend, I joined a photography workshop. We'll learn how to take the perfect shot and exchange souvenirs.",
+          "question_translation": "What is the central topic of the activities mentioned in the postcard?",
+          "options": [
+            "fashion industry",
+            "photographic accessories",
+            "fitness routines"
+          ],
+          "options_translations": [
+            "fashion industry",
+            "photographic accessories",
+            "fitness routines"
+          ],
+          "correctAnswer": "photographic accessories",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A1",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T05:59:13.179969",
+            "passage_word_count": 44
+          }
+        },
+        {
+          "id": 3,
+          "type": "MultipleChoice",
+          "question": "Welches Fachbereich richtet sich auf eine spezifische Hobbyspezialisierung? \n\nPassage: Mein Onkel arbeitet an Fitnessgeräten. Er repariert und verbessert sie zusätzlich zu seinem Hobby: Trainieren. \n\nPassage Translation: My uncle works in fitness equipment. He repairs and improves them alongside his hobby: exercising.",
+          "question_translation": "Which field of study focuses on a specific hobby specialization?",
+          "options": ["fashion design", "equipment design", "shoe fashion"],
+          "options_translations": [
+            "fashion design",
+            "equipment design",
+            "shoe fashion"
+          ],
+          "correctAnswer": "equipment design",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A1",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T05:59:13.179969",
+            "passage_word_count": 38
+          }
+        },
+        {
+          "id": 4,
+          "type": "MultipleChoice",
+          "question": "Welche Aussage beschreibt korrekt die Rolle einer Modedesignerin? \n\nPassage: Die neue Mode-Designerin im Laden hat eine Ausstellung eröffnet. Sie präsentiert Lebendige Trends und einzigartige Kleider. \n\nPassage Translation: The new fashion designer at the store opened an exhibition. She presents lively trends and unique dresses.",
+          "question_translation": "What describes the role of the fashion designer?",
+          "options": [
+            "creates advertising campaigns",
+            "develops clothing and accessories",
+            "designs architectural plans"
+          ],
+          "options_translations": [
+            "creates advertising campaigns",
+            "develops clothing and accessories",
+            "designs architectural plans"
+          ],
+          "correctAnswer": "develops clothing and accessories",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A1",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T05:59:13.179969",
+            "passage_word_count": 45
+          }
+        },
+        {
+          "id": 5,
+          "type": "MultipleChoice",
+          "question": "Welches Produkt kann Ebenenabhängige Menschen besonders interessieren? \n\nPassage: Im Souvenirfach kaufen viele Touristen Erinnerungen. Besonders Schwimmbekleidung und Haushaltsdekor sind populär. \n\nPassage Translation: In the souvenir shop, many tourists buy keepsakes. Especially swimwear and home decor are popular.",
+          "question_translation": "Which product would interest people focused on interior design?",
+          "options": [
+            "shoe collection",
+            "swimwear",
+            "photographic accessories"
+          ],
+          "options_translations": [
+            "shoe collection",
+            "swimwear",
+            "photographic accessories"
+          ],
+          "correctAnswer": "swimwear",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A1",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T05:59:13.179969",
+            "passage_word_count": 42
+          }
+        },
+        {
+          "id": 6,
+          "type": "MultipleChoice",
+          "question": "Welche Bezeichnung beschreibt kompetenannte Begeisterte für Schuhe? \n\nPassage: Mein Freund ist echte Schuhfan. Er sucht stets nach einzigartigen Designs und respecteriert keine Preisgrenzen. \n\nPassage Translation: My friend is a real shoe fan. He constantly looks for unique designs and respects no price limits.",
+          "question_translation": "What term characterizes dedicated shoe enthusiasts?",
+          "options": ["photographer", "shoe addict", "fitness coach"],
+          "options_translations": [
+            "photographer",
+            "shoe addict",
+            "fitness coach"
+          ],
+          "correctAnswer": "shoe addict",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A1",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T05:59:13.179969",
+            "passage_word_count": 37
+          }
+        },
+        {
+          "id": 7,
+          "type": "MultipleChoice",
+          "question": "Welches Organismus-Ziele haben die in dem Leitfaden genannten Aktivitäten? \n\nPassage: In der Bademode-Woche gibt es viele Angebote. Von Modefans werden Entwürfe am Strand bewertet und lebendig gemacht. \n\nPassage Translation: During the swimwear week, there are many offers. Designs are evaluated and become alive by fashionistas on the beach.",
+          "question_translation": "What goal do the activities described in the manual have?",
+          "options": [
+            "promote fitness equipment",
+            "organize sports competitions",
+            "showcase fashion designs and accessories"
+          ],
+          "options_translations": [
+            "promote fitness equipment",
+            "organize sports competitions",
+            "showcase fashion designs and accessories"
+          ],
+          "correctAnswer": "showcase fashion designs and accessories",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A1",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T05:59:13.179969",
+            "passage_word_count": 39
+          }
+        },
+        {
+          "id": 8,
+          "type": "MultipleChoice",
+          "question": "Welches Produkt ist ein Beispiel für praktische Fotografieausrüstung? \n\nPassage: Mit einem lebendigen Stil, erweitert das neue Fotozubehör Anfänger. Die Preise sind eccentric für ein Startangebot. \n\nPassage Translation: With a vivid style, the new photographic accessories help beginners. The prices are eccentric for a starter offer.",
+          "question_translation": "Which product is an example of practical photography equipment?",
+          "options": [
+            "fashion course",
+            "fitness equipment",
+            "photographic accessories"
+          ],
+          "options_translations": [
+            "fashion course",
+            "fitness equipment",
+            "photographic accessories"
+          ],
+          "correctAnswer": "photographic accessories",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A1",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T05:59:13.179969",
+            "passage_word_count": 30
+          }
+        }
+      ],
+      "writing": [
+        {
+          "id": 1,
+          "type": "email",
+          "task_title": "Job Anwendung",
+          "task_description": "Schreibe eine E-Mail von der Bewerberin an eine Modeschule. Bitte um ein Vorstellungsgespräch für eine Designer-Stelle.",
+          "task_instructions": "- Fragebogenstellung ausladen\n - Nennen Sie Ihre Relevanz für die Designbranche\n - Erwähnen Sie, dass Sie bereits mit Design-Tools arbeiten können\n - Halten Sie die E-Mail professionell und knapp\n - Führen Sie keine persönlichen Daten ein",
+          "context": "Die Bewerberin möchte als Modedesignerin bei einer renommierten Modeschule arbeiten. Sie bewarnt sich um eine freie Stelle als Designerin.",
+          "content_points": [
+            "Anfrage nach Vorstellungsgespräch",
+            "Relevanz für die Designbranche erläutern",
+            "Kenntnis von Design-Tools beschreiben"
+          ],
+          "word_count_min": 30,
+          "word_count_max": 50,
+          "example_response": "Sehr geehrte Damen und Herren,\n\nich bewerbe mich um eine Designer-Stelle an Ihrer renommierten Modeschule. Mit meiner Erfahrung in der Trikot- und Accessorieentwicklung suche ich eine neue Herausforderung. Ich spätze auf aktuelle Designer-Tools ein und verfüge über fundierte Kenntnisse in Farbtheorie. Für ein persönliches Meeting lade ich Sie zu einem Vorstellungsgespräch ein.",
+          "evaluation_criteria": {
+            "task_completion": "Bewältigung aller fünf Punkte (Anfrage, Relevanz, Tools, Professionalität, Keine Daten)",
+            "vocabulary_range": "Richtiges Verwenden von 'Designer-Stelle', 'Modeschule', 'designer Tools' oder 'Farbtheorie'",
+            "grammar_complexity": "Einfache Sätze mit Konjunktion Appell und korrekter Akkusativ nach 'bekannt'",
+            "coherence_organization": "Logische Struktur: Glücksänderung, Hauptsätze, Schließung"
+          },
+          "metadata": {
+            "level": "A1",
+            "skill": "WRITING",
+            "topic": "work",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:03:16.385593",
+            "task_type": "email"
+          }
+        },
+        {
+          "id": 2,
+          "type": "email",
+          "task_title": "Arbeitsinformationen",
+          "task_description": "Schreiben Sie eine E-Mail vom Arbeitgeber an einen Designer. Informieren Sie ihn über einen neuen Projektbeginn.",
+          "task_instructions": "- Stellen Sie das Projekt vor\n - Betonen Sie die Wichtigkeit pünktlicher Zusammenarbeit\n - Fragen Sie nach Verfügbarkeit und Erfahrungen\n - Verwenden Sie 'bitte' und 'näher besprechen'\n - Vermeiden Sie komplexe Satzkonstruktionen",
+          "context": "Ein Designunternehmen möchte einen neuen Kunden kontaktieren und baut auf Erfahrung des Designers.",
+          "content_points": [
+            "Vorstellung eines Designprojekts",
+            "Bedeutung von Pünktlichkeit betonen",
+            "Anfragen der Verfügbarkeit"
+          ],
+          "word_count_min": 30,
+          "word_count_max": 50,
+          "example_response": "Sehr geehrte Frau Schmidt,\n\nwir starten nächsten Monat ein großes Modedesign-Projekt. Pünktlichkeit bei Meetings ist hier besonders betont. Haben Sie Zeit als freiberufliche Designerin? Wir können gemeinsam die Kollektion planen. Bitte sagen Sie uns, wie viel Zeit Sie monatlich für Projekte einplanen.",
+          "evaluation_criteria": {
+            "task_completion": "Beantwortung aller vier Punkte (Projektvorstellung, Pünktlichkeit, Verfügbarkeit, korrekter Appell)",
+            "vocabulary_range": "Richtig Verwendung von 'betont', 'Modeschule' scheint ungeeignet, stattdessen 'Designprojekt'",
+            "grammar_complexity": "Einfache Satzkonstruktionen",
+            "coherence_organization": "Chronologische Reihenfolge: Projektankündigung > Forderung > Anregung zur Antwort"
+          },
+          "metadata": {
+            "level": "A1",
+            "skill": "WRITING",
+            "topic": "work",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:03:16.385593",
+            "task_type": "email"
+          }
+        },
+        {
+          "id": 3,
+          "type": "email",
+          "task_title": "Kommende Pläne",
+          "task_description": "Verschicken Sie der Kollegin im Laden Ihrer Modeschule mit. Sie müssen am Freitag die Modelle neu präsentieren.",
+          "task_instructions": "- Berichten Sie, was Sie für Montag vorbereiten\n - Erwähnen Sie die Herausforderung, Modelle einzunaranken\n - Bitte geben Sie Feedback zur zeitlichen Planung\n - Verwenden Sie 'vorgestern’ zur Erzählung über letzte Woche\n - Beziehen Sie sich auf 'die Modedesignerin'",
+          "context": "Zwei Modedesignerinnen planen eine gemeinsame Veranstaltung für Donnerstag nach Abschluss eines Seminarwochenendes (vorgestern).",
+          "content_points": [
+            "Beschreibung der Montag-Aktivitäten",
+            "Einschätzung der Veranstaltungsbedingungen",
+            "Anfrage nach Feedback"
+          ],
+          "word_count_min": 30,
+          "word_count_max": 50,
+          "example_response": "Hallo Michaela,\n\nvorgestern war unsere letzte Modeschule. Am Montag bin ich um 9 Uhr im Laden. Bis dahin muss ich 10 Oberteile bügeln und die Modeschilder vorbereiten. Leider nervt der laute Ton des neuen Fitnessgeräts. Funktioniert die Uhrzeit für Sie?",
+          "evaluation_criteria": {
+            "task_completion": "Beantwortung aller sechs Punkte (Montag, Oberteile, Schilder, Fitnessgerät, Feedbackanfrage, 'vorgestern')",
+            "vocabulary_range": "Verwendung von 'vorgestern', 'nervt', 'Modeschule' und 'Modeschilder'",
+            "grammar_complexity": "Einfache Satzstrukturen",
+            "coherence_organization": "Ursache-Wirkung-Kontext: Vorgestern > heute > Montag > Anregung zur Anpassung"
+          },
+          "metadata": {
+            "level": "A1",
+            "skill": "WRITING",
+            "topic": "work",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:03:16.385593",
+            "task_type": "email"
+          }
+        },
+        {
+          "id": 4,
+          "type": "email",
+          "task_title": "Kunde Feedback",
+          "task_description": "Erstellen Sie eine Feedback-E-Mail an die Kundin, die Ihre Designs erworben hat.",
+          "task_instructions": "- Erwähnen Sie die Zufriedenheit mit dem Design\n - Betonen Sie die Bedeutung der Kundenmeinung\n - Fragen Sie nach Wunschartikeln für nächstes Jahr\n - Verwenden Sie formelle Anrede\n - Beziehen Sie sich auf 'die Modeschule'",
+          "context": "Ein Modedesigner erhält Post über eine Rückmeldung von einer Kundin seiner Modeschule.",
+          "content_points": [
+            "Zufriedenheit",
+            "Auswahl von Produkten",
+            "Anfragen neuer Modelle"
+          ],
+          "word_count_min": 30,
+          "word_count_max": 50,
+          "example_response": "Sehr geehrte Frau Meier,\n\nvorgestern haben wir Ihr Feedback zu meinen Designs erhalten. Es betont, wie beeindruckend die Passformen sind. Könnten wir im Herbst Artikel mit Fitnessgeräte-Integration entwickeln? Ich freue mich auf Ihre Vorschläge.",
+          "evaluation_criteria": {
+            "task_completion": "Beantwortung aller fünf Punkte (Rückmeldung, Feedbackbedeutung, Wunschartikel, formelle Anrede, Modeschule)",
+            "vocabulary_range": "Verwendung von 'betont', 'Modeschule' und 'Designern'",
+            "grammar_complexity": "Einfache Satzstruktur",
+            "coherence_organization": "Feedback > Wertschätzung > Weiterentwicklung"
+          },
+          "metadata": {
+            "level": "A1",
+            "skill": "WRITING",
+            "topic": "work",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:03:16.385593",
+            "task_type": "email"
+          }
+        },
+        {
+          "id": 5,
+          "type": "email",
+          "task_title": "Kostenunterschiede klären",
+          "task_description": "Erklären Sie einem Kunden den Preisunterschied zwischen Ihren Designs und denen einer Konkurrenzmarke.",
+          "task_instructions": "- Betonen Sie die Qualität Ihrer Materialien\n - Vergleichen Sie die Zwischenzeiten bei Passformanpassungen\n - Erwähnen Sie die Investition in die Modeschule\n - Verwenden Sie 'vorgestern' und 'Designerin'\n - Begrenzen Sie sich auf 40 Worte",
+          "context": "Ein günstigerer Wettbewerber unterstellt die Qualität. Der Designer antwortet überlegend.",
+          "content_points": [
+            "Qualität der Materialien",
+            "Passformanpassungszeit",
+            "Investition in Ausbildung"
+          ],
+          "word_count_min": 30,
+          "word_count_max": 50,
+          "example_response": "Sehr geehrte Frau Weber,\n\nim Gegensatz zu preisgünstigen Modedesignern betont unsere Modeschule Qualität. Vorgestern haben wir drei Wochen an einer Mantel-Passform gewirkt. Das Ergebnis nutzt bessere Materialien. Die Konkurrenz kommt von der Fertigung in Asien.",
+          "evaluation_criteria": {
+            "task_completion": "Beantwortung aller fünf Punkte",
+            "vocabulary_range": "Verwendung von 'betont', 'Modeschule', 'Designerin'",
+            "grammar_complexity": "Präteritum und Akkusativ korrekt",
+            "coherence_organization": "Vergleich > Erklärung > Schluss"
+          },
+          "metadata": {
+            "level": "A1",
+            "skill": "WRITING",
+            "topic": "work",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:03:16.385593",
+            "task_type": "email"
+          }
+        }
+      ],
+      "speaking": [
+        {
+          "id": 1,
+          "type": "interview",
+          "task_title": "Reise und Souvenir",
+          "task_description": "Beschreibe eine Reise und bringe ein Souvenir aus dem Urlaub mit.",
+          "task_instructions": "Der Schüler soll seine letzte Reise beschreiben: wann er angekommen ist, ob er ein Souvenir gekauft hat und wie bequem die Unterkunft war.",
+          "prompt": "Erzähle über deine letzte Reise. Wann bist du angekommen, hast du ein Souvenir gekauft, und war die Unterkunft bequem?",
+          "prompt_translation": "Tell us about your last trip: when did you arrive, did you buy a souvenir, and was the accommodation comfortable?",
+          "follow_up_questions": [
+            "Wie viele Tage war die Reise?",
+            "Warst du mit jemandem?",
+            "Hattest du Probleme mit dem Weg?"
+          ],
+          "follow_up_translations": [
+            "How many days was the trip?",
+            "Were you with someone?",
+            "Did you have problems finding your way?"
+          ],
+          "acceptable_response_length": "15-30 seconds",
+          "vocabulary_required": ["ankommen", "Souvenir", "bequem"],
+          "grammar_structures_required": [
+            "Past tense (Perfekt-Idiomm)",
+            "Dative case (e.g., Unterkunft)"
+          ],
+          "example_response": "Letzte Woche bin ich am Montag angekommen. Ich habe ein Souvenir in der Touristenbude gekauft. Die Unterkunft war sehr bequem.",
+          "example_response_translation": "Last week, I arrived on Monday. I bought a souvenir in the tourist shop. The accommodation was very comfortable.",
+          "evaluation_criteria": {
+            "fluency_pronunciation": "Spricht klar und pausenlos, mit naturgemäßer Betonung.",
+            "vocabulary_accuracy": "Nutzt die Schlüsselvokabeln an und erklärt Begriffe bei Bedarf.",
+            "grammar_accuracy": "Korrekte Verwendung von Vergangenheitsformen (Perfekt) und Kasus.",
+            "task_completion": "Antwort beantwortet alle Aspekte der Frage.",
+            "interaction_ability": "Reagiert auf Folgefragen mit einfachen Ergänzungen."
+          },
+          "metadata": {
+            "level": "A1",
+            "skill": "SPEAKING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:07:49.874846",
+            "interaction_type": "interview",
+            "expected_duration_seconds": 25
+          }
+        },
+        {
+          "id": 2,
+          "type": "interview",
+          "task_title": "Duschgel und Retouren",
+          "task_description": "Sprich über ein Produkt, das geprüft bzw. zurückgeschickt wird.",
+          "task_instructions": "Der Schüler erklärt, warum er ein Produkt zurückschickt und welche Vorteile es hätte.",
+          "prompt": "Du hast Duschgel gekauft. Warum hast du es zurückgeschickt? War es nervend oder bequem?",
+          "prompt_translation": "You bought shower gel. Why did you return it? Was it annoying or comfortable?",
+          "follow_up_questions": [
+            "Hast du es erneut gekauft?",
+            "Welches Label hast du geprüft?",
+            "Wie lange brachtest du es, bevor du es zurückschicktest?"
+          ],
+          "follow_up_translations": [
+            "Did you buy it again?",
+            "Which label did you check?",
+            "How long did you use it before sending it back?"
+          ],
+          "acceptable_response_length": "15-30 seconds",
+          "vocabulary_required": ["zurücksicken", "bequem", "Label"],
+          "grammar_structures_required": [
+            "Past tense (Perfekt mit haben/senden)",
+            "Konjunktiv II (hätte, wäre)"
+          ],
+          "example_response": "Ich habe Duschgel mit einem floralen Label gekauft. Nach der ersten Nutzung war es aber nicht bequem, deshalb habe ich es zurückgeschickt.",
+          "example_response_translation": "I bought shower gel with a floral label. After first use, it wasn't comfortable, so I returned it.",
+          "evaluation_criteria": {
+            "fluency_pronunciation": "Klare Aussprache der technischen Begriffe (Label, nerven).",
+            "vocabulary_accuracy": "Verwendet Duschgel, Label und bequem passend einzusetzen.",
+            "grammar_accuracy": "Korrektes Verbkonjugieren im Konjunktiv II und Präteritum.",
+            "task_completion": "Erläutert Monatszeitraum und Motivation.",
+            "interaction_ability": "Nennt konkrete Produktmerkmale."
+          },
+          "metadata": {
+            "level": "A1",
+            "skill": "SPEAKING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:07:49.874846",
+            "interaction_type": "interview",
+            "expected_duration_seconds": 22
+          }
+        },
+        {
+          "id": 3,
+          "type": "interview",
+          "task_title": "Urlaub und Unbehagen",
+          "task_description": "Beschreibe ein unangenehmes Reiseerlebnis mit Nervengefühlen.",
+          "task_instructions": "Der Schüler erklärt, was ihn nervte und wie er es bewältigte.",
+          "prompt": "Erzähle von einer Reise, in der du nerven Sachen erlebt hast. War das Duschgel bequem?",
+          "prompt_translation": "Describe a trip where you experienced stressful situations. Was the shower gel comfortable?",
+          "follow_up_questions": [
+            "Wie hast du damit umgegangen?",
+            "War der Reiseort lebendig?",
+            "Hast du das Label auf dem Produkt gelesen?"
+          ],
+          "follow_up_translations": [
+            "How did you deal with it?",
+            "Was the location lively?",
+            "Did you read the label on the product?"
+          ],
+          "acceptable_response_length": "15-30 seconds",
+          "vocabulary_required": ["nerven", "Duschgel", "lebendig"],
+          "grammar_structures_required": [
+            "Past tense (war, hatte), Adverbialsatz ('weil')"
+          ],
+          "example_response": "Bei meiner Reise nach Berlin habe ich nervend laut laute Nachbarn erlebt. Das Duschgel in der Hotelland was aber bequem. Ich habe das Haus um 1 Uhr verlassen.",
+          "example_response_translation": "On a trip to Berlin, I experienced noisy neighbors. The hotel shower gel was comfortable. I left the house at 1am.",
+          "evaluation_criteria": {
+            "fluency_pronunciation": "Natürliche Betonung der Emotionswörter (nervend, bequem).",
+            "vocabulary_accuracy": "Deckt alle geforderten Vokabeln thematisch ein.",
+            "grammar_accuracy": "Korrekte Satzstruktur mit Zeitbahnen.",
+            "task_completion": "Beantwortet alle Folgefragen konkret.",
+            "interaction_ability": "Baut auf erste Antwort auf humorvolle Weise auf."
+          },
+          "metadata": {
+            "level": "A1",
+            "skill": "SPEAKING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:07:49.874846",
+            "interaction_type": "interview",
+            "expected_duration_seconds": 28
+          }
+        },
+        {
+          "id": 4,
+          "type": "interview",
+          "task_title": "Haushalt und Erfahrungen",
+          "task_description": "Spricht über Haushaltserfahrungen und Retourenprobleme.",
+          "task_instructions": "Der Schüler beschreibt, wie er einen Haushaltsgegenstand beurteilt und warum er ihn zurückgeschickt hat.",
+          "prompt": "Hast du jemals den Haushalt mit einem Bequemprodukt wie Duschgel neu eingerichtet? Warst du mit dem Souvenir zufrieden?",
+          "prompt_translation": "Have you ever set up a household with a comfortable product like shower gel? Were you satisfied with the souvenir?",
+          "follow_up_questions": [
+            "Wie steuerst du deinen Haushalt?",
+            "Kannst du ein Products mit einem farbigen Label empfehlen?",
+            "Was macht ein Produkt für dich nervend?"
+          ],
+          "follow_up_translations": [
+            "How do you manage your household?",
+            "Can you recommend a product with a colored label?",
+            "What makes a product annoying to you?"
+          ],
+          "acceptable_response_length": "15-30 seconds",
+          "vocabulary_required": ["Haushalt", "bequem", "Label"],
+          "grammar_structures_required": [
+            "Present tense, Comparative adjectives ('bequemer als...')"
+          ],
+          "example_response": "Ich benutze bequeme Duschgel im Haushalt. Einmal habe ich ein Produkt mit blauem Label zurückgeschickt, weil es zu teuer war.",
+          "example_response_translation": "I use comfortable shower gel in my household. Once I returned a product with a blue label because it was too expensive.",
+          "evaluation_criteria": {
+            "fluency_pronunciation": "Natürliche Umgangssprache im Sprechen erkennbar.",
+            "vocabulary_accuracy": "Passende Verknüpfung von Haushalt und Produktbeschreibung.",
+            "grammar_accuracy": "Vergleichende Strukturen im Present Tense.",
+            "task_completion": "Beantwortet Umfragefragen übereinstimmend.",
+            "interaction_ability": "Gibt konkrete Produktwerbereiungen."
+          },
+          "metadata": {
+            "level": "A1",
+            "skill": "SPEAKING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:07:49.874846",
+            "interaction_type": "interview",
+            "expected_duration_seconds": 24
+          }
+        },
+        {
+          "id": 5,
+          "type": "interview",
+          "task_title": "Zurückgeben und Erklären",
+          "task_description": "Analyse eines zurückgeschickten Produkts mit Gründe.",
+          "task_instructions": "Der Schüler analysiert ein Produkt und erläutert seine Entscheidung, es zurückzu schicken.",
+          "prompt": "Du hast Duschgel zurückgeschickt. Warum? War das Label qualitativ oder das Produkt nicht lebendig?",
+          "prompt_translation": "You returned shower gel. Why? Was the label quality or the product not lively?",
+          "follow_up_questions": [
+            "Was hättest du stattdessen kaufen können?",
+            "Beschreibe die Verpackung genauer.",
+            "Wie lange hast du es versucht, es zu benutzen?"
+          ],
+          "follow_up_translations": [
+            "What else could you have bought instead?",
+            "Describe the packaging more precisely.",
+            "How long did you try using it?"
+          ],
+          "acceptable_response_length": "15-30 seconds",
+          "vocabulary_required": ["zurücksicken", "Label", "lebendig"],
+          "grammar_structures_required": [
+            "Vergangenheitsform (Missetat: Smellemst DU das Produkt? > Schmellst DU es? Fehler in der Vergangenheitsform)"
+          ],
+          "example_response": "Ich habe Duschgel zurückgeschickt, weil das Label abgenutzt war. Das Produkt war nicht lebendig nachhaltig verpackt.",
+          "example_response_translation": "I returned shower gel because the label was worn out. The product wasn't sustainably packaged.",
+          "evaluation_criteria": {
+            "fluency_pronunciation": "Klare Unterscheidung von Homonomen (nerven vs. Service).",
+            "vocabulary_accuracy": "Präzis die Begriffe Duschgel und lebendig integriert.",
+            "grammar_accuracy": "Korrektes Erklären von Vergangenheitsituationen.",
+            "task_completion": "Beantwortet alle Punkte der Frage.",
+            "interaction_ability": "Nennt eine konkrete alternative Lösung."
+          },
+          "metadata": {
+            "level": "A1",
+            "skill": "SPEAKING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:07:49.874846",
+            "interaction_type": "interview",
+            "expected_duration_seconds": 26
+          }
+        },
+        {
+          "id": 6,
+          "type": "interview",
+          "task_title": "Urlaubsplanung mit Problemen",
+          "task_description": "Planung eines neuen Urlaubs mit Problemlösungskompetenz.",
+          "task_instructions": "Der Schüler plant einen neuen Urlaub und verbessert Fehler aus früheren Erfahrungen.",
+          "prompt": "Planen Schwung! Wann beginnt die Reise? Warum nicht am vorgestern? Was brauchst du bequem?",
+          "prompt_translation": "Let's plan a trip! When does it start? Why not yesterday? What do you need to be comfortable?",
+          "follow_up_questions": [
+            "Welches Produkt würdest du von Duschgel unterscheiden?",
+            "Wie voto ist die Lebensdauer eines Souvenirs?",
+            "Mussst du nervende Situationen vorhersehen?"
+          ],
+          "follow_up_translations": [
+            "What product would you distinguish from shower gel?",
+            "How long does a souvenir last?",
+            "Do you need to anticipate annoying situations?"
+          ],
+          "acceptable_response_length": "15-30 seconds",
+          "vocabulary_required": ["vorgestern", "bequem", "nerven"],
+          "grammar_structures_required": [
+            "Future plans (werde), modal verbs (können)"
+          ],
+          "example_response": "Ich fahre nächste Woche ab! Gebiets vorgestern ist viel zu spät. Ich brauche bequemes Duschgel und keine nervenden Menschen.",
+          "example_response_translation": "I'm leaving next week! Leaving yesterday would be too late. I need comfortable shower gel and no annoying people.",
+          "evaluation_criteria": {
+            "fluency_pronunciation": "Zielgerichtete Prosodie zur Darstellung von zukünftiger Planung.",
+            "vocabulary_accuracy": "Nutzt alle Schlüsselvokabeln im Kontext.",
+            "grammar_accuracy": "Korrekte Konstruktion von Zukunftssätzen.",
+            "task_completion": "Löst den ReisetRain plan aus der Ausgangslage korrekt",
+            "interaction_ability": "Verbindet bisherige Probleme mit Verbesserungsvorschlägen."
+          },
+          "metadata": {
+            "level": "A1",
+            "skill": "SPEAKING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:07:49.874846",
+            "interaction_type": "interview",
+            "expected_duration_seconds": 30
+          }
+        }
+      ]
+    },
+    "A2": {
+      "listening": [
+        {
+          "id": 1,
+          "type": "MultipleChoice",
+          "question": "What are they looking for?",
+          "translation": "contact",
+          "audioText": "Wir suchen Kontakt zu anderen Schulen.",
+          "audioText_translation": "We are looking for contact to other schools.",
+          "audioDescription": "A person speaking at a school meeting",
+          "ttsPrompt": "We are looking for contact to other schools.",
+          "options": ["Kontakt zu anderen Schulen", "Mittagspause", "Film"],
+          "options_translations": [
+            "contact to other schools",
+            "break time",
+            "movie"
+          ],
+          "correctAnswer": "Kontakt zu anderen Schulen",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A2",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:14:36.988452"
+          }
+        },
+        {
+          "id": 2,
+          "type": "MultipleChoice",
+          "question": "What are they discussing?",
+          "translation": "about what",
+          "audioText": "Sie fragen sich gegenseitig, worüber sie heute sprechen wollen.",
+          "audioText_translation": "They are discussing what they want to talk about today.",
+          "audioDescription": "Two friends sitting at a café table",
+          "ttsPrompt": "They are discussing what they want to talk about today.",
+          "options": ["Worüber", "Warum so spät", "Was essen sie"],
+          "options_translations": ["about what", "why so late", "what food"],
+          "correctAnswer": "Worüber",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A2",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:14:36.988452"
+          }
+        },
+        {
+          "id": 3,
+          "type": "MultipleChoice",
+          "question": "What is his job?",
+          "translation": "trainee",
+          "audioText": "Er arbeitet als Azubi in einer Bank.",
+          "audioText_translation": "He works as a trainee in a bank.",
+          "audioDescription": "A young man in a bank uniform",
+          "ttsPrompt": "He works as a trainee in a bank.",
+          "options": ["Kassierer", "Azubi", "Leitender Manager"],
+          "options_translations": ["cashier", "trainee", "senior manager"],
+          "correctAnswer": "Azubi",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A2",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:14:36.988452"
+          }
+        },
+        {
+          "id": 4,
+          "type": "MultipleChoice",
+          "question": "What is her favorite?",
+          "translation": "favourite",
+          "audioText": "Das ist meine Lieblings-Serie!",
+          "audioText_translation": "That's my favourite TV series!",
+          "audioDescription": "A person watching TV",
+          "ttsPrompt": "That's my favourite TV series!",
+          "options": [
+            "Lieblings-Serie",
+            "größte Schwierigkeit",
+            "bester Freund"
+          ],
+          "options_translations": [
+            "favourite TV series",
+            "biggest difficulty",
+            "best friend"
+          ],
+          "correctAnswer": "Lieblings-Serie",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A2",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:14:36.988452"
+          }
+        },
+        {
+          "id": 5,
+          "type": "MultipleChoice",
+          "question": "What are they planning?",
+          "translation": "holidays",
+          "audioText": "Wir organisieren unseren Oktober-Urlaub im Lehnertal.",
+          "audioText_translation": "We are organizing our October holidays in the Lehnertal Valley.",
+          "audioDescription": "A couple looking at a travel map",
+          "ttsPrompt": "We are organizing our October holidays in the Lehnertal Valley.",
+          "options": ["Oktober-Urlaub", "Winterreise", "Sommerferien"],
+          "options_translations": [
+            "October holidays",
+            "winter trip",
+            "summer holidays"
+          ],
+          "correctAnswer": "Oktober-Urlaub",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A2",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:14:36.988452"
+          }
+        },
+        {
+          "id": 6,
+          "type": "MultipleChoice",
+          "question": "How does he feel?",
+          "translation": "daft",
+          "audioText": "Du bist doch so doof, wenn du mich nicht hörst!",
+          "audioText_translation": "You're so daft when you don't hear me!",
+          "audioDescription": "A frustrated person on the street",
+          "ttsPrompt": "You're so daft when you don't hear me!",
+          "options": ["doof", "wütend", "kalt"],
+          "options_translations": ["daft", "angry", "cold"],
+          "correctAnswer": "doof",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A2",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:14:36.988452"
+          }
+        },
+        {
+          "id": 7,
+          "type": "MultipleChoice",
+          "question": "How does she greet him?",
+          "translation": "whisper",
+          "audioText": "Sie flüstert ihm ins Ohr.",
+          "audioText_translation": "She whispers into his ear.",
+          "audioDescription": "A woman leaning in to whisper",
+          "ttsPrompt": "She whispers into his ear.",
+          "options": ["flüstert ins Ohr", "spricht laut", "ruft von weitem"],
+          "options_translations": [
+            "whispers into ear",
+            "speaks loudly",
+            "shouts from afar"
+          ],
+          "correctAnswer": "flüstert ins Ohr",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A2",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:14:36.988452"
+          }
+        },
+        {
+          "id": 8,
+          "type": "MultipleChoice",
+          "question": "What is he doing?",
+          "translation": "congratulate",
+          "audioText": "Ich gratuliere ihm ganz herzlich zur neuen Aufgabe.",
+          "audioText_translation": "I congratulate him wholeheartedly on the new job.",
+          "audioDescription": "A person congratulating someone at a desk",
+          "ttsPrompt": "I congratulate him wholeheartedly on the new job.",
+          "options": ["zur neuen Aufgabe", "zur Hochzeit", "zum Geburtstag"],
+          "options_translations": [
+            "on the new job",
+            "to the wedding",
+            "for the birthday"
+          ],
+          "correctAnswer": "zur neuen Aufgabe",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A2",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:14:36.988452"
+          }
+        },
+        {
+          "id": 9,
+          "type": "MultipleChoice",
+          "question": "What did he obtain?",
+          "translation": "secondary modern school graduation",
+          "audioText": "Er hat seinen Hauptschulabschluss erfolgreich abgelegt.",
+          "audioText_translation": "He passed his secondary modern school graduation successfully.",
+          "audioDescription": "A graduate receiving a diploma",
+          "ttsPrompt": "He passed his secondary modern school graduation successfully.",
+          "options": ["Hauptschulabschluss", "Reisebericht", "Nordic-Skiing"],
+          "options_translations": [
+            "secondary modern school graduation",
+            "travel report",
+            "nordic skiing"
+          ],
+          "correctAnswer": "Hauptschulabschluss",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A2",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:14:36.988452"
+          }
+        },
+        {
+          "id": 10,
+          "type": "MultipleChoice",
+          "question": "What are they discussing?",
+          "translation": "chat",
+          "audioText": "Wo kommen wir denn schon mal an, chatten die Leute überhaupt noch?",
+          "audioText_translation": "Where are we ever going to meet, do people even chat anymore?",
+          "audioDescription": "Two people arguing in a café",
+          "ttsPrompt": "Where are we ever going to meet, do people even chat anymore?",
+          "options": ["chatten", "nehmen", "Ticket"],
+          "options_translations": ["chat", "take", "ticket"],
+          "correctAnswer": "chatten",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A2",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:14:36.988452"
+          }
+        }
+      ],
+      "reading": [
+        {
+          "id": 1,
+          "type": "MultipleChoice",
+          "question": "Welches Hobby ist laut Text Lieblingshinweis?",
+          "question_translation": "Which hobby is mentioned as the favorite?",
+          "passage": "Mein Lieblingssport ist das Spielen von Football, aber ich interessiere mich auch für Kunst. Malen ist meine Leidenschaft.",
+          "passage_translation": "My favorite sport is football, but I'm also interested in art. Painting is my passion.",
+          "options": ["Kochen", "Malen", "Tanzen"],
+          "options_translations": ["Cooking", "Painting", "Dancing"],
+          "correctAnswer": "Malen",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A2",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:21:44.816775",
+            "passage_word_count": 16
+          }
+        },
+        {
+          "id": 2,
+          "type": "MultipleChoice",
+          "question": "Wo hat die Person ihre Ferien verbracht?",
+          "question_translation": "Where did the person spend their holidays?",
+          "passage": "Ich habe Ferien am Strand verbracht und fahrrad gefahren. Das war ein toller Ort für soziale Treffen.",
+          "passage_translation": "I spent my holidays by the beach and went biking. That was a great place for social meetings.",
+          "options": ["Im Wald", "Am Strand", "In der Stadt"],
+          "options_translations": [
+            "In the forest",
+            "At the beach",
+            "In the city"
+          ],
+          "correctAnswer": "Am Strand",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A2",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:21:44.816775",
+            "passage_word_count": 17
+          }
+        },
+        {
+          "id": 3,
+          "type": "MultipleChoice",
+          "question": "Was haben sie am Wochenende ausprobiert?",
+          "question_translation": "What did they try this weekend?",
+          "passage": "Am Wochenende ausprobieren wir neue Actionfilme. Den letzten Mal war 'Riddick'.",
+          "passage_translation": "This weekend we are trying out new action films. Last time it was 'Riddick'.",
+          "options": ["Hörspiele", "Actionfilme", "Bücher"],
+          "options_translations": ["Audio plays", "Action films", "Books"],
+          "correctAnswer": "Actionfilme",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A2",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:21:44.816775",
+            "passage_word_count": 14
+          }
+        },
+        {
+          "id": 4,
+          "type": "MultipleChoice",
+          "question": "Was müssen sie bei der Aktion im Gymnasium tun?",
+          "question_translation": "What must they do at the Gymnasium event?",
+          "passage": "Bei der Aktion im Gymnasium müssen wir über soziale Themen sprechen. Das ist mein neuer Verein.",
+          "passage_translation": "At the Gymnasial event, we have to discuss social topics. That's my new club.",
+          "options": ["Witze erzählen", "Soziale Themen diskutieren", "Tanzen"],
+          "options_translations": [
+            "Tell jokes",
+            "Discuss social topics",
+            "Dance"
+          ],
+          "correctAnswer": "Soziale Themen diskutieren",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A2",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:21:44.816775",
+            "passage_word_count": 18
+          }
+        },
+        {
+          "id": 5,
+          "type": "RichtigFalsch",
+          "question": "Liebt die Person Actionfilme über Tiere?",
+          "question_translation": "Does the person love action films about animals?",
+          "passage": "Mein liebster Film ist ein Actionfilm über Roboter.",
+          "passage_translation": "My favorite movie is an action film about robots.",
+          "options": ["Richtig", "Falsch"],
+          "options_translations": ["Correct", "False"],
+          "correctAnswer": "Falsch",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A2",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:21:44.816775",
+            "passage_word_count": 15
+          }
+        },
+        {
+          "id": 6,
+          "type": "RichtigFalsch",
+          "question": "Malen sie im Sozialkunde-Kurs über Kunst?",
+          "question_translation": "Do they paint in the Social Studies class about art?",
+          "passage": "Am Freitag malen wir im Sozialkunde-Kurs über Kunst.",
+          "passage_translation": "On Friday we paint in the Social Studies class about art.",
+          "options": ["Richtig", "Falsch"],
+          "options_translations": ["Correct", "False"],
+          "correctAnswer": "Richtig",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A2",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:21:44.816775",
+            "passage_word_count": 13
+          }
+        },
+        {
+          "id": 7,
+          "type": "RichtigFalsch",
+          "question": "Teilnimmt er an einem Wettbewerb in seinem ersten Jahr?",
+          "question_translation": "Does he participate in a competition in his first year?",
+          "passage": "Ich nehme an der Sozialkunde-Wettbewerb im Gymnasium teil. Das ist mein erstes Jahr.",
+          "passage_translation": "I participate in the Social Studies competition at the Gymnasium. This is my first year.",
+          "options": ["Richtig", "Falsch"],
+          "options_translations": ["Correct", "False"],
+          "correctAnswer": "Richtig",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A2",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:21:44.816775",
+            "passage_word_count": 17
+          }
+        },
+        {
+          "id": 8,
+          "type": "RichtigFalsch",
+          "question": "Liebt er Frankreich am liebsten für die Ferien?",
+          "question_translation": "Does he love France the most for holidays?",
+          "passage": "Ihr Lieblingsland für die Ferien ist Frankreich.",
+          "passage_translation": "Your favorite country for holidays is France.",
+          "options": ["Richtig", "Falsch"],
+          "options_translations": ["Correct", "False"],
+          "correctAnswer": "Richtig",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "A2",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:21:44.816775",
+            "passage_word_count": 13
+          }
+        }
+      ],
+      "writing": [
+        {
+          "id": 1,
+          "type": "email",
+          "task_title": "Ablösung bei der Arbeit",
+          "task_description": "Schreibe eine E-Mail, um deinen Kollegen zu informieren, dass du in den Urlaub fährst und möchtest, dass ihr gemeinsam an einem Projekt arbeiten könnt.",
+          "task_instructions": "1. Gehe in den Urlaub (Ferien)\n2. Projektarbeit mit Kollegen koordinieren\n3. Kirchwerker: 'www.gymnasium-berlin.de' als Referenz",
+          "context": "Ein Kollege bittet um Projektbetreuung während deiner Ausfallshalbzeit.",
+          "context_translation": "A colleague asks you to coordinate a project during your half-day absence.",
+          "content_points": [
+            "Projektname: 'Wirtschaftsbuchhaltung für startende Unternehmen'",
+            "Zeitraum: 18-22.06.2024",
+            "Kontakt: 'bleiben' für tägliche Abstimmung"
+          ],
+          "word_count_min": 60,
+          "word_count_max": 80,
+          "example_response": "Betreff: Projektbetreuung während meines Urlaubs\n\nLiebe Sophie,\n\nich fahre nächste Woche vom 18. bis 22. Juni auf Urlaub. Während dieser Zeit solltest du das Projekt 'Wirtschaftsbuchhaltung für startende Unternehmen' leiten. Wir haben uns vertagt, aber ich hoffe, du bleibst bis zum Abschluss dabei. Sag mir bitte, wie ich dir bei Rückfragen helfen kann.\n\nLiebe Grüße,\nMax",
+          "evaluation_criteria": {
+            "task_completion": "Benennt Projekt, Zeitraum und Rolle?",
+            "vocabulary_range": "Nutzt 'Ferien', 'bleiben' und mindestens einen Fachbegriff?",
+            "grammar_complexity": "Wendet Sätze wie 'Wir haben uns vertagt' und 'Ich hoffe...' an?",
+            "coherence_organization": "Fließt die E-Mail logisch vom Anfang bis zum Ende?"
+          },
+          "metadata": {
+            "level": "A2",
+            "skill": "WRITING",
+            "topic": "work",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:25:00.231737",
+            "task_type": "email"
+          }
+        },
+        {
+          "id": 2,
+          "type": "email",
+          "task_title": "Feedback zur Arbeitswelt",
+          "task_description": "Schreibe eine E-Mail, in der du Verbesserungsvorschläge für deinen Arbeitsplatz einreichst. Nutze möglichst viele Vokabeln aus der Liste.",
+          "context": "Eine interne E-Mail an die HR-Abteilung mit Verbesserungsvorschlägen.",
+          "context_translation": "Internal email to HR department with improvement suggestions.",
+          "content_points": [
+            "Mitarbeiterfreundschaften durch 'Arbeitswelt'",
+            "Konzernaktivitäten zur Teambindung",
+            "Flexible Arbeitszeiten für Privatleben"
+          ],
+          "word_count_min": 60,
+          "word_count_max": 80,
+          "example_response": "Betreff: Vorschläge zur Verbesserung der Arbeitswelt\n\nSehr geehrter Herr Schmidt,\n\nich möchte einige Ideen zur Verbesserung unserer Arbeitswelt einbringen. Erstens würden Team-Events wie Wettbewerbe im Kunstbereich oder Firmenausflüge zur Vernetzung beitragen. Zweitens könnte eine App zur Einteilung von Arbeitszeiten mehr Privatleben ermöglichen. Meine Meinung ist, dass diese Maßnahmen uns motivieren würden.\n\nMit freundlichen Grüßen,\nAnna Müller",
+          "evaluation_criteria": {
+            "task_completion": "Benennung von 3 Verbesserungsvorschlägen?",
+            "vocabulary_range": "Einbindung von 'Arbeitswelt', 'Gymnasium' und zwei weiteren Begriffen?",
+            "grammar_complexity": "Sind Verben wie 'einbringen' und 'meinen' korrekt verwendet?",
+            "coherence_organization": "Gibt es eine logische Einleitung und einen Abschluss?"
+          },
+          "metadata": {
+            "level": "A2",
+            "skill": "WRITING",
+            "topic": "work",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:25:00.231737",
+            "task_type": "email"
+          }
+        },
+        {
+          "id": 3,
+          "type": "email",
+          "task_title": "Internationale Zusammenarbeit",
+          "task_description": "Schreibe eine E-Mail an einen internationalen Partner, um eine gemeinsame Wirtschaftsanalyse durchzuführen. Verwende fachliche Begriffe und kommuniziere professionell.",
+          "context": "Eine deutsche Wirtschaftskammer koordiniert mit einem spanischen Unternehmen.",
+          "context_translation": "German Chamber of Commerce coordinates with Spanish company.",
+          "content_points": [
+            "Überprüfung von Wirtschaftsdaten im EU-Unternehmen",
+            "Termin für Videokonferenz vorschlagen",
+            "Methodologie für gemeinsam geprüfte Indicators ('Indikatoren')"
+          ],
+          "word_count_min": 60,
+          "word_count_max": 80,
+          "example_response": "Betreff: Terminanfrage für Wirtschaftsanalyse\n\nSehr geehrtes Team,\n\nwäre es möglich, einen Termin für die gemeinsame Wirtschaftsanalyse im ersten Quartal zu vereinbaren? Unsere Kammer in Berlin analysiert mittlerweile auch spanische Wirtschaftsberichte und möchte neue Indikatoren prüfen. Vielleicht könnten wir nächste Woche per Videokonferenz kurz telefonieren?\n\nMit freundlichen Grüßen,\nHerr Müller",
+          "evaluation_criteria": {
+            "task_completion": "Mentions Videokonferenz und Methodology?",
+            "vocabulary_range": "Nutzt 'Wirtschaft', 'chatten' (fachlich) und 'Wirtschaftsanalyse'?",
+            "grammar_complexity": "Korrekte Verwendung von 'vorschlagen', 'analysieren' und 'vereinbaren'?",
+            "coherence_organization": "Logische Struktur von Anfrage bis Argument?"
+          },
+          "metadata": {
+            "level": "A2",
+            "skill": "WRITING",
+            "topic": "work",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:25:00.231737",
+            "task_type": "email"
+          }
+        },
+        {
+          "id": 4,
+          "type": "email",
+          "task_title": "Urlaubsplanung für Familie",
+          "task_description": "Schreibe eine E-Mail an deinen Arbeitgeber, um verlängerten Urlaub zu beantragen. Argumente können persönliche Gründe sein.",
+          "context": "Ein Lehrer bittet um verlängerten Urlaub, da sein Sohn an einem Gymnasium in Berlin eingeschult ist.",
+          "context_translation": "A teacher applies for extended leave because their child is enrolled in a Berlin grammar school.",
+          "content_points": [
+            "Schülereintrag im Gymnasium",
+            "Teilnahme an Schulveranstaltungen",
+            "Möglichkeit der Ablösung in der Arbeitswelt"
+          ],
+          "word_count_min": 60,
+          "word_count_max": 80,
+          "example_response": "Betreff: Antrag auf verlängerten Urlaub\n\nSehr geehrte Frau Lange,\n\nich beantrage aufgrund des Schulwechsels meines Kindes zehn Tage verlängerten Urlaub. Ich möchte an den Schulveranstaltungen im Gymnasium teilnehmen, und meine Meinung ist, dass mein Kind mehr Zeit zur Eingewöhnung braucht. In der Arbeitswelt kann eine Ablösung organisiert werden. Ich kümmere mich selbstverständlich um alle Übergaben.\n\nMit freundlichen Grüßen,\nFrau Becker",
+          "evaluation_criteria": {
+            "task_completion": "Begründet Antrag mit Familiengründen?",
+            "vocabulary_range": "Sind 'Gymnasium', 'Arbeitswelt' und 'meinen' sinnvoll verwendet?",
+            "grammar_complexity": "Gibt es 'wegen', 'könnte' und 'wäre'?",
+            "coherence_organization": "Klare Argumente und logischer Ablauf?"
+          },
+          "metadata": {
+            "level": "A2",
+            "skill": "WRITING",
+            "topic": "work",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:25:00.231737",
+            "task_type": "email"
+          }
+        },
+        {
+          "id": 5,
+          "type": "email",
+          "task_title": "Bewerbung für Wirtschaftsforum",
+          "task_description": "Schreibe eine formelle E-Mail, um an einem Wirtschaftsforum teilzunehmen. Nenne Gründe, warum deine Meinung zur Wirtschaft hilfreich sein könnte. Verwende Begriffe wie 'Wirtschaft', 'Arbeitswelt', 'Gymnasium' (als ehemalige Berufserfahrung) und 'meinen'.",
+          "context": "Eine lokale Wirtschaftskammer organisiert ein Forum für junge Fachkräfte in der Wirtschaft.",
+          "context_translation": "Local Chamber of Commerce organizes a forum for young professionals in the economy.",
+          "content_points": [
+            "Aktuelle Wirtschaftstrends im Bildungswesen",
+            "Berufserfahrung als ehemalige Lehrerin im Gymnasium",
+            "Meinung zur digitalen Transformation"
+          ],
+          "word_count_min": 60,
+          "word_count_max": 80,
+          "example_response": "Betreff: Teilnahmeantrag für Wirtschaftsforum\n\nSehr geehrtes Team,\n\nihre Veranstaltung bietet eine ausgezeichnete Plattform für junge Fachkräfte. Als ehemalige Lehrerin im Gymnasium habe ich Einblicke in die Herausforderungen der modernen Arbeitswelt. Meine Meinung ist, dass Digitalisierung im Bildungsbereich stärker gefördert werden sollte. Gerne würde ich meine Erfahrungen zur Bildungswirtschaft teilen.\n\nMit freundlichen Grüßen,\nMax Müller",
+          "evaluation_criteria": {
+            "task_completion": "Mentions Forum participation and professional relevance?",
+            "vocabulary_range": "Einbindung aller aufgeführten Begriffe?",
+            "grammar_complexity": "Korrekte Verbstellung und vollständige Sätze?",
+            "coherence_organization": "Logische Argumentstruktur?"
+          },
+          "metadata": {
+            "level": "A2",
+            "skill": "WRITING",
+            "topic": "work",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:25:00.231737",
+            "task_type": "email"
+          }
+        }
+      ],
+      "speaking": [
+        {
+          "id": 1,
+          "type": "interview",
+          "task_title": "Introducing Yourself in a Job Interview",
+          "task_description": "You are in a job interview. You need to introduce yourself, explain how you found the contact, and discuss your favorite subject from school.",
+          "task_instructions": "Answer the following questions in German: Who are you? How did you hear about this traineeship? What was your favorite subject in school?",
+          "prompt": "Wie hast du von diesem Azubi-Job erfahren, und welches war dein Lieblingsfach?",
+          "prompt_translation": "How did you hear about this traineeship, and what was your favorite subject?",
+          "follow_up_questions": [
+            "Why did you choose this traineeship over others?",
+            "What skills do you think are important for a trainee?",
+            "Describe a challenge you faced in school and how you solved it."
+          ],
+          "follow_up_translations": [
+            "Why did you choose this traineeship over others?",
+            "What skills do you think are important for a trainee?",
+            "Describe a challenge you faced in school and how you solved it."
+          ],
+          "vocabulary_required": ["Kontakt", "Azubi", "Lieblings-"],
+          "grammar_structures_required": [
+            "Present tense",
+            "Past tense (Präteritum)"
+          ],
+          "example_response": "Ich habe von der Stelle über eine App erfahren. Mein Lieblingsfach war die Mathematik, weil ich Zahlen finde.",
+          "example_response_translation": "I found out about this position through an app. My favorite subject was math because I find numbers interesting.",
+          "acceptable_response_length": "30-60 seconds",
+          "evaluation_criteria": {
+            "fluency_pronunciation": "Sprechen Sie klar und selbstbewusst, ohne zu zögern.",
+            "vocabulary_accuracy": "Verwenden Sie 'Kontakt' und 'Lieblings-', um Ihre Antwort zu strukturieren.",
+            "grammar_accuracy": "Verwenden Sie korrekt den Vergangenheitszeit (Präteritum) für Kissenschuss."
+          },
+          "metadata": {
+            "level": "A2",
+            "skill": "SPEAKING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:28:23.755801",
+            "interaction_type": "interview",
+            "expected_duration_seconds": 45
+          }
+        },
+        {
+          "id": 2,
+          "type": "dialogue",
+          "task_title": "Whispering Secrets at a Party",
+          "task_description": "You are at a party. Discuss a friend who is daft, and ask others about their favorite holiday activities.",
+          "task_instructions": "Play a dialogue with a partner. Ask someone in your group about their favorite holiday activity, and mention something daft you've heard.",
+          "prompt": "Flüstere deinem Partner einen Geheimnis über einen Doofen auf.",
+          "prompt_translation": "Whisper a secret about a daft person to your partner.",
+          "follow_up_questions": [
+            "Was würdest du einem Freund in den Urlaub mitnehmen?",
+            "Warum finden Sie das Scherzchen lustig?",
+            "Wie würdest du die Situation anders handhaben?"
+          ],
+          "follow_up_translations": [
+            "What would you take with a friend on a trip?",
+            "Why do you find the joke funny?",
+            "How would you handle the situation differently?"
+          ],
+          "vocabulary_required": ["Flüstern", "doof", "Ferien"],
+          "grammar_structures_required": [
+            "Present tense",
+            "Modal verb (dürften)"
+          ],
+          "example_response": "Ich flüstere, dass mein Freund eine Pfanne als Hut trägt. Er ist zu doof, um das zu merken.",
+          "example_response_translation": "I whisper that my friend wears a frying pan as a hat. He's too daft to notice.",
+          "acceptable_response_length": "30-60 seconds",
+          "evaluation_criteria": {
+            "fluency_pronunciation": "Sprechen Sie klar und mit angemessener Lautstärke.",
+            "vocabulary_accuracy": "Verwenden Sie 'doof' und 'nullstufige Handlungen' korrekt.",
+            "grammar_accuracy": "Verwenden Sie korrekt den Modalverb 'dürften' für hypothetische Situationen."
+          },
+          "metadata": {
+            "level": "A2",
+            "skill": "SPEAKING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:28:23.755801",
+            "interaction_type": "dialogue",
+            "expected_duration_seconds": 60
+          }
+        },
+        {
+          "id": 3,
+          "type": "picture_description",
+          "task_title": "Describing a Congratulatory Gift",
+          "task_description": "You received a gift for congratulating someone. Describe the gift and why it makes you happy.",
+          "task_instructions": "Look at the image of a gift. Describe it and explain why you're grateful.",
+          "prompt": "Was würdest du einem Freund zum Gratulationsgeschenk geben?",
+          "prompt_translation": "What would you give as a congratulatory gift to a friend?",
+          "follow_up_questions": [
+            "Why did you choose this specific gift?",
+            "How does it make you feel?",
+            "Would you give the same gift to someone else?"
+          ],
+          "follow_up_translations": [
+            "Why did you choose this specific gift?",
+            "How does it make you feel?",
+            "Would you give the same gift to someone else?"
+          ],
+          "vocabulary_required": ["gratulieren", "Kontakt"],
+          "grammar_structures_required": ["Present perfect (Perfekt)"],
+          "example_response": "Ich würde einem Freund Blumen geben. Das freut sich und zeigt Wertschätzung.",
+          "example_response_translation": "I would give flowers to a friend. It makes them happy and shows appreciation.",
+          "acceptable_response_length": "1-2 minutes",
+          "evaluation_criteria": {
+            "fluency_pronunciation": "Sprechen Sie flüssig, ohne häufig zu pausieren.",
+            "vocabulary_accuracy": "Verwenden Sie 'gratulieren' und passende Adjektive.",
+            "grammar_accuracy": "Korrekter Perfektzeitraum für vergangene Handlung."
+          },
+          "metadata": {
+            "level": "A2",
+            "skill": "SPEAKING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:28:23.755801",
+            "interaction_type": "picture_description",
+            "expected_duration_seconds": 90
+          }
+        },
+        {
+          "id": 4,
+          "type": "roleplay",
+          "task_title": "Fair-Weather Friend Complaint",
+          "task_description": "Roleplay a situation where a friend fakes interest during your holiday plans.",
+          "task_instructions": "Act out a conversation with a friend who makes 'small talk' but isn't interested.",
+          "prompt": "Dein Freund nickt, wenn du über Ferienpläne sprichst. Er fragt nicht nach Details.",
+          "prompt_translation": "Your friend nods when you talk about holidays but doesn't ask follow-up questions.",
+          "follow_up_questions": [
+            "Wie würdest du ihn überzeugen, mitzukommen?",
+            "Würdest du ihn später grüßen?",
+            "Schreibe eine Nachricht dafür, dass er sich ändert."
+          ],
+          "follow_up_translations": [
+            "How would you convince him to join?",
+            "Would you greet him later?",
+            "Write a message to change his behavior."
+          ],
+          "vocabulary_required": ["Ferien", "Kontakt"],
+          "grammar_structures_required": ["Conditional forms", "Past tense"],
+          "example_response": "Ich würde sagen: 'Wenn du Ferien magst, warum nicht April anstelle von Juli?'",
+          "example_response_translation": "I would ask: Why not April instead of July if you like holidays?",
+          "acceptable_response_length": "2-3 minutes",
+          "evaluation_criteria": {
+            "fluency_pronunciation": "Sprechen Sie mit klaren Emotionen.",
+            "vocabulary_accuracy": "Verwenden Sie 'Ferien' und 'utuellen' Formeln.",
+            "grammar_accuracy": "Korrekter Akkusativ bei 'die Ferien' und Konditionalsätze."
+          },
+          "metadata": {
+            "level": "A2",
+            "skill": "SPEAKING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:28:23.755801",
+            "interaction_type": "roleplay",
+            "expected_duration_seconds": 120
+          }
+        },
+        {
+          "id": 5,
+          "type": "presentation",
+          "task_title": "Presenting a Holiday Accommodation",
+          "task_description": "Imagine you own a hotel. Describe your favorite guest and their favorite holiday package.",
+          "task_instructions": "Give a 2-minute presentation about a guest, what they liked, and how they made us happy.",
+          "prompt": "Beschreibe deinen Lieblingsschüler, warum er den Hauptschulabschluss bekommt.",
+          "prompt_translation": "Describe your favorite guest and why they received their graduation certificate.",
+          "follow_up_questions": [
+            "Was machst du, um Gäste glücklich zu machen?",
+            "Wie besetzt ihr eure Zimmer?",
+            "Würdest du den gleichen Preis für alle Ferien verlangen?"
+          ],
+          "follow_up_translations": [
+            "What do you do to make guests happy?",
+            "How do you book rooms?",
+            "Would you charge everyone the same price for holidays?"
+          ],
+          "vocabulary_required": ["Ferien", "Lieblings-", "Kontakt"],
+          "grammar_structures_required": [
+            "Past tense",
+            "Passiv], Reflexive verbs"
+          ],
+          "example_response": "Der Lieblingsgast war ein Arzt, der wir immer dankbar sind. Er zimmerte mit seiner Familie mit.",
+          "example_response_translation": "Our favorite guest was a doctor we always appreciate. He stayed with his family.",
+          "acceptable_response_length": "2-3 minutes",
+          "evaluation_criteria": {
+            "fluency_pronunciation": "Sprechen Sie klar und mit natürlicher Betonung.",
+            "vocabulary_accuracy": "Verwenden Sie 'Ferien' und 'Reisebüros'.",
+            "grammar_accuracy": "Vergangenheitsform für Erfahrungen und futuristische Pläne."
+          },
+          "metadata": {
+            "level": "A2",
+            "skill": "SPEAKING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:28:23.755801",
+            "interaction_type": "presentation",
+            "expected_duration_seconds": 120
+          }
+        },
+        {
+          "id": 6,
+          "type": "question_answer",
+          "task_title": "Cultural Exchange about Traditions",
+          "task_description": "Explain your favorite holiday tradition and how it celebrates friendship.",
+          "task_instructions": "Answer questions about your favorite holiday, how you celebrate, and contact friends to make plans.",
+          "prompt": "Welche Tradition hast du während des Ferien und wie begrüßt ihr Freunde?",
+          "prompt_translation": "What tradition do you have during holidays and how do you greet friends?",
+          "follow_up_questions": [
+            "Würde ein Deutscher diese Tradition würdigen?",
+            "Wie würdest du sie ändern?",
+            "Schreibe eine Einladung zu dieser Feier."
+          ],
+          "follow_up_translations": [
+            "Would a German appreciate this tradition?",
+            "How would you change it?",
+            "Write an invitation to this celebration."
+          ],
+          "vocabulary_required": ["Ferien", "Lieblings-", "Kontakt"],
+          "grammar_structures_required": [
+            "Modalverb 'können",
+            "Vergangenheitsform"
+          ],
+          "example_response": "In Ferien schauen wir 'Wochensuell' 'Freundschaftspreise' ein. Ich gratuliieren ihnen per Telefon.",
+          "example_response_translation": "During holidays, we watch 'Weekly Friendship Awards'. I congratulate them by phone.",
+          "acceptable_response_length": "1-2 minutes",
+          "evaluation_criteria": {
+            "fluency_pronunciation": "Sprechen Sie mit Sicherheit über kulturelle Themen.",
+            "vocabulary_accuracy": "Korrekte Verwendung von 'Ferien' und 'Träumen'.",
+            "grammar_accuracy": "Verwenden Sie 'könnten' für Vorschläge und genauen Vergangenheitszeituid."
+          },
+          "metadata": {
+            "level": "A2",
+            "skill": "SPEAKING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:28:23.755801",
+            "interaction_type": "question_answer",
+            "expected_duration_seconds": 90
+          }
+        }
+      ]
+    },
+    "B1": {
+      "listening": [
+        {
+          "id": 1,
+          "type": "MultipleChoice",
+          "question": "Wo kommen die Gäste zur Registrierung?",
+          "translation": "Where are the guests coming for registration?",
+          "audioText": "Herzlich willkommen! Die Gäste kommen hierher, denn sie haben ihre Reservierung bestätigt.",
+          "audioDescription": "Hotel reception welcoming guests for check-in",
+          "ttsPrompt": "Herzlich willkommen! Die Gäste kommen hierher, denn sie haben ihre Reservierung bestätigt.",
+          "options": ["hierher", "dorthin", "zurück"],
+          "options_translations": ["here", "away", "back"],
+          "correctAnswer": "hierher",
+          "imagePlaceholder": "hotel_reception.jpg",
+          "metadata": {
+            "level": "B1",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:30:28.500782"
+          }
+        },
+        {
+          "id": 2,
+          "type": "MultipleChoice",
+          "question": "Wousu für einen Urlaub erwähnt?",
+          "translation": "What holiday did they mention?",
+          "audioText": "Im Sommer fahren wir nach Südtirol für den Almurlaub. Dort ist die Landschaft atemberaubend.",
+          "audioDescription": "Family discussing their spring vacation plans",
+          "ttsPrompt": "Im Sommer fahren wir nach Südtirol für den Almurlaub. Dort ist die Landschaft atemberaubend.",
+          "options": ["Strandurlaub", "Stadturlaub", "Almurlaub"],
+          "options_translations": [
+            "seaside holiday",
+            "city trip",
+            "alpine holiday"
+          ],
+          "correctAnswer": "Almurlaub",
+          "imagePlaceholder": "alpine_landscape.jpg",
+          "metadata": {
+            "level": "B1",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:30:28.500782"
+          }
+        },
+        {
+          "id": 3,
+          "type": "MultipleChoice",
+          "question": "Was ist wichtig für den Kaffeemaschinenbetrieb?",
+          "translation": "What's important for operating the coffee machine?",
+          "audioText": "Um Kaffee zu kochen, bedient man den Knopf hierher. Shake leicht, wenn nötig.",
+          "audioDescription": "Video tutorial demonstrating an appliance",
+          "ttsPrompt": "Um Kaffee zu kochen, bedient man den Knopf hierher. Shake leicht, wenn nötig.",
+          "options": ["Hygiene", "Techik", "Formular"],
+          "options_translations": ["hygiene", "technique", "form"],
+          "correctAnswer": "hierher",
+          "imagePlaceholder": "coffee_machine.jpg",
+          "metadata": {
+            "level": "B1",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:30:28.500782"
+          }
+        },
+        {
+          "id": 4,
+          "type": "MultipleChoice",
+          "question": "Welche Metapher beschreibt das Verhalten des Geschäftsführers?",
+          "translation": "Which metaphor describes the boss's behavior?",
+          "audioText": "Der Geschäftsführer schreit hierher, wenn er unzufrieden ist. Man schürft das Verhalten durch.",
+          "audioDescription": "Company meeting discussing management style",
+          "ttsPrompt": "Der Geschäftsführer schreit hierher, wenn er unzufrieden ist. Man schürft das Verhalten durch.",
+          "options": ["milk", "sulky", "burgeoning"],
+          "options_translations": ["melken", "ärgern", "blühen"],
+          "correctAnswer": "schürft",
+          "imagePlaceholder": "boardroom.jpg",
+          "metadata": {
+            "level": "B1",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:30:28.500782"
+          }
+        },
+        {
+          "id": 5,
+          "type": "MultipleChoice",
+          "question": "Warum kommen die Touristen morgen?",
+          "translation": "Why are tourists coming tomorrow?",
+          "audioText": "Pünktlich morgen früh kommen sie unaufhaltsam indhaus zur Bergstation. Die Genehmigung wurde bereits erhalten.",
+          "audioDescription": "Travel agent announcing arrival details",
+          "ttsPrompt": "Pünktlich morgen früh kommen sie unaufhaltsam indhaus zur Bergstation. Die Genehmigung wurde bereits erhalten.",
+          "options": ["zur Arbeit", "zur Neuigkeit", "indhaus"],
+          "options_translations": ["to work", "to news", "inside"],
+          "correctAnswer": "indhaus",
+          "imagePlaceholder": "mountain_hut.jpg",
+          "metadata": {
+            "level": "B1",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:30:28.500782"
+          }
+        },
+        {
+          "id": 6,
+          "type": "MultipleChoice",
+          "question": "Wie verhalten sich die staff bei besonders heißen Tagen?",
+          "translation": "How do staff behave on hot days?",
+          "audioText": "Trotz der Hitze blieb das Café aufgrund guter Hygienestandards stets erholt für die Kunden.",
+          "audioDescription": "Interview with café owner about summer business",
+          "ttsPrompt": "Trotz der Hitze blieb das Café aufgrund guter Hygienestandards stets erholt für die Kunden.",
+          "options": ["unbezahlbar", "ü Fellowship", "erholt"],
+          "options_translations": ["unreasonable", "discordant", "relaxed"],
+          "correctAnswer": "erholt",
+          "imagePlaceholder": "sunny_cafe.jpg",
+          "metadata": {
+            "level": "B1",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:30:28.500782"
+          }
+        },
+        {
+          "id": 7,
+          "type": "MultipleChoice",
+          "question": "Welcher Begriff passt zur Nachricht des Gesundheitsamts?",
+          "translation": "Which term fits the health office's message?",
+          "audioText": "Aufgrund der Neuigkeit von Grippefällen wird gebeten, hierher nicht zu kommen, wenn man krankgemale war.",
+          "audioDescription": "Public health announcement broadcast",
+          "ttsPrompt": "Aufgrund der Neuigkeit von Grippefällen wird gebeten, hierher nicht zu kommen, wenn man krankgemale war.",
+          "options": ["Neuigkeit", "Hygiene", "Prävention"],
+          "options_translations": ["news", "hygiene", "prevention"],
+          "correctAnswer": "aufgrund",
+          "imagePlaceholder": "public_health.jpg",
+          "metadata": {
+            "level": "B1",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:30:28.500782"
+          }
+        },
+        {
+          "id": 8,
+          "type": "MultipleChoice",
+          "question": "Was ist die wichtigste Eigenschaft der neuen Jobbewilligung?",
+          "translation": "What's the most important feature of the new rental permit?",
+          "audioText": "Für den Wohnungswechsel muss die Genehmigung von der Gemeindebehörde erteilt werden, so if\"-Krisen.",
+          "audioDescription": "Expert explaining legal requirements",
+          "ttsPrompt": "Für den Wohnungswechsel muss die Genehmigung von der Gemeindebehörde erteilt werden, so if)-Krisen.",
+          "options": ["Notwendigkeit", "Genehmigung", "Krisen"],
+          "options_translations": ["necessity", "permission", "crises"],
+          "correctAnswer": "Genehmigung",
+          "imagePlaceholder": "office_building.jpg",
+          "metadata": {
+            "level": "B1",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:30:28.500782"
+          }
+        },
+        {
+          "id": 9,
+          "type": "MultipleChoice",
+          "question": "Warum haben die Nachrichten hierher mit ihrem broadcast?",
+          "translation": "Why did the newscasters come here to broadcast?",
+          "audioText": "Spezialmeldung: Heute Abend fahren die Reporter vor Ort. Das Hotel wurde letztes Jahr für seine Hygienestandards ausgezeichnet.",
+          "audioDescription": "Weather update report",
+          "ttsPrompt": "Spezialmeldung: Heute Abend fahren die Reporter vor Ort. Das Hotel wurde letztes Jahr für seine Hygienestandards ausgezeichnet.",
+          "options": [
+            "als Ergebnis",
+            "wegen der Hygiene",
+            "aus Verlustgründen"
+          ],
+          "options_translations": [
+            "as a result",
+            "because of hygiene",
+            "due to loss"
+          ],
+          "correctAnswer": "wegen der Hygiene",
+          "imagePlaceholder": "news_studio.jpg",
+          "metadata": {
+            "level": "B1",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:30:28.500782"
+          }
+        },
+        {
+          "id": 10,
+          "type": "MultipleChoice",
+          "question": "Wann finden die Diskussionen über die neue Flachgefladetheit statt?",
+          "translation": "When will the discussions about the new apartment regulation start?",
+          "audioText": "Die Gespräche über die neuen Kriterien für die Genehmigung finden hierher statt. Die Starttermin ist für den kommenden Freitag abgestimmt.",
+          "audioDescription": "City council meeting.",
+          "ttsPrompt": "Die Gespräche über die neuen Kriterien für die Genehmigung finden hierher statt. Die Starttermin ist für den kommenden Freitag abgestimmt.",
+          "options": ["Montag", "Donnerstag", "Freitag"],
+          "options_translations": ["Monday", "Thursday", "Friday"],
+          "correctAnswer": "Freitag",
+          "imagePlaceholder": "town_hall.jpg",
+          "metadata": {
+            "level": "B1",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:30:28.500782"
+          }
+        }
+      ],
+      "reading": [
+        {
+          "id": 1,
+          "type": "MultipleChoice",
+          "question": "Was ist das Ferienclub-Unternehmen bekannt für? Der Club: Praktische Aktivitäten für Hobbysportler anbietet, organisiert aber keine Sportveranstaltungen. The club: Offers practical activities for hobby athletes but doesn't organize sports events.",
+          "question_translation": "What is the holiday club known for? The club: Offers practical activities for hobby athletes but doesn't organize sports events.",
+          "passage": "Viele Menschen schließen sich dem Ferienclub an, um praktische Fähigkeiten zu lernen. Die Teilnehmer bauen z.B. Modelle aus. Sie sind begeistert, aber es gibt keine organisierten Spiele. Many people join the holiday club to learn practical skills. Participants build models, e.g. They are enthusiastic, but there are no organized games.",
+          "passage_translation": "Many people join the holiday club to learn practical skills. Participants build models, e.g. They are enthusiastic, but there are no organized games.",
+          "options": [
+            "Sportveranstaltungen",
+            "praktische Fähigkeiten",
+            "Kinderprodukte"
+          ],
+          "options_translations": [
+            "sports events",
+            "practical skills",
+            "children's products"
+          ],
+          "correctAnswer": "praktische Fähigkeiten",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "B1",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:39:36.756648",
+            "passage_word_count": 64
+          }
+        },
+        {
+          "id": 2,
+          "type": "MultipleChoice",
+          "question": "Welches Produkt ist für Kinder gedacht? Das Unternehmen bewirbt: Ein neues Kinderprodukt mit interaktiven Games, das in der Schule verkauft wird. The company advertises: A new children's product with interactive games, sold in schools.",
+          "question_translation": "Which product is for children? The company advertises: A new children's product with interactive games, sold in schools.",
+          "passage": "In einem Geschäft findet man ein Kinderprodukt, das mit Batterien betätigt wird. Eltern kaufen es für ihre Kinder im Weihnachtsferien. Children find an interactive product in a store activated by batteries. Parents buy it for their kids during Christmas holidays.",
+          "passage_translation": "In a store, there's a children's product activated by batteries. Parents buy it for their kids during Christmas holidays.",
+          "options": ["Sportausrüstung", "Kinderprodukt", "Ferienaktivitäten"],
+          "options_translations": [
+            "sports equipment",
+            "children's product",
+            "holiday activities"
+          ],
+          "correctAnswer": "Kinderprodukt",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "B1",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:39:36.756648",
+            "passage_word_count": 58
+          }
+        },
+        {
+          "id": 3,
+          "type": "MultipleChoice",
+          "question": "Was beschreiben die Texte gemeinsam? Ein Teilnehmer sagt: „Ich kann nicht mitarbeiten, weil meine Familie mich besucht.“ Ein weiterer Teilnehmer wechsel zwischen liegendem Und stehendem Lesen umher.",
+          "question_translation": "What do the texts have in common? Participant 1: \"I can't assist because my family visits me.\" Participant 2: switches between lying down and standing reading.",
+          "passage": "Mark will mitarbeiten an einem online-Kurs aber ist verhindert. In einem Hobby-Club probieren Menschen einen Steh-Sitz-Tisch aus. Mark wants to assist in an online course but is unavailable. In a hobby club, people try a standing-sitting table.",
+          "passage_translation": "Mark wants to assist in an online course but is unavailable. In a hobby club, people try a standing-sitting table.",
+          "options": ["Logistik", "Hobbyschwerpunkte", "Veranstaltungsdetails"],
+          "options_translations": [
+            "logistics",
+            "hobby focuses",
+            "event details"
+          ],
+          "correctAnswer": "Hobbyschwerpunkte",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "B1",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:39:36.756648",
+            "passage_word_count": 71
+          }
+        },
+        {
+          "id": 4,
+          "type": "MultipleChoice",
+          "question": "Was ist die Ursache für die Planänderung? Die Vereinsleitung teilt mit: In dieser Saison gibt es mehr Angebote gegen creativeren Sport. Die Teilnehmer werden begeistert sein.",
+          "question_translation": "What is the reason for the schedule change? The club management announces: This season, there are more creative sports offerings. Participants will be enthusiastic.",
+          "passage": "Ein Sportverein in Berlin ändert seinen Plan. Ab jetzt gibt es Kurse gegen die Regeln weniger strukturierte Aktivitäten. Die Mitglieder freuen sich darauf zu Hause Zugang zu bieten. A Berlin sports club changes its schedule. From now on, there will be less structured activities against regulations. Members are excited about home access.",
+          "passage_translation": "A Berlin sports club changes its schedule. From now on, there will be less structured activities against regulations. Members are excited about home access.",
+          "options": [
+            "Kapazitätsengpässe",
+            "kreativerer Sport",
+            "generationengerechte Gestaltung"
+          ],
+          "options_translations": [
+            "capacity shortages",
+            "more creative sports",
+            "generation-appropriate design"
+          ],
+          "correctAnswer": "kreativerer Sport",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "B1",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:39:36.756648",
+            "passage_word_count": 95
+          }
+        },
+        {
+          "id": 5,
+          "type": "MultipleChoice",
+          "question": "Welche Aussage beschreibt die Teilnehmer zum besten? Bei der Lektüre über Vereinsangebote erwähnt eine Person: „Die Einsamkeit ist geringer, wenn man gemeinsame Aktivitäten erfährt.“",
+          "question_translation": "Which statement describes the members best? Regarding club offers, one person wrote: \"Loneliness decreases when one learns common activities.\"",
+          "passage": "Ein Artikel beschreibt, wie Verbindungen gegen die Einsamkeit helfen. Teilnehmer in München teilen Erfahrung über Ferienclub-Aktivitäten und Geselligkeit. A study describes how connections help against loneliness. Participants in Munich share experiences about holiday club activities and sociability.",
+          "passage_translation": "A study describes how connections help against loneliness. Participants in Munich share experiences about holiday club activities and sociability.",
+          "options": [
+            "Verantwortung in der Gruppe",
+            "Verringern der Einsamkeit",
+            "Finanzielle Nachhaltigkeit"
+          ],
+          "options_translations": [
+            "responsibility in the group",
+            "reducing loneliness",
+            "financial sustainability"
+          ],
+          "correctAnswer": "Verringern der Einsamkeit",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "B1",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:39:36.756648",
+            "passage_word_count": 88
+          }
+        },
+        {
+          "id": 6,
+          "type": "MultipleChoice",
+          "question": "Was wird mitgegeben? Im Artikel steht: Der Ferienclub in der Region erlaubt die Nutzung von Sportausrüstung für Kinderprodukte während der Weihnachtsferien.",
+          "question_translation": "What is included? The article states: The holiday club in the region allows the use of sports equipment for children's products during Christmas holidays.",
+          "passage": "Eine Wochenzeitung berichtet über neue Annehmlichkeiten. Kinder können beim Ferienclub nicht nur an Aktivitäten teilnehmen, sondern auch Sportmaterial ausleihen. A weekly newspaper reports on new amenities. Children can participate in activities at the holiday club and borrow sports equipment.",
+          "passage_translation": "A weekly newspaper reports on new amenities. Children can participate in activities at the holiday club and borrow sports equipment.",
+          "options": [
+            "Küchengeräte",
+            "Sportausrüstung",
+            "Bücher über Weihnachten"
+          ],
+          "options_translations": [
+            "kitchen appliances",
+            "sports equipment",
+            "books about Christmas"
+          ],
+          "correctAnswer": "Sportausrüstung",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "B1",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:39:36.756648",
+            "passage_word_count": 104
+          }
+        },
+        {
+          "id": 7,
+          "type": "MultipleChoice",
+          "question": "Wessen Bescheid nehmen die Teilnehmer? In einem Brief an den Ferienclub-Organisator lesen wir: „Ich unterstütze diese Initiative begeistert und hoffe, dass auch meine Kinder das Kinderprodukt nutzen können.“",
+          "question_translation": "Whose support do the participants send? In a letter to the holiday club organizer, we read: \"I enthusiastically support this initiative and hope my children can use the children's product.\"",
+          "passage": "Die Teilnehmer freuen sich über die neue Angebotspalette. Viele sind begeistert von der Möglichkeit, an Kurse zu Hause teilzunehmen. Viele Eltern danken für zugängliche Organisation. Participants are happy about the new offer palette. Many are enthusiastic about the option to attend courses at home. Many parents thank for approachable organization.",
+          "passage_translation": "Participants are happy about the new offer palette. Many are enthusiastic about the option to attend courses at home. Many parents thank for approachable organization.",
+          "options": [
+            "Freunde aus dem Hobby-Club",
+            "Eltern der Kinderproduktnutzer",
+            "Gegenwärtige Vereinsmitglieder"
+          ],
+          "options_translations": [
+            "friends from the hobby club",
+            "parents of children's product users",
+            "current club members"
+          ],
+          "correctAnswer": "Eltern der Kinderproduktnutzer",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "B1",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:39:36.756648",
+            "passage_word_count": 118
+          }
+        },
+        {
+          "id": 8,
+          "type": "MultipleChoice",
+          "question": "Was ist das Hauptthema des Textes? eine Werbeplakat beschreibt: Steh-Sitz-Tische für Hobbygruppen an Orten gegen die einsamkeit, wo man Weihnachtsferien verbringen kann.",
+          "question_translation": "What is the main topic of the text? An advertisement describes: Standing-sitting tables for hobby groups at locations around which loneliness, where one can spend Christmas holidays.",
+          "passage": "Ein Unternehmen bewirbt Steh-Sitz-Tische für Hobbygruppen. Die Tische sind geeignet für gemeinsame Aktivitäten gegen die Einsamkeit. Die Werbung betont die Nutzung während Weihnachtsferien. A company advertises standing-sitting tables for hobby groups. The tables are suitable for group activities against loneliness. The ad emphasizes use during Christmas holidays.",
+          "passage_translation": "A company advertises standing-sitting tables for hobby groups. The tables are suitable for group activities against loneliness. The ad emphasizes use during Christmas holidays.",
+          "options": [
+            "Förderung von Sport",
+            "Bekämpfung von Heimweh",
+            "Sozionale Integration durch Hobby"
+          ],
+          "options_translations": [
+            "sports promotion",
+            "combating homesickness",
+            "social integration through hobbies"
+          ],
+          "correctAnswer": "Soziale Integration durch Hobby",
+          "imagePlaceholder": "",
+          "metadata": {
+            "level": "B1",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:39:36.756648",
+            "passage_word_count": 91
+          }
+        }
+      ],
+      "writing": [
+        {
+          "id": 1,
+          "type": "email",
+          "task_title": "Beratung als neuer Mitarbeiter",
+          "task_description": "Sie sind ein neuer Mitarbeiter in einem Unternehmen. Schreiben Sie eine E-Mail an Ihre Kollegin/feinen Kollegen, um Unterstützung zu bitten und Ihre Begeisterung für Ihre Rolle auszudrücken.",
+          "task_instructions": "Stellen Sie konkrete Fragen zur Arbeit, erklären Sie, warum Sie begeistert sind, und diskutieren Sie das von Ihnen verantwortete Kinderprodukt.",
+          "context": "Ihr Team hilft Ihnen, sich an Ihre neue Position zu gewöhnen. Themen: Zusammenarbeit, persönliche Motivation, Produktverantwortung.",
+          "context_translation": "Your team helps you settle into your new role. Topics: teamwork, personal motivation, product responsibility.",
+          "content_points": [
+            "Fordern Sie konkrete Hilfe an (z. B. bei Tools oder Prozessen)",
+            "Erklären Sie, was Sie an Ihrer Aufgabenstellung begeistert",
+            "Beschreiben Sie das Kinderprodukt und dessen Zielgruppe"
+          ],
+          "word_count_min": 100,
+          "word_count_max": 150,
+          "example_response": "Sehr geehrter Herr Schmidt,\n\nihrs Ihre Unterstützung wäre mir sehr entscheidend, um mich schnell in den Arbeitsalltag zu integrieren. Speziell brauche ich Hilfe, die Software für das Kinderprodukt zu nutzen. Was mich begeistert, ist die kreative Gestaltung dieses Produkts und die klare Zielgruppe. Welche Schritte würden Sie empfehlen, um mich schneller anzupassen?",
+          "evaluation_criteria": {
+            "task_completion": "Alle drei Punkte nennen und sinnvoll in den Text einbauen",
+            "vocabulary_range": "Korrekte Verwendung von 'begeistert', 'mitarbeiten', 'Kinderprodukt'",
+            "grammar_complexity": "Fragenstellung mit 'brauche', 'welche Schritte', Relativsätze",
+            "coherence_organization": "Einleitung, Hauptteil, Schluss mit höflicher Abfrage"
+          },
+          "metadata": {
+            "level": "B1",
+            "skill": "WRITING",
+            "topic": "work",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:44:23.968082",
+            "task_type": "email"
+          }
+        },
+        {
+          "id": 2,
+          "type": "email",
+          "task_title": "Wechsel in ein anderes Department beantragen",
+          "task_description": "Sie möchten in ein anderes Department wechseln und haben Bedenken. Schreiben Sie eine E-Mail an Ihren Vorgesetzten.",
+          "task_instructions": "Nennen Sie den Vanbildungsort (Dortmund), die Gründe für den Wechsel (Einsamkeit, Heimweh) und bitten Sie um Überlegung.",
+          "context": "Ihr aktuelles Team befindet sich in München. Das neue Department in Dortmund hat Kollegen, die Sie bevorzugen.",
+          "context_translation": "Your current team is in Munich. The new department in Dortmund has colleagues you prefer.",
+          "content_points": [
+            "Explizit den Wunsch nach Wechseln formulieren",
+            "Erklären Sie die Gründe aus Ihrer Sicht",
+            "Zeigen Sie Bereitschaft, sich anzupassen"
+          ],
+          "word_count_min": 100,
+          "word_count_max": 150,
+          "example_response": "Sehr geehrte Frau Hoffmann,\n\nihnen freundlich, um Sie über meinen Wunsch, in das Dortmund-Team zu wechseln, zu informieren. Aktuell fühle ich mich am Arbeitsort in München aufgrund von Heimweh und Einsamkeit unbehaglich. In Dortmund könnte die Zusammenarbeit mit Ihnen und Ihrem Team motivierender sein. Welche Voraussetzungen wären für diesen Wechsel erforderlich?",
+          "evaluation_criteria": {
+            "task_completion": "Anfrage, Gründe nennen, Abschließende Frage",
+            "vocabulary_range": "Begriffe 'mitarbeiten' falsch (hier nicht nötig), korrekt 'heimweh', 'einsamkeit'",
+            "grammar_complexity": "Konjunktiv II im Frageteil (könnten), Verknüpfung mit 'da'"
+          },
+          "metadata": {
+            "level": "B1",
+            "skill": "WRITING",
+            "topic": "work",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:44:23.968082",
+            "task_type": "email"
+          }
+        },
+        {
+          "id": 3,
+          "type": "email",
+          "task_title": "Product Improvement Vorschlag",
+          "task_description": "Als Teamleiter erhalten Sie Feedback zu einem Produkt. Schreiben Sie eine Antwort, um Verbesserungsvorschläge zu besprechen.",
+          "task_instructions": "Nennen Sie Verbesserungsvorschläge für 'das Kindermatridament', erklären Sie Bedenken im Team (Abneigung) und schlagen Sie Umsetzungsstrategien vor.",
+          "context": "Die Verkäufe sinken, und Ihr Team schlägt Verbesserungen vor.",
+          "context_translation": "Sales are declining, and your team suggests improvements.",
+          "content_points": [
+            "Konkrete Vorschläge zur Produktverbesserung nennen",
+            "Erklären Sie, warum Bedenken im Team bestehen (Abneigung)",
+            "Sagen Sie zu, um Änderungen umzusetzen"
+          ],
+          "word_count_min": 100,
+          "word_count_max": 150,
+          "example_response": "Sehr geehrtes Team,\nder Feedbackbetrag zu unserem Kindermatridament ist bedacht. Es gibt Diskussionen darüber, die Verpackung zu überdenken, da Kundenobjective Widerstand (Abneigung) zeigen. Ich schlage vor, wir wechseln (schalten) den Fokus auf aktives Feedback. Welche konkreten Schritte empfiehlt ihr, um die Akzeptanz zu erhöhen?",
+          "evaluation_criteria": {
+            "task_completion": "Nennen, erklären, zustimmen und vorschlagen",
+            "vocabulary_range": "Begriffe 'hold', 'objektions', 'Coworker' verwenden",
+            "grammar_complexity": "Bedingungssätze mit 'wenn', passive Konstruktionen",
+            "coherence_organization": "Struktur mit Vorschlag und Begründung"
+          },
+          "metadata": {
+            "level": "B1",
+            "skill": "WRITING",
+            "topic": "work",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:44:23.968082",
+            "task_type": "email"
+          }
+        },
+        {
+          "id": 4,
+          "type": "email",
+          "task_title": "Sommerurlaub Unterstützung",
+          "task_description": "Sie planen die Abwesenheit und benötigen Abdeckung. Schreiben Sie eine E-Mail an Ihr Team.",
+          "task_instructions": "Nennen Sie die Absenzeiträume, erklären Sie die Gründe (Privatreise, Heimweh) und versprechen Sie vollständige Zurückmeldung.",
+          "context": "Ihr Urlaub liegt außerhalb der Hauptreisezeit des Unternehmens.",
+          "context_translation": "Your vacation occurs outside the company's peak travel period.",
+          "content_points": [
+            "Datum und Dauer der Abwesenheit nennen",
+            "Grunde für den Urlaub nennen",
+            "Versprechen Sie, den Kollegen über Entwicklungen zu informieren"
+          ],
+          "word_count_min": 100,
+          "word_count_max": 150,
+          "example_response": "Lieber Kollege,\ndiese Zeit (vom 10.07. bis 15.07.) werde ich die privaten Projekte abschließen müssen, da mich die Einsamkeit ohne Familie begleitet. Ich versichere Ihnen, dass ich alle wichtigen E-Mails und Aufgaben erledigen werde. Übrigens, könnten wir die Kinderprodukteabgabe nächste Woche übernehmen?",
+          "evaluation_criteria": {
+            "task_completion": "Termine nennen, Gründe erraten, Rückmeldungsversprechen",
+            "vocabulary_range": "Verwenden von 'switch', 'homesickness', 'product'",
+            "grammar_complexity": "Konditionalsätze zur Erklärung (weil), Perfekt zur Berichterstattung",
+            "coherence_organization": "Chronologische Reihenfolge der Ereignisse"
+          },
+          "metadata": {
+            "level": "B1",
+            "skill": "WRITING",
+            "topic": "work",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:44:23.968082",
+            "task_type": "email"
+          }
+        },
+        {
+          "id": 5,
+          "type": "email",
+          "task_title": "Teamkonflikt klären",
+          "task_description": "Ein Teammitglied klagt über Unklarheiten bei der Aufgabenverteilung. Schreiben Sie eine Antwort zur Wiedergutmachung.",
+          "task_instructions": "Erklären Sie die Missverständnisse, schlagen Sie Erklärungen vor (Schalter) und unterstreichen Sie die Wärme Ihres Teams.",
+          "context": "Einer der Mitarbeiter fühlt sich durch fehlende klaren Richtlinien verwirrt.",
+          "context_translation": "An employee feels uncertain due to unclear guidelines.",
+          "content_points": [
+            "Erklären Sie, Warum Missverständnisse entstanden",
+            "Vorschläge machen, um Kommunikationslücken zu schließen",
+            "Wiederholen Sie das Engagement Ihres Teams"
+          ],
+          "word_count_min": 100,
+          "word_count_max": 150,
+          "example_response": "Sehr geehrte Anneliese,\nwer sind wir mich in Ihrer E-Mail um die Unklarheiten bei den Aufgaben? Unser Team arbeitet daran, die Vorgänge transparent zu halten (durch tägliche Check-Ins), aber möglicherweise wurden Schwächen übersehen. Ich schlage vor, wir wechseln (schalten) die Verfahrensweise ab sofort. Die Leidenschaft für unseren Arbeitsspaß bleibt uns nicht verborgen – sterben Zusammenarbeit wird sicherstellen",
+          "evaluation_criteria": {
+            "task_completion": "Probleme benennen, Lösungen anbieten, Engagement widerspiegeln",
+            "vocabulary_range": "Conjunctions to explain causes, passive voice for assurance",
+            "grammar_complexity": "Use of subordinate clauses for causal explanations",
+            "coherence_organization": "Structure with apology, explanation, solution"
+          },
+          "metadata": {
+            "level": "B1",
+            "skill": "WRITING",
+            "topic": "work",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:44:23.968082",
+            "task_type": "email"
+          }
+        }
+      ],
+      "speaking": [
+        {
+          "id": 1,
+          "type": "interview",
+          "task_title": "Besuch planen",
+          "task_description": "Sie möchten mit Ihrem Partner:in einen gemeinsamen Besuch planen. Diskutieren Sie Wunschorte und Termine.",
+          "task_instructions": "Plan Sie mit Ihrem Interviewpartner einen gemeinsamen Besuch. Verwenden Sie Fachbegriffe, um Orte und Schwierigkeiten zu beschreiben.",
+          "prompt": "Wie sind Sie hierher gekommen, um an diesem Tag zu besuchen?",
+          "prompt_translation": "How did you come here to visit on this day?",
+          "follow_up_questions": [
+            "Welche Schwierigkeiten haben Sie gemerkt?",
+            "Würden Sie es erneut versuchen?",
+            "Gibt es noch weitere Ziele, die Sie besuchen möchten?"
+          ],
+          "follow_up_translations": [
+            "What difficulties did you notice?",
+            "Would you try again?",
+            "Are there other places you'd like to visit?"
+          ],
+          "acceptable_response_length": "1-2 minutes",
+          "vocabulary_required": ["hierher", "zu Besuch kommen"],
+          "grammar_structures_required": ["Perfekt", "Dativ Fall"],
+          "example_response": "Ich bin gestern Nachmittag mit dem Fahrrad hierher gekommen, weil mich der Tag besonders aufregend versprach.",
+          "example_response_translation": "I came by bike yesterday afternoon because the day seemed particularly exciting.",
+          "evaluation_criteria": {
+            "fluency_pronunciation": "Fließende Äußerungen mit klarer Aussprache",
+            "vocabulary_accuracy": "Präzise Verzeichnis von Orten",
+            "grammar_accuracy": "Korrekte Vergangenheitsform von unregelmäßigen Verben",
+            "task_completion": "Gelungene Planung eines Besuchs",
+            "interaction_ability": "Natürliche Anpassung an den Gesprächspartner"
+          },
+          "metadata": {
+            "level": "B1",
+            "skill": "SPEAKING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:45:39.457317",
+            "interaction_type": "interview",
+            "expected_duration_seconds": 120
+          }
+        },
+        {
+          "id": 2,
+          "type": "interview",
+          "task_title": "Erholungsurlaub",
+          "task_description": "Sie reflektieren einen vorherigen Urlaub am Berg. Teilen Sie Eindrücke und Empfehlungen aus.",
+          "task_instructions": "Beschreiben Sie Ihren Alpumschlag und analysieren Sie die Erfahrung.",
+          "prompt": "Sind Sie heute hierher gekommen, um neue Eindrücke zu sammeln?",
+          "prompt_translation": "Are you here today to make new impressions?",
+          "follow_up_questions": [
+            "Welche Naturphänomene haben Sie nicht erwartet?",
+            "Wie hat sich Ihr Verhalten verändert?",
+            "Wie vergleicht sich dieser Ort mit dem letzten Mal?"
+          ],
+          "follow_up_translations": [
+            "What natural phenomena surprised you?",
+            "How did your behavior change?",
+            "How does this place compare to last time?"
+          ],
+          "acceptable_response_length": "1-2 minutes",
+          "vocabulary_required": ["erholt", "Almurlaub"],
+          "grammar_structures_required": ["Plusquamperfekt", "Superlativ"],
+          "example_response": "Vorgehen ist wichtig, um die Hygiene auf dem Berg zu erhalten.",
+          "example_response_translation": "Preparation is important to maintain mountain hygiene.",
+          "evaluation_criteria": {
+            "fluency_pronunciation": "Fließende Rede ohne Unterbrechung",
+            "vocabulary_accuracy": "Korrekte Begriffe für Natur",
+            "grammar_accuracy": "Genau divergent Konjunktiv II Formen",
+            "task_completion": "Vergleich mit vorherigen Erfahrungen",
+            "interaction_ability": "Emotionale Betonung"
+          },
+          "metadata": {
+            "level": "B1",
+            "skill": "SPEAKING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:45:39.457317",
+            "interaction_type": "interview",
+            "expected_duration_seconds": 120
+          }
+        },
+        {
+          "id": 3,
+          "type": "interview",
+          "task_title": "Begeisterungsanalyse",
+          "task_description": "Bewerten Sie Wärmeempfindungen in verschiedenen Tagesszeiten.",
+          "task_instructions": "Vergleichen Sie Temperaturen und Stimmungen unter Verwendung spezifischer Begriffe.",
+          "prompt": "Wie hat sich Ihr Enthusiasmus durch die Lufthygiene verändert?",
+          "prompt_translation": "How has your enthusiasm changed through air hygiene?",
+          "follow_up_questions": [
+            "Beeinträchtigen Sie Ihren Alltag ähnlich?",
+            "Welche Aktivitäten begleiten die Erholung?",
+            "Wie verbinden Sie Glätte und Struktur?",
+            "Welche Grenzen sind wahrscheinlich?"
+          ],
+          "follow_up_translations": [
+            "Does your routine suffer similarly?",
+            "What activities accompanied the recovery?",
+            "How do you balance smoothness and structure?",
+            "What boundaries exist?"
+          ],
+          "acceptable_response_length": "1-2 minutes",
+          "vocabulary_required": ["begeistert", "Hygiene", "gewohnt"],
+          "grammar_structures_required": ["Konjunktiv II", "Präteritum"],
+          "example_response": "Glücklich fühle ich mich, wenn die Hygiene in solchen Zonen gewahrt bleibt.",
+          "example_response_translation": "I feel happy when hygiene is maintained in such zones.",
+          "evaluation_criteria": {
+            "fluency_pronunciation": "Rolle für Tonwechsel verantwortlich",
+            "vocabulary_accuracy": "Eindeutige Zugehörigkeit von Begriffen",
+            "grammar_accuracy": "Korrekte Pluralformen und Genitive",
+            "task_completion": "Berücksichtigung aller Follow-Ups",
+            "interaction_ability": "Ermöglichen von Nachfragen"
+          },
+          "metadata": {
+            "level": "B1",
+            "skill": "SPEAKING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:45:39.457317",
+            "interaction_type": "interview",
+            "expected_duration_seconds": 120
+          }
+        },
+        {
+          "id": 4,
+          "type": "interview",
+          "task_title": "Unusual Encounters",
+          "task_description": "Reden Sie über seltene Erlebnisse mit Freunden.",
+          "task_instructions": "Aceton Sie geheimnisvolle Elemente, die die Hygiene überraschen könnten.",
+          "prompt": "Wie verwahren Sie Empfindungen wegen dieser Neuigkeit?",
+          "prompt_translation": "How do you handle feelings about this news?",
+          "follow_up_questions": [
+            "Würden andere Menschen ähnlich reagieren?",
+            "Können Sie die Situation beheben?",
+            "Wie vectoren Sie zukünftige Pläne?",
+            "Wie nameieren Sie hervorragende Strategien?"
+          ],
+          "follow_up_translations": [
+            "Would others react similarly?",
+            "Could you resolve the situation?",
+            "How do you vector future plans?",
+            "How name outstanding strategies?"
+          ],
+          "acceptable_response_length": "1-2 minutes",
+          "vocabulary_required": ["melken", "die Neuigkeit"],
+          "grammar_structures_required": ["Konjunktiv II", "Imperativ"],
+          "example_response": "Wenn die Hygiene wichtig bleibt, melke ich Ihnen neue Kraft zu.",
+          "example_response_translation": "If hygiene remains important, I'll milk you new strength.",
+          "evaluation_criteria": {
+            "fluency_pronunciation": "Rolle für Präpositionalobjekte",
+            "vocabulary_accuracy": "Korrekte Verben in Dativ",
+            "grammar_accuracy": "Professionelle Expressions",
+            "task_completion": "Verbindung von Begriffen",
+            "interaction_ability": "Emotionalitätsignale setzen"
+          },
+          "metadata": {
+            "level": "B1",
+            "skill": "SPEAKING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:45:39.457317",
+            "interaction_type": "interview",
+            "expected_duration_seconds": 120
+          }
+        },
+        {
+          "id": 5,
+          "type": "interview",
+          "task_title": "Besuchskultur-Vergleich",
+          "task_description": "Vergleichen Sie persönliche Erfahrungen aus verschiedenen Besuchen.",
+          "task_instructions": "Verwenden Sie Vergleiche zwischen zwei unterschiedlichen Situationen.",
+          "prompt": "Welche Unterschiede macht ein gewohnter Besuch versus ein spontaner?",
+          "prompt_translation": "What differences does a regular visit versus a spontaneous one make?",
+          "follow_up_questions": [
+            "Wann scheinen Granate verwendet zu werden?",
+            "Wie belohnen Sie sich nach so vielen Aktivitäten?",
+            "Können Sie Nutzung vs. nichterwartete Ergebnisse zusammenfassen?",
+            "Wie fühlen Sie sich mit der Zeit verbringen?"
+          ],
+          "follow_up_translations": [
+            "When are grenades used?",
+            "How do you reward yourself after activities?",
+            "Can you summarize intended vs unexpected results?",
+            "How do you feel spending that time?"
+          ],
+          "acceptable_response_length": "1-2 minutes",
+          "vocabulary_required": ["üblich", "melken", "erholt"],
+          "grammar_structures_required": ["Superlativ", "Konjunktiv II"],
+          "example_response": "Empfehle ich es nur bedingt, weil die Hygiene manchmal unzureichend ist.",
+          "example_response_translation": "I recommend it only conditionally because hygiene is sometimes insufficient.",
+          "evaluation_criteria": {
+            "fluency_pronunciation": "Belastbare Links in komplexen Sätzen",
+            "vocabulary_accuracy": "Mehrstufige Beziehungen",
+            "grammar_accuracy": "Korrekte Subordination",
+            "task_completion": "Eindeutige Antwort auf Prompt",
+            "interaction_ability": "Emotionale Neutralität bewahren"
+          },
+          "metadata": {
+            "level": "B1",
+            "skill": "SPEAKING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:45:39.457317",
+            "interaction_type": "interview",
+            "expected_duration_seconds": 120
+          }
+        },
+        {
+          "id": 6,
+          "type": "interview",
+          "task_title": "Kritische Analyse",
+          "task_description": "Bewerten Sie ein Überraschendes Ereignis in einer Hofnähe.",
+          "task_instructions": "Kritisch betrachten Sie ungewöhnliche Vorkommnisse.",
+          "prompt": "Wurden Sie durch ein ungelöstes Problem hierher gezogen?",
+          "prompt_translation": "Were you drawn here by unresolved problems?",
+          "follow_up_questions": [
+            "Wie steuert man Situationen mit Unstoff?",
+            "Sollte man sich sofort melden oder abwarten?",
+            "Wie deckt Hygiene motorische Aspekte ab?",
+            "Schlagen Sie authentische Verbesserungsvorschläge vor?"
+          ],
+          "follow_up_translations": [
+            "How control situations with substance?",
+            "Should one report immediately or wait?",
+            "How cover hygiene physical aspects?",
+            "Propose authentic improvements?"
+          ],
+          "acceptable_response_length": "1-2 minutes",
+          "vocabulary_required": ["gewohnt", "begeistert", "Hygiene"],
+          "grammar_structures_required": ["Konjunktiv II", "Imperfekt"],
+          "example_response": "Spetten Sie mit erhöhter Wachsamkeit die Hygiene aufrecht.",
+          "example_response_translation": "Support with increased vigilance maintains hygiene.",
+          "evaluation_criteria": {
+            "fluency_pronunciation": "Korrekter Sprachrhythmus",
+            "vocabulary_accuracy": "Passende Begriffe",
+            "grammar_accuracy": "Fließende Superlative",
+            "task_completion": "Umgang mit kritischen Fragen",
+            "interaction_ability": "Strukturierte Reflexion"
+          },
+          "metadata": {
+            "level": "B1",
+            "skill": "SPEAKING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:45:39.457317",
+            "interaction_type": "interview",
+            "expected_duration_seconds": 120
+          }
+        }
+      ]
+    },
+    "B2": {
+      "listening": [
+        {
+          "id": 1,
+          "type": "MultipleChoice",
+          "question": "Welche Unterstützung sucht der Sprecher für Flüchtlinge?",
+          "translation": "What support is the speaker asking for refugees?",
+          "audioText": "Es muss dringend eine bessere Integration der Flüchtlinge gewährleistet werden, denn viele von ihnen leben nach wie vor in prekären Verhältnissen.",
+          "audioText_translation": "There is an urgent need to ensure better integration for refugees, because many of them still live in precarious conditions.",
+          "audioDescription": "A politician discussing refugee support at a press conference.",
+          "ttsPrompt": "Sie müssen politischer Fachbegriffe und Konjunktiv I verstehen.",
+          "options": [
+            "Ressourcen für Flüchtlingsunterkünfte ausbauen",
+            "Asylverfahren eilen",
+            "Migrationsströme stoppen",
+            "Umweltgesetze verschärfen"
+          ],
+          "options_translations": [
+            "Expand resources for refugee shelters",
+            "Accelerate asylum procedures",
+            "Stop migration flows",
+            "Tighten environment laws"
+          ],
+          "correctAnswer": "Ressourcen für Flüchtlingsunterkünfte ausbauen",
+          "imagePlaceholder": "none",
+          "metadata": {
+            "level": "B2",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:47:39.988004"
+          }
+        },
+        {
+          "id": 2,
+          "type": "MultipleChoice",
+          "question": "Welchen Ton hat die Diskussion über Klimaunterschiede?",
+          "translation": "What tone does the speaker use in the discussion about climate differences?",
+          "audioText": "„Die Klimaveränderungen schaffen es, die sozialen Schichten bei Bedarf subtil zu deuten, ohne Rush stiften zu müssen.",
+          "audioText_translation": "\"Climate changes subtly reveal social classes when necessary, without rushing to enforce policies.\"",
+          "audioDescription": "A sociologist giving a lecture on societal shifts.",
+          "ttsPrompt": "Identifiziere höhereformige Ausdrücke und zweiteilige Verben.",
+          "options": [
+            "absolut",
+            "verhältnismäßig",
+            "thestatisch",
+            "unveränderlich"
+          ],
+          "options_translations": [
+            "absolute",
+            "proportional",
+            "static",
+            "unchanging"
+          ],
+          "correctAnswer": "verhältnismäßig",
+          "imagePlaceholder": "none",
+          "metadata": {
+            "level": "B2",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:47:39.988004"
+          }
+        },
+        {
+          "id": 3,
+          "type": "MultipleChoice",
+          "question": "Was ist das Ziel des Redners bei der Nachhilfestunde?",
+          "translation": "What is the goal of the speaker at the tutoring session?",
+          "audioText": "Diese Lernerfolge müssen veröffentlicht werden. Nur so kann den Elterngruppen die Angst genommen werden, dass nichts gelernt werden soll.",
+          "audioText_translation": "These learning successes must be published. Only then can the parents' fears be alleviated that nothing will be learned.",
+          "audioDescription": "A teacher discussing student progress with parents.",
+          "ttsPrompt": "Achte auf Passivformen und Ausdrücke des Erleichterns.",
+          "options": [
+            "Angst vor Lernerfolg beseitigen",
+            "Leistungen der Schüler übersetzen",
+            "Elterngruppen einschüchtern",
+            "Preise für die Schule verlieren"
+          ],
+          "options_translations": [
+            "Eliminate fear of learning success",
+            "Translate students' achievements",
+            "Intimidate parent groups",
+            "Lose awards for the school"
+          ],
+          "correctAnswer": "Angst vor Lernerfolg beseitigen",
+          "imagePlaceholder": "none",
+          "metadata": {
+            "level": "B2",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:47:39.988004"
+          }
+        },
+        {
+          "id": 4,
+          "type": "MultipleChoice",
+          "question": "Welche Handlung wird in der Diskussion erwähnt?",
+          "translation": "What action is being mentioned in the discussion?",
+          "audioText": "„Nach der Naturkatastrophe müssen die Häuser notfalls umgebaut werden, bevor die Anwohner zurückkehren dürfen.",
+          "audioText_translation": "\"After the natural disaster, the houses must be rebuilt if necessary before the residents can return.\"",
+          "audioDescription": "An engineer explaining post-disaster protocols.",
+          "ttsPrompt": "Fokus auf verbundene Passivsätze und Eingebungen.",
+          "options": [
+            "Gebäude beginnen",
+            "Trockenbau errichten",
+            "Naturkatastrophen verhindern",
+            "Technikgeräte reparieren"
+          ],
+          "options_translations": [
+            "Start buildings",
+            "Erect drywall",
+            "Prevent natural disasters",
+            "Repair electronics"
+          ],
+          "correctAnswer": "Gebäude beginnen",
+          "imagePlaceholder": "none",
+          "metadata": {
+            "level": "B2",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:47:39.988004"
+          }
+        },
+        {
+          "id": 5,
+          "type": "MultipleChoice",
+          "question": "Was könnte der Redner als Teil seiner Botschaft meinen?",
+          "translation": "What could the speaker include as part of their message?",
+          "audioText": "„Unsere Usance, eine warme Begrüßung, kann nicht im Armutszentrum weiterbestehen. Es braucht eine neue Tradition avisiert werden.“",
+          "audioText_translation": "\"Our usual greeting cannot survive in the center of poverty. A new tradition must be advertised.\"",
+          "audioDescription": "A activist discussing cultural traditions.",
+          "ttsPrompt": "Erkenne Abstraktionselemente und gesellschaftskritische Äußerungen.",
+          "options": [
+            "Konfirmationen aussprechen",
+            "Usanzen verwirklichen",
+            "Lichter zusammenhängen lassen",
+            "Aktivitäten ausklammern"
+          ],
+          "options_translations": [
+            "Perform confirmations",
+            "Realize traditions",
+            "Harmonize lights",
+            "Bracket activities"
+          ],
+          "correctAnswer": "Usanzen verwirklichen",
+          "imagePlaceholder": "none",
+          "metadata": {
+            "level": "B2",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:47:39.988004"
+          }
+        },
+        {
+          "id": 6,
+          "type": "MultipleChoice",
+          "question": "Welche Begriffe sind im Text definierbar?",
+          "translation": "Which terms can be defined from the text?",
+          "audioText": "„Der Hochhüftrigens wiegt schwer, sie sind aber unbedeingbar für die Naturkatastrophen des Klimawandels.“",
+          "audioText_translation": "\"The high-heeled shoes weigh heavily, but they are indispensable for the natural disasters of climate change.\"",
+          "audioDescription": "A poet discussing environmental metaphors.",
+          "ttsPrompt": "Analysiere bildhafte Sprache und Synonyme.",
+          "options": [
+            "Hochhüftrigens",
+            "Kohlensäuregehalt",
+            "Klimawandel",
+            "Naturkatastrophe"
+          ],
+          "options_translations": [
+            "High-heeled shoes",
+            "Carbonation content",
+            "Climate change",
+            "Natural disaster"
+          ],
+          "correctAnswer": "Hochhüftrigens",
+          "imagePlaceholder": "none",
+          "metadata": {
+            "level": "B2",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:47:39.988004"
+          }
+        },
+        {
+          "id": 7,
+          "type": "MultipleChoice",
+          "question": "Welchen fatalen Trend erwähnt der Sprecher?",
+          "translation": "What dangerous trend does the speaker mention?",
+          "audioText": "„Die Teilnehmer wurden angewiesen, sich gegenseitig zu besuchen. Jede Beschwerde muss jedoch zugleich erträgbar sein, sonst dünnt sich die Gemeinschaft ab.",
+          "audioText_translation": "\"Participants were told to visit each other. Yet every complaint must be tolerable, otherwise the community begins to fade.\"",
+          "audioDescription": "A psychologist discussing group dynamics.",
+          "ttsPrompt": "Identifiziere Konsequenzen-alluierte Formulierungen.",
+          "options": [
+            "Sozialer Zerfall",
+            "Naturkatastrophen",
+            "Flüchtlingsströme",
+            "Internetabhängigkeit"
+          ],
+          "options_translations": [
+            "Social disintegration",
+            "Natural disasters",
+            "Refugee flows",
+            "Internet addiction"
+          ],
+          "correctAnswer": "Sozialer Zerfall",
+          "imagePlaceholder": "none",
+          "metadata": {
+            "level": "B2",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:47:39.988004"
+          }
+        },
+        {
+          "id": 8,
+          "type": "MultipleChoice",
+          "question": "Was könnten Schüler über die Usance lernen?",
+          "translation": "What could students learn about the habit?",
+          "audioText": "„Diese Usance, die Zeit mit dem Portemonnaie zu teilen, fördert Respekt für das Gemein. Doch manche nutzen sie ausschließlich aus persönlichen Vorteil.“",
+          "audioText_translation": "\"This habit of sharing time with the wallet promotes respect for others. But some use it only for personal gain.\"",
+          "audioDescription": "A ethics teacher discussing student behavior.",
+          "ttsPrompt": "Achte auf Passivkonstruktionen und implizite Werteurteile.",
+          "options": [
+            "Portemonnaikeien",
+            "Gemeinschaftsoptimismus",
+            "Einhalt der Tradition",
+            "Nachhilfestunden"
+          ],
+          "options_translations": [
+            "Wallet inspections",
+            "Collective optimism",
+            "Adherence to tradition",
+            "Tutoring lessons"
+          ],
+          "correctAnswer": "Portemonnaikeien",
+          "imagePlaceholder": "none",
+          "metadata": {
+            "level": "B2",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:47:39.988004"
+          }
+        },
+        {
+          "id": 9,
+          "type": "MultipleChoice",
+          "question": "Welchen Kontext gibt der Ton zur Nachhilfestunde?",
+          "translation": "What context does the speaker give for the tutoring lesson?",
+          "audioText": "„Die Flüchtlingelfrauen hier hätten zuerst Lernerfolg erreichen müssen. Nur so kann den anderen eine richtige Einstufung gegeben werden.",
+          "audioText_translation": "\"The refugee women here should first achieve learning success. Only then can the others receive proper placement.\"",
+          "audioDescription": "A school principal organizing courses.",
+          "ttsPrompt": "Analysiere Hierarchienkonzerne und Denken in Schichten.",
+          "options": [
+            "beruflicher Aufstieg",
+            "kulturelle Diskriminierung",
+            "Filtern durch Leistung",
+            "Überstundenlimite"
+          ],
+          "options_translations": [
+            "career advancement",
+            "cultural discrimination",
+            "Filtering through performance",
+            "Overtime limits"
+          ],
+          "correctAnswer": "Filtern durch Leistung",
+          "imagePlaceholder": "none",
+          "metadata": {
+            "level": "B2",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:47:39.988004"
+          }
+        },
+        {
+          "id": 10,
+          "type": "MultipleChoice",
+          "question": "Was führt die falsche Umsetzung der Flüchtlingspolitik zu?",
+          "translation": "What leads to the wrong refugee policy being implemented?",
+          "audioText": "„Ohne respektvolles Zuhören machen wir den Flüchtlingen Unrecht. Ihr Motto ist der nur Weg, um nachhaltige Beziehungen fördern zu können.“",
+          "audioText_translation": "\"Without respectful listening, we do wrong to the refugees. Their motto is the only way to sustain relationships.\"",
+          "audioDescription": "A mediator resolving community conflicts.",
+          "ttsPrompt": "Fokus auf indi-rede mit Konjunktiv I und moralische Bewertung.",
+          "options": [
+            "Migrantenwelle",
+            "Diplomatieversagen",
+            "Usanciers",
+            "Nachtaktivitäten"
+          ],
+          "options_translations": [
+            "Migrant influx",
+            "Diplomatic failures",
+            "Practitioners",
+            "Nighttime activities"
+          ],
+          "correctAnswer": "Diplomatieversagen",
+          "imagePlaceholder": "none",
+          "metadata": {
+            "level": "B2",
+            "skill": "LISTENING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:47:39.988004"
+          }
+        }
+      ],
+      "reading": [
+        {
+          "id": 1,
+          "type": "MultipleChoice",
+          "question": "Welche Zielgruppe zielt die Region Berlin, indem sie gesundheitlich kostenlose Nachhilfestunden anbietet?",
+          "question_translation": "Which target group is Berlin targeting by offering free health-related tutoring sessions?",
+          "passage": "Die Stadt Berlin vermarktet gesundheitlich preiswerte Nachhilfestunden für Geringverdiener. Durch die Bereitstellung von Lernmaterial im öffentlichen Nahverkehr fördert sie Disziplin im selbstständigen Lernen. Sowohl Sozialhilfeempfänger als auch leistungsbereite Schüler:innen können sich anmelden.",
+          "passage_translation": "The city of Berlin is promoting affordable health-focused tutoring sessions for low-income earners. By providing learning materials at public transportation sites, they encourage discipline in self-study. Both social welfare recipients and high-performance students can apply.",
+          "options": [
+            "Geringverdiener und gesundheitlich Verwundbare",
+            "Sozialhilfeempfängler und Leistungsbereitsame",
+            "Nachhilfesuchende mit hohen Ausgaben",
+            "Bürger mit erhebiger Lernmotivation"
+          ],
+          "options_translations": [
+            "Low-income earners and health-promoting participants",
+            "Social welfare recipients and performance-oriented students",
+            "Tutoring seekers with high expenses",
+            "Citizens with significant motivation"
+          ],
+          "correctAnswer": "Geringverdiener und gesundheitlich Verwundbare",
+          "imagePlaceholder": "true",
+          "metadata": {
+            "level": "B2",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:49:03.700391",
+            "passage_word_count": 56
+          }
+        },
+        {
+          "id": 2,
+          "type": "MultipleChoice",
+          "question": "Was repräsentiert die 'Usance' im Kontext des Kunsthandwerks?",
+          "question_translation": "What does 'Usance' represent in the context of handicrafts?",
+          "passage": "Der Kunstverein fördert nachhaltige Gewohnheiten wie regelmäßige Nachhilfestunden zu modelmachenden. Die Usance, lebenslange verbundene Muster, wird durch gesundheitlich überwachte Techniken bewahrt.",
+          "passage_translation": "The arts association promotes sustainable habits like regular model-building workshops. The tradition of lifelong ingrained patterns is preserved through health-monitored techniques.",
+          "options": [
+            "Lebenslange Traditionen und Qualitätsstandards",
+            "Wettbewerbsregeln und finanzielle Sanktionen",
+            "Bewerbungsfristen für neue Steuerung",
+            "Öffentliche Projektionen der kreativen Prozesse"
+          ],
+          "options_translations": [
+            "Lifelong traditions and quality standards",
+            "Competition rules and financial penalties",
+            "Application deadlines for new management",
+            "Public projections of creative processes"
+          ],
+          "correctAnswer": "Lebenslange Traditionen und Qualitätsstandards",
+          "imagePlaceholder": "false",
+          "metadata": {
+            "level": "B2",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:49:03.700391",
+            "passage_word_count": 67
+          }
+        },
+        {
+          "id": 3,
+          "type": "RichtigFalsch",
+          "question": "Die Nachhilfestunde beinhaltet stets gesundheitlich überwachte Aktivitäten.",
+          "question_translation": "The tutoring lesson always includes health-monitored activities.",
+          "passage": "In den Nachhilfestunden wird Lernmaterial zu gesundheitlich ausgewogenen Themen bereitgestellt. Der Verein erfordert jedoch nicht zwingend gesundheitliche Anforderungen.",
+          "passage_translation": "In tutoring sessions, learning materials on health-balanced topics are provided. However, the association does not strictly require health-related criteria.",
+          "options": ["Wahr", "Falsch"],
+          "options_translations": ["True", "False"],
+          "correctAnswer": "Falsch",
+          "imagePlaceholder": "false",
+          "metadata": {
+            "level": "B2",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:49:03.700391",
+            "passage_word_count": 51
+          }
+        },
+        {
+          "id": 4,
+          "type": "MultipleChoice",
+          "question": "Welche Aussage beschreibt die Beziehung zwischen Disziplin und Spendenbereitschaft?",
+          "question_translation": "Which statement best describes the relationship between discipline and willingness to donate?",
+          "passage": "Disziplinvolle Mitarbeit der Sozialhilfeempfänger ermöglicht es, mehr Spendenbereitschaft hervorzurufen. Gemeinsam finanzieren sie gezielte Nachhilfestunden für Selbsthilfegruppen.",
+          "passage_translation": "Disciplined participation of social welfare recipients helps generate more willingness to donate. Together they finance targeted tutoring sessions for self-help groups.",
+          "options": [
+            "Disziplin fördert kollektives Engagement für gesellschaftliche Zwecke",
+            "Hohe Disziplin reduziert Spendenbereitschaft",
+            "Spendenbereitschaft macht Disziplin überflüssig",
+            "Disziplin richtet sich auf gesundheitliche katastrophale Ereignisse"
+          ],
+          "options_translations": [
+            "Discipline promotes collective engagement for societal causes",
+            "High discipline reduces willingness to donate",
+            "Willingness to donate eliminates the need for discipline",
+            "Discipline is directed at catastrophic health events"
+          ],
+          "correctAnswer": "Disziplin fördert kollektives Engagement für gesellschaftliche Zwecke",
+          "imagePlaceholder": "false",
+          "metadata": {
+            "level": "B2",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:49:03.700391",
+            "passage_word_count": 48
+          }
+        },
+        {
+          "id": 5,
+          "type": "MultipleChoice",
+          "question": "Welche Voraussetzung wird für die Teilnahme an den Nachhilfestunden genannt?",
+          "question_translation": "What requirement is mentioned for participating in the tutoring sessions?",
+          "passage": "Sozialhilfeempfänger können durch ihre Lebenslage gezielte Unterstützung erhalten. Eine hohe Leistungsbereitschaft ist notwendig, um das bereitgestellte Lernmaterial maximally zu nutzen.",
+          "passage_translation": "Social welfare recipients can receive targeted support through their life situations. High performance readiness is necessary to fully utilize the provided learning materials.",
+          "options": [
+            "Nachweis der hohen Leistung in Schule",
+            "Anmeldung als Sozialhilfeempfänger",
+            "Vorlage von geeignetem Wohnraum",
+            "Vorbesitz von Lernmaterialien"
+          ],
+          "options_translations": [
+            "Proof of academic achievement",
+            "Registration as a social welfare recipient",
+            "Provision of adequate housing",
+            "Ownership of learning materials"
+          ],
+          "correctAnswer": "Anmeldung als Sozialhilfeempfänger",
+          "imagePlaceholder": "false",
+          "metadata": {
+            "level": "B2",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:49:03.700391",
+            "passage_word_count": 63
+          }
+        },
+        {
+          "id": 6,
+          "type": "MultipleChoice",
+          "question": "Welche Aussage ist über die gesundheitlichen Aspekte korrekt?",
+          "question_translation": "Which statement is correct regarding the health aspects?",
+          "passage": "Die aus farmersischen Techniken abgeleiteten gesundheitlichen Konzepte erlauben es Geringverdiener:innen, durch Disziplin ihre Lebenslage zu verbessern.",
+          "passage_translation": "Health concepts derived from agrarian techniques enable low-income earners to improve their life situations through discipline.",
+          "options": [
+            "Gesundheitliche Konzepte garantieren bessere Lebenslagen",
+            "Disziplin ist die Hauptursache gesundheitlicher Probleme",
+            "Geringverdiener müssen an disastrous gesundheitlichen Überprüfungen teilnehmen",
+            "Die Kombination von gesundheitlichen Konzepten und Disziplin verbessert die Lebenslage"
+          ],
+          "options_translations": [
+            "Health concepts guarantee better life situations",
+            "Discipline is the main cause of health problems",
+            "Low-income earners must undergo disastrous health examinations",
+            "The combination of health concepts and discipline improves life situations"
+          ],
+          "correctAnswer": "Die Kombination von gesundheitlichen Konzepten und Disziplin verbessert die Lebenslage",
+          "imagePlaceholder": "true",
+          "metadata": {
+            "level": "B2",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:49:03.700391",
+            "passage_word_count": 59
+          }
+        },
+        {
+          "id": 7,
+          "type": "RichtigFalsch",
+          "question": "Um Nachhilfestunden zu organisieren, ist eine hohe Leistungsbereitschaft der Teilnehmer vorgeschrieben.",
+          "question_translation": "A high performance readiness of the participants is required to organize tutoring sessions.",
+          "passage": "Zur Finanzierung gesundheitlicher Projekte müssen Social Workers Disziplin aufbauen. Sie selbst bemühen sich darum, nachhaltige Gewohnheiten zu formieren.",
+          "passage_translation": "To finance health projects, Social Workers must build discipline. They themselves strive to develop sustainable habits.",
+          "options": ["Wahr", "Falsch"],
+          "options_translations": ["True", "False"],
+          "correctAnswer": "Falsch",
+          "imagePlaceholder": "false",
+          "metadata": {
+            "level": "B2",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:49:03.700391",
+            "passage_word_count": 49
+          }
+        },
+        {
+          "id": 8,
+          "type": "MultipleChoice",
+          "question": "Was verbindet die Größenordnung der Veranstaltungen mit Disziplin in den geschilderten Fällen?",
+          "question_translation": "What connects the scale of the events with discipline in the described cases?",
+          "passage": "Ganz gleich ob Betriebskünfte oder Hobbys - in der Gesellschaft dominiert die Vorstellung, dass Disziplin den Willens gleichermaßen stärkt wie die Bereitschaft zur Unterstützung. Somit wachsen die Spendenbereitschaft und Benutzerzahlen parallel.",
+          "passage_translation": "Whether in crafts or hobbies - in society, the idea prevails that discipline equally strengthens the will and the willingness to support. Thus, the willingness to donate and the number of users grow in parallel.",
+          "options": [
+            "Größere Veranstaltungen zeigen mehr Disziplin der Teilnehmer an",
+            "Disziplin treibt die Zunahme der Spendenbereitschaft an",
+            "Höhere Teilnehmerzahlen bedeuten geringere Lebenslagen",
+            "Disziplinlose님은 Geschäftsausbau verhindern können"
+          ],
+          "options_translations": [
+            "Larger events indicate more participant discipline",
+            "Discipline drives increased willingness to donate",
+            "Higher participant numbers mean lower income levels",
+            " undisciplined individuals can prevent business expansion"
+          ],
+          "correctAnswer": "Disziplin treibt die Zunahme der Spendenbereitschaft an",
+          "imagePlaceholder": "false",
+          "metadata": {
+            "level": "B2",
+            "skill": "READING",
+            "topic": "hobbies",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:49:03.700391",
+            "passage_word_count": 62
+          }
+        }
+      ],
+      "writing": [
+        {
+          "id": 1,
+          "type": "email",
+          "task_title": "Job Application Inquiry",
+          "task_description": "Write an email applying for a position at a trading company. Mention your current situation and how the role aligns with your background.",
+          "task_instructions": "Convey enthusiasm for the role, highlight relevant experience, state your current life situation, and request an interview. Use formal language.",
+          "context": "A small trading company is expanding and seeking bilingual candidates.",
+          "content_points": [
+            "Explain your current employment situation (Geringverdiener)",
+            "Describe your experience in international trade",
+            "Request a meeting to discuss the position"
+          ],
+          "word_count_min": 150,
+          "word_count_max": 200,
+          "example_response": "Sehr geehrte Damen und Herren, ich bin derzeit Geringverdiener im Einzelhandel, aber meine Erfahrung als Logistikkoordinator für ein Import-Export-Unternehmen macht mich auf die Tätigkeit bei Ihrem Handelsunternehmen ideal vorbereitet. Könnten wir gerne ein Vorstellungsgespräch vereinbaren?",
+          "evaluation_criteria": {
+            "task_completion": "All points addressed? Logical flow?",
+            "vocabulary_range": "3+ terms used appropriately",
+            "grammar_complexity": "Passiv, Subjunktiv II, Komplexsätze",
+            "coherence_organization": "Paragraph structure, transitions"
+          },
+          "metadata": {
+            "level": "B2",
+            "skill": "WRITING",
+            "topic": "work",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:51:17.454743",
+            "task_type": "email"
+          }
+        },
+        {
+          "id": 2,
+          "type": "email",
+          "task_title": "Volunteer Offer",
+          "task_description": "Write to a community center offering help with organizing their summer camp facilities.",
+          "task_instructions": "Explain your availability, suggest specific tasks (e.g., building structures), and reference your current life situation.",
+          "context": "A local nonprofit needs volunteers to refurbish children's play areas.",
+          "content_points": [
+            "State you're a student/budget-conscious worker (Geringverdiener)",
+            "Offer to help build outdoor play structures (bauen)",
+            "Suggest a schedule for your involvement"
+          ],
+          "word_count_min": 140,
+          "word_count_max": 190,
+          "example_response": "Sehr geehrte Freiwilligenkoordinatorin, meine Lebenslage als Studierender erlaubt mir, montags bis mittwochs nachmittags zu helfen. Ich könnte beim Bauen von Spielgeräten unterstützen, wobei meine Handwerkskenntnisse zur Sicherstellung einer stabilen Dachkonstruktion beitragen.",
+          "evaluation_criteria": {
+            "task_completion": "All criteria met? Specific suggestions?",
+            "vocabulary_range": "Use of 'bauen', 'Lebenslage', 'Geringverdiener'",
+            "grammar_complexity": "Multiple past tenses for description",
+            "coherence_organization": "Logical progression from introduction to scheduling"
+          },
+          "metadata": {
+            "level": "B2",
+            "skill": "WRITING",
+            "topic": "work",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:51:17.454743",
+            "task_type": "email"
+          }
+        },
+        {
+          "id": 3,
+          "type": "email",
+          "task_title": "Workplace Problem",
+          "task_description": "Write an internal company memo about inefficiencies in the warehouse.",
+          "task_instructions": "Identify the problem with the storage system (Ernte Delay), propose solutions, and copy management.",
+          "context": "A manufacturing company faces delays in processing bulk orders.",
+          "content_points": [
+            "Describe a specific Rätsel (logistical problem with Ernte quantities)",
+            "Suggest implementing a new labeling system",
+            "Recommend acting on the suggestion within two weeks"
+          ],
+          "word_count_min": 160,
+          "word_count_max": 210,
+          "example_response": "Betreff: Verbesserungsvorschlag für Lagerlogistik Unser aktueller Ernteprozess verursacht bei Großbestellungen Rätsel, da unverhofft anliegende Containertaschen die Stoklösung stören. Vorschlag: Einführen eines farblich kodierten Etikettensystems und_Listed",
+          "evaluation_criteria": {
+            "task_completion": "Clear problem description? actionable solution?",
+            "vocabulary_range": "Technical terms like 'Handelsunternehmen' integration",
+            "grammar_complexity": "Causative structures, Zweck-Überordnung",
+            "coherence_organization": "Headline + body paragraphs with OR-Verbindungen"
+          },
+          "metadata": {
+            "level": "B2",
+            "skill": "WRITING",
+            "topic": "work",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:51:17.454743",
+            "task_type": "email"
+          }
+        },
+        {
+          "id": 4,
+          "type": "email",
+          "task_title": "Charity Campaign",
+          "task_description": "Draft an internal flyer encouraging employees to donate to a social housing charity.",
+          "task_instructions": "Explain the charity's mission, relate it to company values, and request participation.",
+          "context": "A corporate social responsibility campaign for homeless support.",
+          "content_points": [
+            "Connect the charity's work to company ethos",
+            "Mention donation options (time/money)",
+            "Include deadline for donations (Usance)"
+          ],
+          "word_count_min": 130,
+          "word_count_max": 180,
+          "example_response": "Liebe Kolleginnen, als Handelsunternehmen fördern wir soziale Gerechtigkeit. Habituelles spenden Sie stattdessen?: 10€ für ein Dachmaterial, 2 Stunden bei der Bauassistance. Bitte senden Sie Ihre Angebote bis zum 15.04. an RH.",
+          "evaluation_criteria": {
+            "task_completion": "Clear call to action? All points covered?",
+            "vocabulary_range": "Formal appeal vocabulary",
+            "grammar_complexity": "Attributiv-Subjektivkonstruktionen",
+            "coherence_organization": "Bullet points with explanatory clauses"
+          },
+          "metadata": {
+            "level": "B2",
+            "skill": "WRITING",
+            "topic": "work",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:51:17.454743",
+            "task_type": "email"
+          }
+        },
+        {
+          "id": 5,
+          "type": "email",
+          "task_title": "Work-Life Balance",
+          "task_description": "Write to HR about arranging flexible work hours due to family commitments.",
+          "task_instructions": "Explain your current situation, propose a schedule change, and suggest a trial period.",
+          "context": "A parent needs to pick up their child from school at 15:00 daily.",
+          "content_points": [
+            "Describe your current life situation",
+            "Propose working from 07:00-13:00 and remote work on Fridays",
+            "Request a pilot program for three months"
+          ],
+          "word_count_min": 145,
+          "word_count_max": 210,
+          "example_response": "Betreff: Antrag auf flexible Arbeitszeiten Meine Lebenslage als Alleinerziehende erfordert ab dem 01.05. frühere Arbeitsende. Vorschlag: Arbeitsbeginn um 07:00 und freitags remot. Diese Änderung würde meine Produktivität verbessern, da sich meine Gewohnheiten (Usance) optieren lassen.",
+          "evaluation_criteria": {
+            "task_completion": "Clear proposal? Realistic adjustments?",
+            "vocabulary_range": "Formal request language",
+            "grammar_complexity": "Konjunktiv II for hypotheticals",
+            "coherence_organization": "Headline + justified points + conclusion"
+          },
+          "metadata": {
+            "level": "B2",
+            "skill": "WRITING",
+            "topic": "work",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:51:17.454743",
+            "task_type": "email"
+          }
+        }
+      ],
+      "speaking": [
+        {
+          "id": 1,
+          "type": "interview",
+          "task_title": "Respektvolle Begrüßungen in einer Flüchtlingsorganisation",
+          "task_description": "Sie arbeiten in einer Flüchtlingsorganisation. Antworten Sie auf Fragen zur Bildung von respektvollen Gesprächsanlässen für neue Flüchtlinge.",
+          "task_instructions": "Beschreiben Sie, wie Sie mit respektvoller Sprache Flüchtlinge aufnehmen und welche Rolle ihr persönliches Motto spielt.",
+          "prompt": "Wie begrüßen Sie neue Flüchtlinge, und warum ist dies wichtig? Erwähnen Sie mindestens zwei Aspekte.",
+          "prompt_translation": "How do you greet new refugees, and why is it important? Mention at least two aspects.",
+          "follow_up_questions": [
+            "Wie reagieren Sie, wenn jemand eine andere Begrüßung bevorzugt?",
+            "Haben Sie jemals einen Flüchtling getroffen, der Ihre Begrüßung überraschend schätzte?",
+            "Welche Wörter oder Gesten sind in Ihrem Land üblich, um Respekt zu zeigen?"
+          ],
+          "follow_up_translations": [
+            "How do you react if someone prefers a different greeting?",
+            "Have you ever met a refugee who unexpectedly appreciated your greeting?",
+            "What words or gestures are common in your country to show respect?"
+          ],
+          "acceptable_response_length": "15-30 seconds",
+          "vocabulary_required": ["Flüchtling", "respektvoll", "Motto"],
+          "grammar_structures_required": [
+            "Present tense",
+            "Modal verbs",
+            "Nouns with correct cases"
+          ],
+          "example_response": "Ich begrüße sie mit einem Lächeln und frage nach ihrem Wohlbefinden. Mein Motto ist, dass jeder willkommen sein soll.",
+          "example_response_translation": "I greet them with a smile and ask about their well-being. My motto is that everyone should feel welcome.",
+          "evaluation_criteria": {
+            "fluency_pronunciation": "Sprechen ohne Zögern, klare Aussprache",
+            "vocabulary_accuracy": "Korrektes Verwenden von 'Flüchtling', 'respektvoll' und 'Motto'",
+            "grammar_accuracy": "Genauige Verben und Fälle für Begrüßungen",
+            "task_completion": "Berücksichtigung aller Aspekte: Begrüßung, Respekt, Motto",
+            "interaction_ability": "Natürliche Fortführung der Diskussion"
+          },
+          "metadata": {
+            "level": "B2",
+            "skill": "SPEAKING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:57:54.905969",
+            "interaction_type": "interview",
+            "expected_duration_seconds": 180
+          }
+        },
+        {
+          "id": 2,
+          "type": "interview",
+          "task_title": "Habit der Nachhilfeunterstützung bei Lernerfolg",
+          "task_description": "Reden Sie über die Rolle von Nachhilfestunden für den Lernerfolg und tägliche Gewohnheiten.",
+          "task_instructions": "Erläutern Sie, wie geplante Nachhilfestunden (Usance) den Lernerfolg steigern.",
+          "prompt": "Was hat Ihnen geholfen, Ihren Lernerfolg zu verbessern? Erwähnen Sie eine Gewohnheit, die Ihre Erfahrung prägte.",
+          "prompt_translation": "What has improved your learning success? Mention a habit that shaped your experience.",
+          "follow_up_questions": [
+            "Wie organisieren Sie Ihre Nachhilfestunden zur optimalen Vorbereitung?",
+            "Würden Sie jemals abbrechen oder vernachlässigen, die Nachhilfe? Warum?",
+            "Wie reagieren Sie, wenn der Lernerfolg trotz Nachhilfe nicht zunimmt?"
+          ],
+          "follow_up_translations": [
+            "How do you organize your tutoring lessons for optimal preparation?",
+            "Would you ever skip tutoring? Why or why not?",
+            "How do you react if your learning success doesn't improve despite tutoring?"
+          ],
+          "acceptable_response_length": "30-60 seconds",
+          "vocabulary_required": ["Nachhilfestunde", "Usance", "Lernerfolg"],
+          "grammar_structures_required": [
+            "Past tense",
+            "If-clauses",
+            "Cause-effect sentences"
+          ],
+          "example_response": "Ich hatte viele Nachhilfestunden, die meine Wiederholungsgewohnheit etablierten. Das führte schließlich zum Erfolg.",
+          "example_response_translation": "I had many tutoring sessions that established my review habits, which eventually led to success.",
+          "evaluation_criteria": {
+            "fluency_pronunciation": "Fließendes Sprechen mit klaren Zeitformen",
+            "vocabulary_accuracy": "Passende Verwendung von 'Usance', 'Nachhilfestunde'",
+            "grammar_accuracy": "Präzise Vergangenheitsform und Nebensätze wie 'weil'",
+            "task_completion": "Vollständige Antwort auf Nachhilfe und Gewohnheiten",
+            "interaction_ability": "Logische Folgefrage-Antwort-Verbindung"
+          },
+          "metadata": {
+            "level": "B2",
+            "skill": "SPEAKING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:57:54.905969",
+            "interaction_type": "interview",
+            "expected_duration_seconds": 240
+          }
+        },
+        {
+          "id": 3,
+          "type": "interview",
+          "task_title": "Respekt durch Passende Begrüßungen",
+          "task_description": "Erklären Sie, wie respektvolle Worte und Gesten je nach Kontext variieren.",
+          "task_instructions": "Beschreiben Sie eine Situation, in der Sie verschiedene Begrüßungen (Richten, Treaty) je nach Person anwenden.",
+          "prompt": "Beschreiben Sie eine Situation, in der Sie je nach Person unterschiedlich begrüßen. Nennen Sie einen Begriff zum Thema.",
+          "prompt_translation": "Describe a situation where you greet people differently based on context. Mention one term from the topic.",
+          "follow_up_questions": [
+            "Warum ist es wichtig, Begrüßungen an die Situation anzupassen?",
+            "Nennen Sie einen Fehler, den Sie bei der Begrüßung gemacht haben.",
+            "Wie beeinflusst die Technik die Nachhilfestunde beginnt mindfulness beeinflusst?"
+          ],
+          "follow_up_translations": [
+            "Why is it important to adapt greetings to the situation?",
+            "Mention a mistake you made in greeting someone.",
+            "How does technology influence how you start mindfulness sessions?"
+          ],
+          "acceptable_response_length": "60-90 seconds",
+          "vocabulary_required": ["richten", "Nachhilfestunde", "Flüchtling"],
+          "grammar_structures_required": [
+            "Perfekt tense",
+            "Adverbialsätze",
+            "Passiv für allgemeine Aussagen"
+          ],
+          "example_response": "Ich begrüße Kollegen respektvoll mit einer Handschlag, Flüchtlinge aber mit offenen Fragen zu ihren Erfahrungen.",
+          "example_response_translation": "I greet colleagues with a handshake, but refugees with open questions about their experiences.",
+          "evaluation_criteria": {
+            "fluency_pronunciation": "Variation in Betonung je nach Kontext",
+            "vocabulary_accuracy": "Wortwahl passend zu Flüchtlingen vs Kollegen",
+            "grammar_accuracy": "Präsens und Passiv für allgemeine Regeln",
+            "task_completion": "Bezug auf verschiedene Szenarien",
+            "interaction_ability": "Dynamische Reaktion auf unterschiedlichen Kontext"
+          },
+          "metadata": {
+            "level": "B2",
+            "skill": "SPEAKING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:57:54.905969",
+            "interaction_type": "interview",
+            "expected_duration_seconds": 210
+          }
+        },
+        {
+          "id": 4,
+          "type": "interview",
+          "task_title": "Portemonnaie und Naturkatastrophen: Umgang mit Habit",
+          "task_description": "Sprechen Sie darüber, wie Gewohnheiten (Usance) bei Gesprächen über Portemonnaies oder Naturkatastrophen eine Rolle spielen.",
+          "task_instructions": "Verknüpfen Sie alltägliche Gegenstände wie Portemonnaies mit persönlichen Gewohnheiten in Krisensituationen.",
+          "prompt": "Wie könnte eine Naturkatastrophe Ihre Gewohnheit (Usance), Ihr Portemonnaie betreffen? Geben Sie ein Beispiel.",
+          "prompt_translation": "How might a natural disaster affect your habit of carrying a wallet? Give an example.",
+          "follow_up_questions": [
+            "Was würden Sie tun, wenn Ihr Portemonnaie bei einer Katastrophe verloren ging?",
+            "Wie verbinden Sie Ihre persönlichen Werte mit der Umgang mit Habit?",
+            "Welche Rolle spielt Respekt in der Reaktion auf ein solches Ereignis?"
+          ],
+          "follow_up_translations": [
+            "What would you do if your wallet was lost in a disaster?",
+            "How do you connect personal values to habit management?",
+            "What role does respect play in reacting to such an event?"
+          ],
+          "acceptable_response_length": "90-120 seconds",
+          "vocabulary_required": ["Portemonnaie", "Naturkatastrophe", "Usance"],
+          "grammar_structures_required": [
+            "Hypothetisches Präteritum",
+            "Konjunktiv II",
+            "Kevtional sentences"
+          ],
+          "example_response": "Wenn mein Portemonnaie bei einem Sturm verloren ginge, würde ich first resources ask respektvoll, basierend auf meinem Motto.",
+          "example_response_translation": "If my wallet were lost in a storm, I would respectfully ask for resources based on my motto.",
+          "evaluation_criteria": {
+            "fluency_pronunciation": "Kontrollierte Sprechgeschwindigkeit bei hypothetischen Gedanken",
+            "vocabulary_accuracy": "Korrekte Verwendung von 'Portemonnaie' und 'Naturkatastrophe'",
+            "grammar_accuracy": "Konjunktiv für hypothetische Ereignisse",
+            "task_completion": "Integration aller drei Vokabeln in die Antwort",
+            "interaction_ability": "Kohärenter Übergang zwischen Szenarien"
+          },
+          "metadata": {
+            "level": "B2",
+            "skill": "SPEAKING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:57:54.905969",
+            "interaction_type": "interview",
+            "expected_duration_seconds": 270
+          }
+        },
+        {
+          "id": 5,
+          "type": "interview",
+          "task_title": "Beraten von Flüchtlingen über Schwerpunkt",
+          "task_description": "Arbeiten Sie als Berufsberater und helfen Sie einem Flüchtling, seine Karriere einzurichten.",
+          "task_instructions": "Nutzen Sie respektvolle Sprache und Ihren eigenen Motto, um Praktische Ratschläge zu geben.",
+          "prompt": "Ein Flüchtling fragt nach der richtigen Methode, seinen Beruf zu etablieren. Wie beraten Sie sie?",
+          "prompt_translation": "A refugee asks about the right way to establish a career. How do you advise them?",
+          "follow_up_questions": [
+            "Wie berücksichtigen Sie kulturelle Unterschiede bei der Beratung?",
+            "Welche Ressource ist am wichtigsten für Ihre Motto zur Unterstützung?",
+            "Wie bewältigen Sie, wenn Lernerfolg durch Sprachbarrieren behindert wird?"
+          ],
+          "follow_up_translations": [
+            "How do you account for cultural differences in your advice?",
+            "Which resource is most important for your motto to support them?",
+            "How do you deal with learning success hindered by language barriers?"
+          ],
+          "acceptable_response_length": "2-3 minutes",
+          "vocabulary_required": ["richten", "Flüchtling", "gesamt"],
+          "grammar_structures_required": [
+            "Konjunktiv II für Ratschläge",
+            "Adjektive mit korrekten Endungen",
+            "Passiv für allgemeine Tipps"
+          ],
+          "example_response": "Ich würde ihn leiten lassen, seinen Interessen resilient zu folgen, und währenddessen Toleranz zeigen.",
+          "example_response_translation": "I would guide him to follow his interests resiliently and show tolerance during the process.",
+          "evaluation_criteria": {
+            "fluency_pronunciation": "Natürliche Betonung bei emotionalen Themen",
+            "vocabulary_accuracy": "Passende Berufsbegriffe und 'Flüchtling'",
+            "grammar_accuracy": "Passiv zur Berichterstattung über allgemeine Praktiken",
+            "task_completion": "Integrierung von Motto, Handlungsschritte",
+            "interaction_ability": "Empathische Wiederholung der migrantischen Erfahrungen"
+          },
+          "metadata": {
+            "level": "B2",
+            "skill": "SPEAKING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:57:54.905969",
+            "interaction_type": "interview",
+            "expected_duration_seconds": 300
+          }
+        },
+        {
+          "id": 6,
+          "type": "interview",
+          "task_title": "Motto der Nachhaltigkeit in der Ausbildung",
+          "task_description": "Vermitteln Sie, warum Lernerfolg durch gesellschaftliche Werte wie nachhaltigkeit beeinflusst werden kann.",
+          "task_instructions": "Nutzen Sie Ihr Wissen über Gewohnheiten, um Lernmethoden nachhaltig zu verankern.",
+          "prompt": "Wie tragen Ihre persönlichen Gewohnheiten (Usance) zum langfristigen Lernerfolg in verschiedenen Regionen bei?",
+          "prompt_translation": "How do your personal habits contribute to long-term learning success in different regions?",
+          "follow_up_questions": [
+            "Welche Rolle spielt das Lernerfolgrecht bei der Entwicklung von Nachhaltigkeit?",
+            "Wie vermeiden Sie Nachhaltigkeitsrisiken durch unregelmäßige Nachhilfe?",
+            "Ist es möglich, dass zwei Schüler mit ähnlicher Herkunft lange unterschiedlich lernen?"
+          ],
+          "follow_up_translations": [
+            "What role does the right to learn play in developing sustainability?",
+            "How do you avoid sustainability risks through irregular tutoring?",
+            "Can two students with similar backgrounds learn differently long-term?"
+          ],
+          "acceptable_response_length": "2-3 minutes",
+          "vocabulary_required": [
+            "nachhaltigkeit",
+            "Lernerfolg",
+            "Nachhilfestunde"
+          ],
+          "grammar_structures_required": [
+            "Konjunktiv II",
+            "Infinitiivsatzkonstruktionen",
+            "Duale Verben und Adverbien"
+          ],
+          "example_response": "Meine feste Nachhilfespirit hilft, Nachhaltigkeit in jedem Schritt zu umfassen.",
+          "example_response_translation": "My consistent habit of tutoring helps me encompass sustainability in every step.",
+          "evaluation_criteria": {
+            "fluency_pronunciation": "Kohärente Verbindung von Konzepten",
+            "vocabulary_accuracy": "Verwendung von 'Nachhaltigkeit' und 'Nachhilfestunde'",
+            "grammar_accuracy": "Satzstruktur zur Verknüpfung von Ideen",
+            "task_completion": "Antwort auf gesellschaftliche und pädagogische Aspekte",
+            "interaction_ability": "Analytische Antwort auf langfristige Lernerfolge"
+          },
+          "metadata": {
+            "level": "B2",
+            "skill": "SPEAKING",
+            "topic": "greetings",
+            "source": "generated",
+            "timestamp": "2025-11-18T06:57:54.905969",
+            "interaction_type": "interview",
+            "expected_duration_seconds": 240
+          }
+        }
+      ]
+    }
+  }
+}
