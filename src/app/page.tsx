@@ -149,9 +149,9 @@ const App = () => {
       return (
         <div className="flex items-center justify-center py-12">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 mx-auto mb-4"></div>
-            <p className="text-gray-600">Loading questions...</p>
-            <p className="text-sm text-gray-400 mt-2">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
+            <p className="text-gray-200">Loading questions...</p>
+            <p className="text-sm text-gray-300 mt-2">
               (Fragen werden geladen...)
             </p>
           </div>
@@ -163,11 +163,11 @@ const App = () => {
       return (
         <div className="flex items-center justify-center py-12">
           <div className="text-center max-w-md">
-            <div className="text-red-600 text-5xl mb-4">⚠️</div>
-            <p className="text-red-600 font-semibold mb-2">
+            <div className="text-red-400 text-5xl mb-4">⚠️</div>
+            <p className="text-red-400 font-semibold mb-2">
               Error loading questions
             </p>
-            <p className="text-gray-600 text-sm mb-4">{error}</p>
+            <p className="text-gray-300 text-sm mb-4">{error}</p>
             <button
               onClick={() => {
                 setError(null);
@@ -186,8 +186,8 @@ const App = () => {
       return (
         <div className="flex items-center justify-center py-12">
           <div className="text-center">
-            <p className="text-gray-600">No questions available</p>
-            <p className="text-sm text-gray-400 mt-2">
+            <p className="text-gray-200">No questions available</p>
+            <p className="text-sm text-gray-300 mt-2">
               (Keine Fragen verfügbar)
             </p>
           </div>
@@ -230,16 +230,14 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans">
+    <div className="min-h-screen starry-background font-sans">
       <Header
         activeLevel={activeLevel}
         activeSection={activeSection}
         onBack={handleBack}
       />
-      <main className="max-w-6xl mx-auto p-4 sm:p-6 md:p-8">
-        <div className="bg-white p-6 sm:p-8 rounded-xl shadow-2xl">
-          {renderContent()}
-        </div>
+      <main className="max-w-6xl mx-auto p-4 sm:p-6 md:p-8 relative z-10">
+        <div className="relative z-10">{renderContent()}</div>
       </main>
     </div>
   );

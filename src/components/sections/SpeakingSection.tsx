@@ -166,16 +166,16 @@ export const SpeakingSection: React.FC<SpeakingSectionProps> = ({
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center text-3xl font-extrabold text-red-700 border-b pb-2">
-        <Mic className="w-7 h-7 mr-3" />
+      <div className="flex items-center text-3xl font-extrabold text-red-300 border-b border-gray-600 pb-2 mb-4">
+        <Mic className="w-7 h-7 mr-3 text-red-300" />
         <div>
-          <p>4. Sprechen</p>
-          <p className="text-sm font-medium text-gray-400 mt-1 italic leading-tight">
+          <p className="text-gray-200">4. Sprechen</p>
+          <p className="text-sm font-medium text-gray-300 mt-1 italic leading-tight">
             (4. Speaking)
           </p>
         </div>
       </div>
-      <p className="text-gray-600 italic">
+      <p className="text-gray-300 italic mb-6">
         Üben Sie die mündliche Prüfung. Nehmen Sie Ihre Antwort auf und lassen
         Sie sie validieren.{" "}
         <span className="text-xs font-normal opacity-80">
@@ -190,14 +190,14 @@ export const SpeakingSection: React.FC<SpeakingSectionProps> = ({
             className="mb-4"
           />
 
-          <div className="p-4 bg-red-50 border-l-4 border-red-400 rounded-md mb-4">
-            <p className="text-sm font-medium text-red-700">
+          <div className="p-4 bg-red-900/30 border-l-4 border-red-400 rounded-md mb-4">
+            <p className="text-sm font-medium text-red-300">
               Beispiel / Fokus ({q.type}):{" "}
               <span className="text-xs font-normal opacity-80">
                 (Example / Focus ({q.type}):)
               </span>
             </p>
-            <p className="text-md italic mt-1 text-red-800">
+            <p className="text-md italic mt-1 text-red-200">
               {q.example || "Denken Sie sich eine Antwort aus."}{" "}
               <span className="text-xs font-normal opacity-80">
                 ({q.example ? "" : "Think of an answer."})
@@ -214,15 +214,15 @@ export const SpeakingSection: React.FC<SpeakingSectionProps> = ({
                   className="px-6 py-3 bg-red-600 text-white rounded-lg shadow-md hover:bg-red-700 transition duration-150 flex items-center gap-2"
                 >
                   <Mic className="w-5 h-5" />
-                  Aufnahme starten (Start Recording)
+                  Start Recording
                 </button>
               ) : (
                 <button
                   onClick={() => stopRecording(q.id)}
-                  className="px-6 py-3 bg-red-800 text-white rounded-lg shadow-md hover:bg-red-900 transition duration-150 flex items-center gap-2"
+                  className="px-6 py-3 bg-red-800 text-white rounded-lg shadow-md hover:bg-red-900 transition duration-150 flex items-center gap-2 animate-pulse"
                 >
                   <Square className="w-5 h-5" />
-                  Aufnahme stoppen (Stop Recording)
+                  Stop Recording
                 </button>
               )}
 
@@ -230,10 +230,10 @@ export const SpeakingSection: React.FC<SpeakingSectionProps> = ({
                 <>
                   <button
                     onClick={() => playRecording(q.id)}
-                    className="px-4 py-3 bg-gray-600 text-white rounded-lg shadow-md hover:bg-gray-700 transition duration-150 flex items-center gap-2"
+                    className="px-4 py-3 bg-gray-500/50 text-white rounded-lg shadow-md hover:bg-gray-500/70 transition duration-150 flex items-center gap-2"
                   >
                     <Play className="w-4 h-4" />
-                    Abspielen (Play)
+                    Play
                   </button>
                   <button
                     onClick={() => handleValidate(q)}
@@ -248,7 +248,7 @@ export const SpeakingSection: React.FC<SpeakingSectionProps> = ({
                     ) : (
                       <>
                         <CheckCircle className="w-4 h-4" />
-                        Antwort prüfen (Validate)
+                        Validate
                       </>
                     )}
                   </button>

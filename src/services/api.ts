@@ -484,7 +484,7 @@ export function adaptReadingQuestion(
     textTranslation: apiQuestion.textTranslation,
     question: apiQuestion.question,
     translation: apiQuestion.translation,
-    options: apiQuestion.options,
+    options: apiQuestion.options || [],
     correctAnswer: apiQuestion.correctAnswer,
     imagePlaceholder: apiQuestion.imagePlaceholder,
   };

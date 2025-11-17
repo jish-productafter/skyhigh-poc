@@ -136,8 +136,8 @@ export const WritingSection: React.FC<WritingSectionProps> = ({
           </div>
         </div>
         <div className="text-center py-8">
-          <p className="text-gray-600">No writing questions available</p>
-          <p className="text-sm text-gray-400 mt-2">
+          <p className="text-gray-200">No writing questions available</p>
+          <p className="text-sm text-gray-300 mt-2">
             (Keine Schreibaufgaben verfügbar)
           </p>
         </div>
@@ -147,16 +147,16 @@ export const WritingSection: React.FC<WritingSectionProps> = ({
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center text-3xl font-extrabold text-orange-700 border-b pb-2">
-        <PenTool className="w-7 h-7 mr-3" />
+      <div className="flex items-center text-3xl font-extrabold text-orange-300 border-b border-gray-600 pb-2 mb-4">
+        <PenTool className="w-7 h-7 mr-3 text-orange-300" />
         <div>
-          <p>3. Schreiben</p>
-          <p className="text-sm font-medium text-gray-400 mt-1 italic leading-tight">
+          <p className="text-gray-200">3. Schreiben</p>
+          <p className="text-sm font-medium text-gray-300 mt-1 italic leading-tight">
             (3. Writing)
           </p>
         </div>
       </div>
-      <p className="text-gray-600 italic">
+      <p className="text-gray-300 italic mb-6">
         Schreiben Sie eine Nachricht oder füllen Sie ein Formular aus. Achten
         Sie auf die vorgegebene Wortanzahl.{" "}
         <span className="text-xs font-normal opacity-80">
@@ -197,17 +197,17 @@ export const WritingSection: React.FC<WritingSectionProps> = ({
                   <div key={field}>
                     <label
                       htmlFor={`${question.id}-${field}`}
-                      className="block text-sm font-medium text-gray-700 mb-1"
+                      className="block text-sm font-medium text-gray-200 mb-1"
                     >
                       {field}:{" "}
-                      <span className="text-xs text-gray-400 italic">
+                      <span className="text-xs text-gray-300 italic">
                         ({field})
                       </span>
                     </label>
                     <input
                       type="text"
                       id={`${question.id}-${field}`}
-                      className="w-full p-2 border border-gray-300 rounded-lg focus:ring-orange-500 focus:border-orange-500"
+                      className="w-full p-2 border border-gray-500/30 rounded-lg bg-white/10 text-gray-200 placeholder-gray-400 focus:ring-orange-500 focus:border-orange-500 focus:bg-white/20"
                       placeholder={`Ihr ${field} hier (Your ${field} here)`}
                       value={formAnswers[`${question.id}-${field}`] || ""}
                       onChange={(e) =>
@@ -240,7 +240,7 @@ export const WritingSection: React.FC<WritingSectionProps> = ({
                 ) : (
                   <>
                     <CheckCircle className="w-4 h-4" />
-                    Antwort prüfen (Validate Answer)
+                    Validate Answer
                   </>
                 )}
               </button>
@@ -371,7 +371,7 @@ export const WritingSection: React.FC<WritingSectionProps> = ({
 
               <textarea
                 rows={8}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-orange-500 focus:border-orange-500 resize-none"
+                className="w-full p-3 border border-gray-500/30 rounded-lg bg-white/10 text-gray-200 placeholder-gray-400 focus:ring-orange-500 focus:border-orange-500 focus:bg-white/20 resize-none"
                 placeholder="Ihre Antwort hier... (Your answer here...)"
                 value={questionEssayAnswer}
                 onChange={(e) =>
@@ -386,8 +386,8 @@ export const WritingSection: React.FC<WritingSectionProps> = ({
                   (question.minWords &&
                     questionWordCount < question.minWords) ||
                   (question.maxWords && questionWordCount > question.maxWords)
-                    ? "text-red-600"
-                    : "text-gray-500"
+                    ? "text-red-400"
+                    : "text-gray-300"
                 }`}
               >
                 Wortzahl: {questionWordCount}
@@ -425,7 +425,7 @@ export const WritingSection: React.FC<WritingSectionProps> = ({
                 ) : (
                   <>
                     <CheckCircle className="w-4 h-4" />
-                    Antwort prüfen (Validate Answer)
+                    Validate Answer
                   </>
                 )}
               </button>
