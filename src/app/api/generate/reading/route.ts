@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { fetchWithRetry } from "../../utils";
 
 const API_BASE_URL = process.env.API_BASE_URL!;
 
@@ -27,12 +28,16 @@ export async function POST(request: NextRequest) {
       url.searchParams.append("prefer_type", prefer_type);
     }
 
-    const response = await fetch(url.toString(), {
-      method: "POST",
-      headers: {
-        accept: "application/json",
-      },
-    });
+    const response = await fetchWithRetry(
+      () =>
+        fetch(url.toString(), {
+          method: "POST",
+          headers: {
+            accept: "application/json",
+          },
+        }),
+      2
+    );
 
     if (!response.ok) {
       const errorText = await response.text();
@@ -43,29 +48,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Get response as text first to handle potential JSON parsing errors
-    const responseText = await response.text();
-    let data;
-    try {
-      data = JSON.parse(responseText);
-    } catch (parseError) {
-      console.error("Failed to parse JSON response:", parseError);
-      console.error(
-        "Response text (first 1000 chars):",
-        responseText.substring(0, 1000)
-      );
-      console.error("Response text length:", responseText.length);
-      return NextResponse.json(
-        {
-          error: "Invalid JSON response from API",
-          details:
-            parseError instanceof Error
-              ? parseError.message
-              : "Unknown parsing error",
-          responsePreview: responseText.substring(0, 500),
-        },
-        { status: 500 }
-      );
-    }
+    const data = await response.json();
 
     console.log("reading questions", data);
     return NextResponse.json(data);
