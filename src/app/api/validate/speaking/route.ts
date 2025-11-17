@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const API_BASE_URL = "https://german.productafter.com";
+const API_BASE_URL = process.env.API_BASE_URL!;
 
 export async function POST(request: NextRequest) {
   try {
@@ -40,6 +40,7 @@ export async function POST(request: NextRequest) {
     }
 
     const data = await response.json();
+    console.log("speaking validation", data);
     return NextResponse.json(data);
   } catch (error) {
     console.error("Error validating speaking:", error);

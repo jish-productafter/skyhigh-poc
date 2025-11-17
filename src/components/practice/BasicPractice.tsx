@@ -262,17 +262,17 @@ export const BasicPractice: React.FC = () => {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center text-3xl font-extrabold text-purple-700 border-b pb-2">
-        <Grid className="w-7 h-7 mr-3" />
+      <div className="flex items-center text-3xl font-extrabold text-purple-300 border-b border-gray-600 pb-2 mb-4">
+        <Grid className="w-7 h-7 mr-3 text-purple-300" />
         <div>
-          <p>Basic - Aussprache üben</p>
-          <p className="text-sm font-medium text-gray-400 mt-1 italic leading-tight">
+          <p className="text-gray-200">Basic - Aussprache üben</p>
+          <p className="text-sm font-medium text-gray-300 mt-1 italic leading-tight">
             (Basic - Practice Pronunciation)
           </p>
         </div>
       </div>
 
-      <p className="text-gray-600 italic">
+      <p className="text-gray-300 italic mb-6">
         Üben Sie die Aussprache deutscher Wörter. Hören Sie das Wort an und
         versuchen Sie es nachzusprechen.{" "}
         <span className="text-xs font-normal opacity-80">
@@ -281,14 +281,14 @@ export const BasicPractice: React.FC = () => {
         </span>
       </p>
 
-      <div className="bg-white p-8 rounded-lg shadow-md border-l-4 border-purple-400">
+      <div className="glass-card p-8 rounded-lg shadow-md border-l-4 border-purple-400">
         <div className="flex flex-col items-center justify-center space-y-6">
           {/* Word Display */}
           <div className="text-center">
-            <p className="text-5xl font-black text-gray-800 mb-2">
+            <p className="text-5xl font-black text-gray-200 mb-2">
               {currentWord}
             </p>
-            <p className="text-sm text-gray-400 italic">
+            <p className="text-sm text-gray-300 italic">
               (Click the speaker icon to hear the pronunciation)
             </p>
           </div>
@@ -307,10 +307,7 @@ export const BasicPractice: React.FC = () => {
             >
               <Speaker className="w-6 h-6 mr-2" />
               <span className="font-semibold">
-                {isSpeaking ? "Spricht..." : "Anhören"}
-              </span>
-              <span className="text-xs ml-2 opacity-80">
-                ({isSpeaking ? "Speaking..." : "Listen"})
+                {isSpeaking ? "Speaking..." : "Listen"}
               </span>
             </button>
 
@@ -321,8 +318,7 @@ export const BasicPractice: React.FC = () => {
                 className="flex items-center justify-center px-6 py-3 rounded-lg shadow-md transition-all transform hover:scale-105 bg-red-500 text-white hover:bg-red-600"
               >
                 <Mic className="w-6 h-6 mr-2" />
-                <span className="font-semibold">Aufnehmen</span>
-                <span className="text-xs ml-2 opacity-80">(Record)</span>
+                <span className="font-semibold">Record</span>
               </button>
             ) : (
               <button
@@ -330,8 +326,7 @@ export const BasicPractice: React.FC = () => {
                 className="flex items-center justify-center px-6 py-3 rounded-lg shadow-md transition-all transform hover:scale-105 bg-red-800 text-white hover:bg-red-900 animate-pulse"
               >
                 <Square className="w-6 h-6 mr-2" />
-                <span className="font-semibold">Stoppen</span>
-                <span className="text-xs ml-2 opacity-80">(Stop)</span>
+                <span className="font-semibold">Stop</span>
               </button>
             )}
 
@@ -342,8 +337,7 @@ export const BasicPractice: React.FC = () => {
                 className="flex items-center justify-center px-6 py-3 rounded-lg shadow-md transition-all transform hover:scale-105 bg-gray-600 text-white hover:bg-gray-700"
               >
                 <Play className="w-6 h-6 mr-2" />
-                <span className="font-semibold">Abspielen</span>
-                <span className="text-xs ml-2 opacity-80">(Play)</span>
+                <span className="font-semibold">Play</span>
               </button>
             )}
 
@@ -362,8 +356,7 @@ export const BasicPractice: React.FC = () => {
                 ) : (
                   <>
                     <CheckCircle className="w-6 h-6 mr-2" />
-                    <span className="font-semibold">Prüfen</span>
-                    <span className="text-xs ml-2 opacity-80">(Validate)</span>
+                    <span className="font-semibold">Validate</span>
                   </>
                 )}
               </button>
@@ -375,49 +368,48 @@ export const BasicPractice: React.FC = () => {
               className="flex items-center justify-center px-6 py-3 rounded-lg shadow-md transition-all transform hover:scale-105 bg-gray-500 text-white hover:bg-gray-600"
             >
               <RefreshCw className="w-6 h-6 mr-2" />
-              <span className="font-semibold">Neues Wort</span>
-              <span className="text-xs ml-2 opacity-80">(New Word)</span>
+              <span className="font-semibold">New Word</span>
             </button>
           </div>
 
           {/* Recording Indicator */}
           {isRecording && (
-            <div className="flex items-center justify-center gap-2 text-red-600">
-              <div className="w-3 h-3 bg-red-600 rounded-full animate-pulse"></div>
+            <div className="flex items-center justify-center gap-2 text-red-400">
+              <div className="w-3 h-3 bg-red-400 rounded-full animate-pulse"></div>
               <span className="text-sm font-medium">Recording...</span>
             </div>
           )}
 
           {/* Validation Result */}
           {validationResult && (
-            <div className="mt-4 p-4 bg-green-50 border-l-4 border-green-400 rounded-md max-w-2xl">
+            <div className="mt-4 p-4 bg-green-900/30 border-l-4 border-green-400 rounded-md max-w-2xl">
               <div className="flex items-start gap-2">
-                <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
+                <CheckCircle className="w-5 h-5 text-green-300 mt-0.5" />
                 <div className="flex-1">
-                  <h4 className="font-semibold text-green-800 mb-2">
+                  <h4 className="font-semibold text-green-200 mb-2">
                     Validation Result
                   </h4>
                   {validationResult.score !== undefined && (
-                    <p className="text-green-700 mb-2">
+                    <p className="text-green-200 mb-2">
                       <strong>Score:</strong> {validationResult.score}/100
                     </p>
                   )}
                   {validationResult.transcription && (
-                    <p className="text-green-700 mb-2">
+                    <p className="text-green-200 mb-2">
                       <strong>Transcription:</strong>{" "}
                       {validationResult.transcription}
                     </p>
                   )}
                   {validationResult.feedback && (
-                    <p className="text-green-700 mb-2">
+                    <p className="text-green-200 mb-2">
                       <strong>Feedback:</strong> {validationResult.feedback}
                     </p>
                   )}
                   {validationResult.errors &&
                     validationResult.errors.length > 0 && (
                       <div className="mt-2">
-                        <strong className="text-green-800">Errors:</strong>
-                        <ul className="list-disc list-inside text-green-700 mt-1">
+                        <strong className="text-green-200">Errors:</strong>
+                        <ul className="list-disc list-inside text-green-300 mt-1">
                           {validationResult.errors.map((error, idx) => (
                             <li key={idx}>{error}</li>
                           ))}
@@ -427,8 +419,8 @@ export const BasicPractice: React.FC = () => {
                   {validationResult.suggestions &&
                     validationResult.suggestions.length > 0 && (
                       <div className="mt-2">
-                        <strong className="text-green-800">Suggestions:</strong>
-                        <ul className="list-disc list-inside text-green-700 mt-1">
+                        <strong className="text-green-200">Suggestions:</strong>
+                        <ul className="list-disc list-inside text-green-300 mt-1">
                           {validationResult.suggestions.map(
                             (suggestion, idx) => (
                               <li key={idx}>{suggestion}</li>
@@ -444,25 +436,25 @@ export const BasicPractice: React.FC = () => {
 
           {/* Validation Error */}
           {validationError && (
-            <div className="mt-4 p-4 bg-red-50 border-l-4 border-red-400 rounded-md max-w-2xl">
+            <div className="mt-4 p-4 bg-red-900/30 border-l-4 border-red-400 rounded-md max-w-2xl">
               <div className="flex items-start gap-2">
-                <XCircle className="w-5 h-5 text-red-600 mt-0.5" />
+                <XCircle className="w-5 h-5 text-red-300 mt-0.5" />
                 <div>
-                  <h4 className="font-semibold text-red-800 mb-1">
+                  <h4 className="font-semibold text-red-200 mb-1">
                     Validation Error
                   </h4>
-                  <p className="text-red-700">{validationError}</p>
+                  <p className="text-red-300">{validationError}</p>
                 </div>
               </div>
             </div>
           )}
 
           {/* Instructions */}
-          <div className="mt-6 p-4 bg-purple-50 border-l-4 border-purple-400 rounded-md max-w-2xl">
-            <p className="text-sm font-medium text-purple-700 mb-2">
+          <div className="mt-6 p-4 bg-purple-900/30 border-l-4 border-purple-400 rounded-md max-w-2xl">
+            <p className="text-sm font-medium text-purple-200 mb-2">
               Anleitung (Instructions):
             </p>
-            <ol className="text-sm text-purple-800 space-y-1 list-decimal list-inside">
+            <ol className="text-sm text-purple-200 space-y-1 list-decimal list-inside">
               <li>
                 Klicken Sie auf "Anhören", um das Wort zu hören. (Click "Listen"
                 to hear the word.)

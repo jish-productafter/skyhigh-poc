@@ -273,6 +273,7 @@ export async function generateListening(
   }
 
   const data = await response.json();
+  console.log("Listening API response:", data);
 
   // Cache the response
   if (useCache) {
@@ -325,6 +326,7 @@ export async function generateReading(
   }
 
   const data = await response.json();
+  console.log("Reading API response:", data);
 
   // Cache the response
   if (useCache) {
@@ -377,7 +379,7 @@ export async function generateWriting(
   }
 
   const data = await response.json();
-
+  console.log("Writing API response:", data);
   // Log the response to debug
   console.log("Writing API response:", data);
   console.log("Writing API response type:", typeof data);
@@ -438,6 +440,7 @@ export async function generateSpeaking(
   }
 
   const data = await response.json();
+  console.log("speaking questions", data);
 
   // Cache the response
   if (useCache) {
@@ -481,7 +484,7 @@ export function adaptReadingQuestion(
     textTranslation: apiQuestion.textTranslation,
     question: apiQuestion.question,
     translation: apiQuestion.translation,
-    options: apiQuestion.options,
+    options: apiQuestion.options || [],
     correctAnswer: apiQuestion.correctAnswer,
     imagePlaceholder: apiQuestion.imagePlaceholder,
   };
@@ -551,7 +554,7 @@ export function adaptSpeakingQuestion(
 }
 
 export interface ValidateWritingParams {
-  writing_task: import("@/types").WritingQuestion;
+  writing_task: ApiWritingQuestion | import("@/types").WritingQuestion;
   user_response: string;
 }
 
@@ -569,39 +572,61 @@ export interface WritingValidationResult {
 export async function validateWriting(
   params: ValidateWritingParams
 ): Promise<WritingValidationResult> {
-  // Convert writing task to JSON string
+  console.log("[API] validateWriting called");
+  console.log("[API] Writing Task (object):", params.writing_task);
+  console.log("[API] User Response Length:", params.user_response.length);
+
+  // Convert writing task (full question details object) to JSON string for the API
   const writingTaskJson = JSON.stringify(params.writing_task);
-  // User response is already a string, but ensure it's properly formatted
-  const userResponseJson = JSON.stringify(params.user_response);
+  // User response should be sent as-is (plain input string), not double-encoded
+  const userResponse = params.user_response;
+
+  console.log("[API] Writing Task JSON:", writingTaskJson);
+  console.log(
+    "[API] User Response (plain):",
+    userResponse.substring(0, 100) + "..."
+  );
 
   const formData = new URLSearchParams();
   formData.append("writing_task", writingTaskJson);
-  formData.append("user_response", userResponseJson);
+  formData.append("user_response", userResponse);
 
   const url = new URL("/api/validate/writing", window.location.origin);
+  console.log("[API] Request URL:", url.toString());
+  console.log("[API] FormData values:", {
+    writing_task: formData.get("writing_task")?.substring(0, 50) + "...",
+    user_response: formData.get("user_response")?.substring(0, 50) + "...",
+  });
 
   const response = await fetch(url.toString(), {
     method: "POST",
     headers: {
       accept: "application/json",
+      "Content-Type": "application/x-www-form-urlencoded",
     },
     body: formData,
   });
+
+  console.log("[API] Response Status:", response.status);
+  console.log("[API] Response OK:", response.ok);
 
   if (!response.ok) {
     const errorData = await response.json().catch(() => ({
       detail: response.statusText,
     }));
+    console.error("[API] Validation Error Response:", errorData);
     throw new Error(
       `Failed to validate writing: ${errorData.detail || response.statusText}`
     );
   }
 
-  return response.json();
+  const result = await response.json();
+  console.log("[API] Validation Success Response:", result);
+  return result;
 }
 
 export interface ValidateSpeakingParams {
-  speaking_task: import("@/types").SpeakingQuestion;
+  speaking_task: ApiSpeakingQuestion | import("@/types").SpeakingQuestion;
   audioFile: Blob;
 }
 
@@ -620,25 +645,50 @@ export interface SpeakingValidationResult {
 export async function validateSpeaking(
   params: ValidateSpeakingParams
 ): Promise<SpeakingValidationResult> {
+  console.log("[API] validateSpeaking called");
+  console.log("[API] Speaking Task:", params.speaking_task);
+  console.log("[API] Audio File Size:", params.audioFile.size, "bytes");
+  console.log("[API] Audio File Type:", params.audioFile.type);
+
   const formData = new FormData();
   formData.append("file", params.audioFile, "recording.mp3");
   formData.append("speaking_task", JSON.stringify(params.speaking_task));
 
+  console.log(
+    "[API] Speaking Task JSON:",
+    JSON.stringify(params.speaking_task)
+  );
+  console.log("[API] FormData entries:", {
+    hasFile: formData.has("file"),
+    hasTask: formData.has("speaking_task"),
+  });
+
   const url = new URL("/api/validate/speaking", window.location.origin);
+  console.log("[API] Request URL:", url.toString());
 
   const response = await fetch(url.toString(), {
     method: "POST",
     body: formData,
   });
 
+  console.log("[API] Response Status:", response.status);
+  console.log("[API] Response OK:", response.ok);
+  console.log(
+    "[API] Response Headers:",
+    Object.fromEntries(response.headers.entries())
+  );
+
   if (!response.ok) {
     const errorData = await response.json().catch(() => ({
       detail: response.statusText,
     }));
+    console.error("[API] Validation Error Response:", errorData);
     throw new Error(
       `Failed to validate speaking: ${errorData.detail || response.statusText}`
     );
   }
 
-  return response.json();
+  const result = await response.json();
+  console.log("[API] Validation Success Response:", result);
+  return result;
 }

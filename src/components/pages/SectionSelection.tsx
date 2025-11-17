@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import React from "react"
-import { Grid, Speaker, BookOpen, PenTool, Mic } from "lucide-react"
-import { ExamContent } from "@/types"
-import { SectionCard } from "@/components/ui/SectionCard"
+import React from "react";
+import { Grid, Speaker, BookOpen, PenTool, Mic } from "lucide-react";
+import { ExamContent } from "@/types";
+import { SectionCard } from "@/components/ui/SectionCard";
 
 interface SectionSelectionProps {
-  examContent: ExamContent
+  examContent: ExamContent;
   onSelectSection: (
     section: "LISTENING" | "READING" | "WRITING" | "SPEAKING"
-  ) => void
+  ) => void;
 }
 
 export const SectionSelection: React.FC<SectionSelectionProps> = ({
@@ -18,22 +18,17 @@ export const SectionSelection: React.FC<SectionSelectionProps> = ({
 }) => {
   return (
     <div className="p-8">
-      <div className="flex items-center text-3xl font-extrabold text-gray-800 mb-6">
-        <Grid className="w-7 h-7 mr-3 text-indigo-500" />
-        <div>
-          <p>{examContent.title} - Sektionen</p>
-          <p className="text-sm font-medium text-gray-400 mt-1 italic leading-tight">
-            ({examContent.englishTitle} - Sections)
-          </p>
-        </div>
+      <div className="text-center mb-8">
+        <h1 className="text-4xl font-extrabold text-gray-200 mb-2">
+          {examContent.title} - Sektionen
+        </h1>
+        <p className="text-base text-gray-300">
+          Wählen Sie den Prüfungsteil, den Sie üben möchten.{" "}
+          <span className="text-sm italic opacity-80">
+            (Select the exam part you would like to practice.)
+          </span>
+        </p>
       </div>
-
-      <p className="text-lg text-gray-600 mb-10">
-        Wählen Sie den Prüfungsteil, den Sie üben möchten.{" "}
-        <span className="text-sm font-normal opacity-80 italic">
-          (Select the exam part you would like to practice.)
-        </span>
-      </p>
 
       <div className="flex flex-wrap justify-center -m-2">
         <SectionCard
@@ -74,5 +69,5 @@ export const SectionSelection: React.FC<SectionSelectionProps> = ({
         />
       </div>
     </div>
-  )
-}
+  );
+};

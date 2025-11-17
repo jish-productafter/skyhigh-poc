@@ -1,14 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import {
-  Level,
-  Section,
-  ListeningQuestion,
-  ReadingQuestion,
-  WritingQuestion,
-  SpeakingQuestion,
-} from "@/types";
+import { Level, Section } from "@/types";
 import { EXAM_CONTENT } from "@/data";
 import { Header } from "@/components/layout/Header";
 import { LevelSelection } from "@/components/pages/LevelSelection";
@@ -23,20 +16,20 @@ import {
   generateReading,
   generateWriting,
   generateSpeaking,
-  adaptListeningQuestion,
-  adaptReadingQuestion,
-  adaptWritingQuestion,
-  adaptSpeakingQuestion,
+  ApiListeningQuestion,
+  ApiReadingQuestion,
+  ApiWritingQuestion,
+  ApiSpeakingQuestion,
 } from "@/services/api";
 
 const App = () => {
   const [activeLevel, setActiveLevel] = useState<Level | "Basic" | null>(null);
   const [activeSection, setActiveSection] = useState<Section | null>(null);
   const [questions, setQuestions] = useState<
-    | ListeningQuestion[]
-    | ReadingQuestion[]
-    | WritingQuestion[]
-    | SpeakingQuestion[]
+    | ApiListeningQuestion[]
+    | ApiReadingQuestion[]
+    | ApiWritingQuestion[]
+    | ApiSpeakingQuestion[]
   >([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -73,7 +66,7 @@ const App = () => {
                 topic: defaultTopic,
                 level: activeLevel,
               });
-              setQuestions(listeningData.map(adaptListeningQuestion));
+              setQuestions(listeningData);
               break;
             }
             case "READING": {
@@ -82,7 +75,7 @@ const App = () => {
                 level: activeLevel,
                 prefer_type: "MultipleChoice",
               });
-              setQuestions(readingData.map(adaptReadingQuestion));
+              setQuestions(readingData);
               break;
             }
             case "WRITING": {
@@ -92,9 +85,7 @@ const App = () => {
                 task_type: "email",
               });
               console.log("Raw writing data from API:", writingData);
-              const adapted = writingData.map(adaptWritingQuestion);
-              console.log("Adapted writing questions:", adapted);
-              setQuestions(adapted);
+              setQuestions(writingData);
               break;
             }
             case "SPEAKING": {
@@ -103,7 +94,7 @@ const App = () => {
                 level: activeLevel,
                 interaction_type: "interview",
               });
-              setQuestions(speakingData.map(adaptSpeakingQuestion));
+              setQuestions(speakingData);
               break;
             }
           }
@@ -158,9 +149,9 @@ const App = () => {
       return (
         <div className="flex items-center justify-center py-12">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 mx-auto mb-4"></div>
-            <p className="text-gray-600">Loading questions...</p>
-            <p className="text-sm text-gray-400 mt-2">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
+            <p className="text-gray-200">Loading questions...</p>
+            <p className="text-sm text-gray-300 mt-2">
               (Fragen werden geladen...)
             </p>
           </div>
@@ -172,11 +163,11 @@ const App = () => {
       return (
         <div className="flex items-center justify-center py-12">
           <div className="text-center max-w-md">
-            <div className="text-red-600 text-5xl mb-4">⚠️</div>
-            <p className="text-red-600 font-semibold mb-2">
+            <div className="text-red-400 text-5xl mb-4">⚠️</div>
+            <p className="text-red-400 font-semibold mb-2">
               Error loading questions
             </p>
-            <p className="text-gray-600 text-sm mb-4">{error}</p>
+            <p className="text-gray-300 text-sm mb-4">{error}</p>
             <button
               onClick={() => {
                 setError(null);
@@ -195,8 +186,8 @@ const App = () => {
       return (
         <div className="flex items-center justify-center py-12">
           <div className="text-center">
-            <p className="text-gray-600">No questions available</p>
-            <p className="text-sm text-gray-400 mt-2">
+            <p className="text-gray-200">No questions available</p>
+            <p className="text-sm text-gray-300 mt-2">
               (Keine Fragen verfügbar)
             </p>
           </div>
@@ -208,28 +199,28 @@ const App = () => {
       case "LISTENING":
         return (
           <ListeningSection
-            questions={questions as ListeningQuestion[]}
+            questions={questions as ApiListeningQuestion[]}
             level={activeLevel}
           />
         );
       case "READING":
         return (
           <ReadingSection
-            questions={questions as ReadingQuestion[]}
+            questions={questions as ApiReadingQuestion[]}
             level={activeLevel}
           />
         );
       case "WRITING":
         return (
           <WritingSection
-            questions={questions as WritingQuestion[]}
+            questions={questions as ApiWritingQuestion[]}
             level={activeLevel}
           />
         );
       case "SPEAKING":
         return (
           <SpeakingSection
-            questions={questions as SpeakingQuestion[]}
+            questions={questions as ApiSpeakingQuestion[]}
             level={activeLevel}
           />
         );
@@ -239,16 +230,14 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans">
+    <div className="min-h-screen starry-background font-sans">
       <Header
         activeLevel={activeLevel}
         activeSection={activeSection}
         onBack={handleBack}
       />
-      <main className="max-w-6xl mx-auto p-4 sm:p-6 md:p-8">
-        <div className="bg-white p-6 sm:p-8 rounded-xl shadow-2xl">
-          {renderContent()}
-        </div>
+      <main className="max-w-6xl mx-auto p-4 sm:p-6 md:p-8 relative z-10">
+        <div className="relative z-10">{renderContent()}</div>
       </main>
     </div>
   );

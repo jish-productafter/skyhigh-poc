@@ -1,16 +1,21 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useMemo } from "react";
 import { Speaker, Pause, Volume2 } from "lucide-react";
-import { SectionProps, ListeningQuestion } from "@/types";
+import { ListeningSectionProps, ListeningQuestion } from "@/types";
 import { GermanQuestion } from "@/components/ui/GermanQuestion";
 import { QuestionContainer } from "@/components/ui/QuestionContainer";
 import { AnswerFeedback } from "@/components/ui/AnswerFeedback";
+import { adaptListeningQuestion } from "@/services/api";
 
-export const ListeningSection: React.FC<SectionProps> = ({
+export const ListeningSection: React.FC<ListeningSectionProps> = ({
   questions,
   level,
 }) => {
+  // Adapt API questions to app format
+  const adaptedQuestions = useMemo(() => {
+    return questions.map(adaptListeningQuestion);
+  }, [questions]);
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [showFeedback, setShowFeedback] = useState<Record<number, boolean>>({});
   const [playing, setPlaying] = useState<Record<number, boolean>>({});
@@ -134,17 +139,17 @@ export const ListeningSection: React.FC<SectionProps> = ({
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center text-3xl font-extrabold text-indigo-700 border-b pb-2">
-        <Speaker className="w-7 h-7 mr-3" />
+      <div className="flex items-center text-3xl font-extrabold text-indigo-300 border-b border-gray-600 pb-2 mb-4">
+        <Speaker className="w-7 h-7 mr-3 text-indigo-300" />
         <div>
-          <p>1. Hören</p>
-          <p className="text-sm font-medium text-gray-400 mt-1 italic leading-tight">
+          <p className="text-gray-200">1. Hören</p>
+          <p className="text-sm font-medium text-gray-300 mt-1 italic leading-tight">
             (1. Listening)
           </p>
         </div>
       </div>
 
-      <p className="text-gray-600 italic">
+      <p className="text-gray-300 italic mb-6">
         Hören Sie gut zu. Da die Audiofiles nicht verfügbar sind, verwenden Sie
         die <strong>Audio-Beschreibung</strong> als Hinweis.{" "}
         <span className="text-xs font-normal opacity-80">
@@ -153,7 +158,7 @@ export const ListeningSection: React.FC<SectionProps> = ({
         </span>
       </p>
 
-      {questions.map((q: ListeningQuestion) => (
+      {adaptedQuestions.map((q: ListeningQuestion) => (
         <QuestionContainer key={q.id} id={q.id} level={level}>
           <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
             <div className="shrink-0">
@@ -176,7 +181,7 @@ export const ListeningSection: React.FC<SectionProps> = ({
                 {q.question && (
                   <button
                     onClick={() => handlePlayAudio(q)}
-                    className="ml-4 p-2 bg-indigo-100 hover:bg-indigo-200 text-indigo-700 rounded-full transition-all duration-200 flex items-center justify-center min-w-[44px] min-h-[44px]"
+                    className="ml-4 p-2 bg-indigo-500/30 hover:bg-indigo-500/50 text-white rounded-full transition-all duration-200 flex items-center justify-center min-w-[44px] min-h-[44px]"
                     title="Play question (Frage abspielen)"
                     aria-label="Play question"
                   >
@@ -188,16 +193,16 @@ export const ListeningSection: React.FC<SectionProps> = ({
                   </button>
                 )}
               </div>
-              <p className="text-sm text-blue-600 mb-4 font-medium">
+              <p className="text-sm text-blue-300 mb-4 font-medium">
                 <em>{q.audioDescription}</em>
               </p>
               {(q.ttsPrompt || q.audioText) && (
-                <div className="mb-4 p-2 bg-indigo-50 rounded-lg border border-indigo-200">
-                  <p className="text-xs text-indigo-700">
+                <div className="mb-4 p-2 bg-indigo-900/30 rounded-lg border border-indigo-400/30">
+                  <p className="text-xs text-indigo-200">
                     <strong>Audio Text:</strong> {q.ttsPrompt || q.audioText}
                   </p>
                   {q.audioText_translation && (
-                    <p className="text-xs text-indigo-600 mt-1 italic">
+                    <p className="text-xs text-indigo-300 mt-1 italic">
                       ({q.audioText_translation})
                     </p>
                   )}
@@ -212,8 +217,8 @@ export const ListeningSection: React.FC<SectionProps> = ({
                     className={`p-3 text-left rounded-lg transition-all border-2
                       ${
                         answers[q.id] === option
-                          ? "bg-indigo-100 border-indigo-500 text-indigo-700 font-bold"
-                          : "bg-gray-50 hover:bg-gray-100 border-gray-200 text-gray-700"
+                          ? "bg-indigo-500/30 border-indigo-400 text-white font-bold"
+                          : "glass-card hover:bg-white/20 border-gray-500/30 text-gray-200"
                       }
                     `}
                   >
@@ -233,7 +238,7 @@ export const ListeningSection: React.FC<SectionProps> = ({
                 disabled={!answers[q.id]}
                 className="mt-4 px-4 py-2 bg-indigo-600 text-white rounded-lg shadow-md hover:bg-indigo-700 disabled:opacity-50 transition duration-150"
               >
-                Antwort prüfen (Check Answer)
+                Check Answer
               </button>
 
               {showFeedback[q.id] && q.correctAnswer && (

@@ -1,5 +1,5 @@
-import React from "react"
-import { GermanQuestionProps } from "@/types"
+import React from "react";
+import { GermanQuestionProps } from "@/types";
 
 /**
  * Renders a German text with its English translation as a small, light subscript.
@@ -18,18 +18,16 @@ export const GermanQuestion: React.FC<GermanQuestionProps> = ({
       ? "text-2xl font-bold"
       : size === "lg"
       ? "text-lg font-semibold"
-      : "text-md font-medium"
+      : "text-md font-medium";
 
   return (
     <div className={className}>
-      <p className={`${textSizeClass} text-gray-800`}>{germanText}</p>
+      <p className={`${textSizeClass} text-gray-200`}>{germanText}</p>
       {englishTranslation && (
-        <p className="text-xs text-gray-400 mt-1 italic leading-tight">
+        <p className="text-xs text-gray-300 mt-1 italic leading-tight">
           {englishTranslation}
         </p>
       )}
     </div>
-  )
-}
-
-
+  );
+};
