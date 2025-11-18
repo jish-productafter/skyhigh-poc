@@ -110,7 +110,7 @@ export const ListeningSection: React.FC<ListeningSectionProps> = ({
 
   const handlePlayAudio = (question: ListeningQuestion) => {
     // Read the question text, not the audioText
-    const textToSpeak = question.question;
+    const textToSpeak = question.audioText;
 
     if (!textToSpeak) {
       console.warn("No question text available for this question");
@@ -161,13 +161,7 @@ export const ListeningSection: React.FC<ListeningSectionProps> = ({
       {adaptedQuestions.map((q: ListeningQuestion) => (
         <QuestionContainer key={q.id} id={q.id} level={level}>
           <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
-            <div className="shrink-0">
-              <img
-                src={q.imagePlaceholder}
-                alt="Placeholder"
-                className="rounded-lg shadow-md"
-              />
-            </div>
+            <div className="shrink-0"></div>
             <div className="grow">
               <div className="flex items-start justify-between mb-3">
                 <div className="flex-1">
@@ -193,9 +187,9 @@ export const ListeningSection: React.FC<ListeningSectionProps> = ({
                   </button>
                 )}
               </div>
-              <p className="text-sm text-blue-300 mb-4 font-medium">
+              {/* <p className="text-sm text-blue-300 mb-4 font-medium">
                 <em>{q.audioDescription}</em>
-              </p>
+              </p> */}
               {(q.ttsPrompt || q.audioText) && (
                 <div className="mb-4 p-2 bg-indigo-900/30 rounded-lg border border-indigo-400/30">
                   <p className="text-xs text-indigo-200">
