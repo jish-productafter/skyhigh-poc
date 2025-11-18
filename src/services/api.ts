@@ -237,7 +237,19 @@ export interface GenerateSpeakingParams {
 }
 
 /**
- * Generate listening questions from API (with caching)
+ * Load syllabus data from data.json
+ * This function is only called from client-side code
+ */
+async function loadSyllabusData(): Promise<any> {
+  const response = await fetch("/data.json");
+  if (!response.ok) {
+    throw new Error(`Failed to load syllabus data: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+/**
+ * Generate listening questions from data.json (with caching)
  */
 export async function generateListening(
   params: GenerateListeningParams,
@@ -254,26 +266,40 @@ export async function generateListening(
     }
   }
 
-  // Fetch from API (via Next.js API route to avoid CORS)
-  const url = new URL("/api/generate/listening", window.location.origin);
-  url.searchParams.append("topic", params.topic);
-  url.searchParams.append("level", params.level);
+  // Load data from data.json
+  const syllabusData = await loadSyllabusData();
+  const levelData = syllabusData.syllabus[params.level];
 
-  const response = await fetch(url.toString(), {
-    method: "POST",
-    headers: {
-      accept: "application/json",
-    },
-  });
+  if (!levelData || !levelData.listening) {
+    throw new Error(`No listening data found for level ${params.level}`);
+  }
 
-  if (!response.ok) {
-    throw new Error(
-      `Failed to generate listening questions: ${response.statusText}`
+  // Filter by topic if needed, otherwise return all
+  let questions = levelData.listening;
+  if (params.topic) {
+    questions = questions.filter(
+      (q: any) => q.metadata?.topic === params.topic
     );
   }
 
-  const data = await response.json();
-  console.log("Listening API response:", data);
+  // Map to ApiListeningQuestion format
+  const data: ApiListeningQuestion[] = questions.map((q: any) => ({
+    id: q.id,
+    type: q.type,
+    question: q.question,
+    translation: q.translation,
+    audioText: q.audioText,
+    audioText_translation: q.audioText_translation,
+    audioDescription: q.audioDescription,
+    ttsPrompt: q.ttsPrompt,
+    options: q.options,
+    options_translations: q.options_translations,
+    correctAnswer: q.correctAnswer,
+    imagePlaceholder: q.imagePlaceholder || "",
+    metadata: q.metadata,
+  }));
+
+  console.log("Listening questions from data.json:", data);
 
   // Cache the response
   if (useCache) {
@@ -284,7 +310,7 @@ export async function generateListening(
 }
 
 /**
- * Generate reading questions from API (with caching)
+ * Generate reading questions from data.json (with caching)
  */
 export async function generateReading(
   params: GenerateReadingParams,
@@ -301,32 +327,111 @@ export async function generateReading(
     }
   }
 
-  // Fetch from API (via Next.js API route to avoid CORS)
-  const url = new URL("/api/generate/reading", window.location.origin);
-  url.searchParams.append("topic", params.topic);
-  url.searchParams.append("level", params.level);
-  if (params.item_id_start !== undefined) {
-    url.searchParams.append("item_id_start", params.item_id_start.toString());
+  // Load data from data.json
+  const syllabusData = await loadSyllabusData();
+  const levelData = syllabusData.syllabus[params.level];
+
+  if (!levelData || !levelData.reading) {
+    throw new Error(`No reading data found for level ${params.level}`);
+  }
+
+  // Filter by topic and type if needed
+  let questions = levelData.reading;
+  console.log(
+    `Reading: Found ${questions.length} total questions for level ${params.level}`
+  );
+
+  if (params.topic) {
+    const filteredByTopic = questions.filter(
+      (q: any) => q.metadata?.topic === params.topic
+    );
+    console.log(
+      `Reading: Filtered by topic "${params.topic}": ${filteredByTopic.length} questions`
+    );
+    // Only apply topic filter if it returns results, otherwise use all questions
+    if (filteredByTopic.length > 0) {
+      questions = filteredByTopic;
+    } else {
+      console.log(
+        `Reading: Topic "${params.topic}" returned 0 results, using all questions`
+      );
+    }
   }
   if (params.prefer_type) {
-    url.searchParams.append("prefer_type", params.prefer_type);
-  }
-
-  const response = await fetch(url.toString(), {
-    method: "POST",
-    headers: {
-      accept: "application/json",
-    },
-  });
-
-  if (!response.ok) {
-    throw new Error(
-      `Failed to generate reading questions: ${response.statusText}`
+    const beforeTypeFilter = questions.length;
+    questions = questions.filter((q: any) => q.type === params.prefer_type);
+    console.log(
+      `Reading: Filtered by type "${params.prefer_type}": ${beforeTypeFilter} -> ${questions.length} questions`
     );
   }
 
-  const data = await response.json();
-  console.log("Reading API response:", data);
+  console.log(`Reading: Final questions count: ${questions.length}`);
+
+  // Map to ApiReadingQuestion format
+  const data: ApiReadingQuestion[] = questions.map((q: any) => {
+    // Handle two formats:
+    // 1. Separate passage field (A2+)
+    // 2. Passage embedded in question field (A1) - format: "Question\n\nPassage: ...\n\nPassage Translation: ..."
+    let passage = q.passage || "";
+    let passageTranslation = q.passage_translation || "";
+    let questionText = q.question || "";
+
+    // If no separate passage field, try to extract from question
+    if (!passage && questionText.includes("\n\nPassage:")) {
+      const parts = questionText.split("\n\nPassage:");
+      questionText = parts[0].trim();
+      if (parts[1]) {
+        const passageParts = parts[1].split("\n\nPassage Translation:");
+        passage = passageParts[0]?.trim() || "";
+        passageTranslation = passageParts[1]?.trim() || "";
+      }
+    }
+
+    // Map question types: MultipleChoice -> A_B_C, RichtigFalsch -> A_B_C (for now)
+    let mappedType = q.type;
+    if (q.type === "MultipleChoice" || q.type === "RichtigFalsch") {
+      mappedType = "A_B_C"; // ReadingSection expects A_B_C type
+    }
+
+    // NOTE: For A1 level, the data.json has English text in the 'options' field
+    // instead of German. This is a data quality issue. A2+ levels have correct
+    // German text in 'options' and English in 'options_translations'.
+    // The component expects German in 'options', so A1 questions will display
+    // English until the data.json is corrected.
+    const options = q.options || [];
+
+    // Warn if options appear to be in English (for A1 data quality issue)
+    if (params.level === "A1" && options.length > 0) {
+      const firstOption = options[0]?.toLowerCase() || "";
+      // Simple heuristic: if first option contains common English words, it's likely English
+      if (
+        firstOption.includes("fashion") ||
+        firstOption.includes("design") ||
+        firstOption.includes("equipment") ||
+        firstOption.includes("accessories")
+      ) {
+        console.warn(
+          `A1 Reading question ${q.id} has English text in options field. Expected German.`
+        );
+      }
+    }
+
+    return {
+      id: q.id,
+      type: mappedType,
+      question: questionText,
+      translation: q.question_translation || q.translation || "",
+      text: passage,
+      textTranslation: passageTranslation,
+      options: options, // Should be German, but A1 data has English
+      options_translations: q.options_translations || [],
+      correctAnswer: q.correctAnswer,
+      imagePlaceholder: q.imagePlaceholder || "",
+      metadata: q.metadata,
+    };
+  });
+
+  console.log("Reading questions from data.json:", data);
 
   // Cache the response
   if (useCache) {
@@ -337,7 +442,7 @@ export async function generateReading(
 }
 
 /**
- * Generate writing questions from API (with caching)
+ * Generate writing questions from data.json (with caching)
  */
 export async function generateWriting(
   params: GenerateWritingParams,
@@ -354,51 +459,31 @@ export async function generateWriting(
     }
   }
 
-  // Fetch from API (via Next.js API route to avoid CORS)
-  const url = new URL("/api/generate/writing", window.location.origin);
-  url.searchParams.append("topic", params.topic);
-  url.searchParams.append("level", params.level);
-  if (params.item_id_start !== undefined) {
-    url.searchParams.append("item_id_start", params.item_id_start.toString());
-  }
-  if (params.task_type) {
-    url.searchParams.append("task_type", params.task_type);
+  // Load data from data.json
+  const syllabusData = await loadSyllabusData();
+  console.log("Syllabus data:", syllabusData);
+  console.log("level", params.level);
+  const levelData = syllabusData.syllabus[params.level];
+
+  console.log("Level data:", levelData);
+
+  if (!levelData || !levelData.writing) {
+    throw new Error(`No writing data found for level ${params.level}`);
   }
 
-  const response = await fetch(url.toString(), {
-    method: "POST",
-    headers: {
-      accept: "application/json",
-    },
-  });
-
-  if (!response.ok) {
-    throw new Error(
-      `Failed to generate writing questions: ${response.statusText}`
-    );
-  }
-
-  const data = await response.json();
-  console.log("Writing API response:", data);
-  // Log the response to debug
-  console.log("Writing API response:", data);
-  console.log("Writing API response type:", typeof data);
-  console.log("Is array?", Array.isArray(data));
-  if (Array.isArray(data) && data.length > 0) {
-    console.log("First writing question:", data[0]);
-    console.log("First question type:", data[0]?.type);
-  }
+  // Filter by topic and task_type if needed
+  let questions = levelData.writing;
 
   // Cache the response
   if (useCache) {
-    setCachedData(cacheKey, data);
+    setCachedData(cacheKey, questions);
   }
 
-  return data;
+  return questions;
 }
 
 /**
- * Generate speaking questions from API (with caching)
+ * Generate speaking questions from data.json (with caching)
  */
 export async function generateSpeaking(
   params: GenerateSpeakingParams,
@@ -415,32 +500,39 @@ export async function generateSpeaking(
     }
   }
 
-  // Fetch from API (via Next.js API route to avoid CORS)
-  const url = new URL("/api/generate/speaking", window.location.origin);
-  url.searchParams.append("topic", params.topic);
-  url.searchParams.append("level", params.level);
-  if (params.item_id_start !== undefined) {
-    url.searchParams.append("item_id_start", params.item_id_start.toString());
+  // Load data from data.json
+  const syllabusData = await loadSyllabusData();
+  const levelData = syllabusData.syllabus[params.level];
+
+  if (!levelData || !levelData.speaking) {
+    throw new Error(`No speaking data found for level ${params.level}`);
+  }
+
+  // Filter by topic and interaction_type if needed
+  let questions = levelData.speaking;
+  if (params.topic) {
+    questions = questions.filter(
+      (q: any) => q.metadata?.topic === params.topic
+    );
   }
   if (params.interaction_type) {
-    url.searchParams.append("interaction_type", params.interaction_type);
-  }
-
-  const response = await fetch(url.toString(), {
-    method: "POST",
-    headers: {
-      accept: "application/json",
-    },
-  });
-
-  if (!response.ok) {
-    throw new Error(
-      `Failed to generate speaking questions: ${response.statusText}`
+    questions = questions.filter(
+      (q: any) => q.metadata?.interaction_type === params.interaction_type
     );
   }
 
-  const data = await response.json();
-  console.log("speaking questions", data);
+  // Map to ApiSpeakingQuestion format
+  const data: ApiSpeakingQuestion[] = questions.map((q: any) => ({
+    id: q.id,
+    type: q.type,
+    prompt: q.prompt || q.task_description || "",
+    translation: q.prompt_translation || "",
+    example: q.example_response || "",
+    imagePlaceholder: q.imagePlaceholder || "",
+    metadata: q.metadata,
+  }));
+
+  console.log("Speaking questions from data.json:", data);
 
   // Cache the response
   if (useCache) {
@@ -477,9 +569,23 @@ export function adaptListeningQuestion(
 export function adaptReadingQuestion(
   apiQuestion: ApiReadingQuestion
 ): import("@/types").ReadingQuestion {
+  // Map types to expected ReadingQuestion types
+  let mappedType: "A_B_C" | "TextMatch" | "Lückentext" = "A_B_C";
+  if (apiQuestion.type === "TextMatch" || apiQuestion.type === "textmatch") {
+    mappedType = "TextMatch";
+  } else if (
+    apiQuestion.type === "Lückentext" ||
+    apiQuestion.type === "lückentext"
+  ) {
+    mappedType = "Lückentext";
+  } else {
+    // Default to A_B_C for MultipleChoice, RichtigFalsch, etc.
+    mappedType = "A_B_C";
+  }
+
   return {
     id: apiQuestion.id,
-    type: apiQuestion.type as "A_B_C" | "TextMatch" | "Lückentext",
+    type: mappedType,
     text: apiQuestion.text,
     textTranslation: apiQuestion.textTranslation,
     question: apiQuestion.question,
